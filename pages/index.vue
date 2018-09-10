@@ -1,6 +1,6 @@
 <template>
   <div>
-    <section id="text-me" class="sml-pad-y3 med-pad-y6">
+    <section id="text-me" class="sml-pad-y2 med-pad-y4">
       <div class="wrapper">
         <div class="row">
           <div class="sml-c12 lrg-c8 grid-center text-center">
@@ -8,7 +8,7 @@
             <p class="sml-push-y2 med-push-y3">
               TODO: widget
             </p>
-            <a class="btn btn-block sml-push-y2 med-push-y3" href="#TODO">
+            <a class="btn btn-block btn-lrg sml-push-y2 med-push-y3" href="#TODO">
               Text me
             </a>
           </div> <!-- .c -->
@@ -16,7 +16,7 @@
       </div> <!-- .wrapper -->
     </section>
 
-    <section id="how" class="sml-pad-y3 med-pad-y6 fill-grey-light">
+    <section id="how" class="sml-pad-y2 med-pad-y4">
       <div class="wrapper">
         <div class="row">
           <div class="sml-c12 lrg-c8 grid-center text-center">
@@ -58,21 +58,27 @@
               &amp; message rates may apply. You can text STOP any time to stop
               receiving messages.
             </p>
-            <a class="btn btn-block sml-push-y2 med-push-y3"
-               @click.prevent="scrollTo('#TODO-section-2')">
-              Text Me!
-            </a>
-            <a class="btn btn-block sml-push-y2 med-push-y3"
-               href="https://m.me/hellovote"
-               target="_blank">
-              Sign up with Messenger
-            </a>
+            <ul class="hoz">
+              <li>
+                <a class="btn btn-dark sml-push-y2 med-push-y3"
+                   @click.prevent="scrollTo('#text-me')">
+                  Text Me!
+                </a>
+              </li>
+              <li>
+                <a class="btn btn-light sml-push-y2 med-push-y3"
+                   href="https://m.me/hellovote"
+                   target="_blank">
+                  Sign up with Messenger
+                </a>
+              </li>
+            </ul>
           </div> <!-- .c -->
         </div> <!-- .row -->
       </div> <!-- .wrapper -->
     </section>
 
-    <section id="widget" class="sml-pad-y3 med-pad-y6">
+    <section id="widget" class="sml-pad-y2 med-pad-y4">
       <div class="wrapper">
         <div class="row">
           <div class="sml-c12 lrg-c8 grid-center text-center">
@@ -115,7 +121,7 @@
       </div> <!-- .wrapper -->
     </section>
 
-    <section id="banner-ads" class="sml-pad-y3 med-pad-y6 fill-grey-light">
+    <section id="banner-ads" class="sml-pad-y2 med-pad-y4">
       <div class="wrapper">
         <div class="row">
           <div class="sml-c12 lrg-c8 grid-center text-center">
@@ -136,7 +142,7 @@
       </div> <!-- .wrapper -->
     </section>
 
-    <section id="social" class="sml-pad-y3 med-pad-y6">
+    <section id="social" class="sml-pad-y2 med-pad-y4">
       <div class="wrapper">
         <div class="row">
           <div class="sml-c12 lrg-c8 grid-center text-center">
@@ -149,7 +155,7 @@
               <a href="https://www.battleforthenet.com/" target="_blank">
                 BattleForThe.Net</a>
               where people can take action.
-              <a href="#TODO" target="_blank">Click here</a>to see ideas for
+              <a href="#TODO" target="_blank">Click here</a> to see ideas for
               blog posts, emails, tweets and more.
             </p>
             <p>
@@ -181,7 +187,7 @@
       </div> <!-- .wrapper -->
     </section>
 
-    <section id="participants" class="sml-pad-y3 med-pad-y6 fill-grey-light">
+    <section id="participants" class="sml-pad-y2 med-pad-y4">
       <div class="wrapper">
         <div class="row">
           <div class="sml-c12 lrg-c8 grid-center text-center">
@@ -201,7 +207,7 @@
       </div> <!-- .wrapper -->
     </section>
 
-    <section id="scoreboard" class="sml-pad-y3 med-pad-y6">
+    <section id="scoreboard" class="sml-pad-y2 med-pad-y4">
       <div class="wrapper">
         <div class="row">
           <div class="sml-c12 lrg-c8 grid-center text-center">

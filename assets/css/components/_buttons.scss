@@ -2,20 +2,27 @@
 
 // Button > Default
 .btn {
-  // TODO: update style
   display: inline-block;
-  padding: $gutter/2 $gutter*4 ($gutter/2 + 2);
+  padding: ($gutter + 2) $gutter*4 ($gutter + 3);
   overflow: hidden;
-  background: $brand-color;
+  background: $brand-secondary-color;
+  background: linear-gradient(
+    0deg,
+    $brand-color                 0%,
+    $brand-secondary-color       98%, // NOTE: magic number is 1px when button text is on one line
+    $brand-secondary-light-color 98%,
+    $brand-secondary-light-color 100%
+  );
   border: none;
   border-radius: $default-border-radius;
   color: $white;
   cursor: pointer;
-  font-size:  $font-size-2;
+  font-size: $base-font-size;
   font-weight: $bold-font-weight;
   outline: none;
   text-align: center;
   text-decoration: none;
+  text-transform: uppercase;
     -moz-user-select:    none;
     -webkit-user-select: none;
   user-select:           none;
@@ -23,7 +30,15 @@
 }
 .btn:hover,
 .btn:focus {
-  background: $brand-dark-color;
+  background: $brand-secondary-light-color;
+  background: linear-gradient(
+    0deg,
+    $brand-color                 0%,
+    $brand-secondary-color       75%,
+    $brand-secondary-color       98%, // NOTE: magic number is 1px when button text is on one line
+    $brand-secondary-light-color 98%,
+    $brand-secondary-light-color 100%
+  );
   border: none;
 }
 button.btn {
@@ -51,20 +66,49 @@ button.btn {
   cursor: default;
 }
 
+// Buttons > Large
+.btn.btn-lrg {
+  padding-top:    ($gutter*1.6 - 1);
+  padding-bottom: ($gutter*1.6 + 1);
+  font-size:  $m-font-size-2;
+
+  @include respond-to(lrg) {
+    font-size: $font-size-3;
+  }
+}
+
+// Buttons > Dark
+.btn.btn-dark {
+  background: $brand-tertiary-color;
+}
+.btn.btn-dark:hover,
+.btn.btn-dark:focus {
+  background: $brand-tertiary-light-color;
+}
+
+// Buttons > Light
+.btn.btn-light {
+  background: $white;
+  color: $brand-darkest-color;
+}
+.btn.btn-light:hover,
+.btn.btn-light:focus {
+  background: $grey-light-color;
+  color: $brand-darkest-color;
+}
+
 // Buttons > Sharing
 .btn.btn-twitter {
-  background-color: $twitter-color;
+  background: $twitter-color;
 }
 .btn.btn-twitter:hover,
 .btn.btn-twitter:focus {
   background: $twitter-dark-color;
-  color: $white;
 }
 .btn.btn-facebook {
-  background-color: $facebook-color;
+  background: $facebook-color;
 }
 .btn.btn-facebook:hover,
 .btn.btn-facebook:focus {
   background: $facebook-dark-color;
-  color: $white;
 }

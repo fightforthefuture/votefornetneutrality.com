@@ -8,7 +8,20 @@ body, select, input, textarea {
 
 // Typography > Headings
 h1, h2, h3, h4, h5, h6 {
+  background: linear-gradient(
+    0deg,
+    $brand-color                 0%,
+    $brand-secondary-color       78%, // NOTE: magic number is 1px when text is on one line
+    $brand-secondary-light-color 78%,
+    $brand-secondary-light-color 100%
+  );
+  color: $brand-secondary-color;
+  font-family: $heading-stack;
   font-weight: $bold-font-weight;
+  text-transform: uppercase;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 h1 {
   font-size: $m-font-size-1;

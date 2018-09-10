@@ -4,7 +4,9 @@
       <div class="wrapper">
         <div class="row">
           <div class="sml-c12 lrg-c8 grid-center text-center">
-            <h1>Vote for Net Neutrality</h1>
+            <img src="~assets/images/logo.png" class="img-logo grid-center"
+                 alt="Vote for Net Neutrality logo" />
+
             <p class="sml-push-y2 med-push-y3">
               TODO: widget
             </p>

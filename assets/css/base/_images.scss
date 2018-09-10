@@ -4,3 +4,7 @@ img {
   display: block;
   max-width: 100%;
 }
+.img-logo {
+  max-width: 294px; // Half width for retina
+  background-size: 100%;
+}

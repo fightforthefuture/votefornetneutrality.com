@@ -1,11 +1,11 @@
 // Page Footer
 
 .page-footer {
-  background: $grey-light-color;
+  background: $background-light-color;
 }
 .page-footer .contact-block {
   position: relative;
-  background: $grey-color;
+  background: $background-color;
 }
 .page-footer .contact-block:before {
   display: block;
@@ -17,5 +17,5 @@
   left: 50%;
   margin-left: -10px;
   border: 20px solid transparent;
-  border-bottom-color: $grey-color;
+  border-bottom-color: $background-color;
 }

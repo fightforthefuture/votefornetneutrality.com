@@ -3,16 +3,25 @@
     <section id="text-me" class="sml-pad-y2 med-pad-y4">
       <div class="wrapper">
         <div class="row">
-          <div class="sml-c12 lrg-c8 grid-center text-center">
+          <div class="sml-c12 lrg-c8 grid-center">
             <img src="~assets/images/logo.png" class="img-logo grid-center"
                  alt="Vote for Net Neutrality logo" />
 
-            <p class="sml-push-y2 med-push-y3">
-              TODO: widget
-            </p>
-            <a class="btn btn-block btn-lrg sml-push-y2 med-push-y3" href="#TODO">
-              Text me
-            </a>
+            <div class="sml-push-y3 med-push-y6 with-glow">
+              <div class="sml-pad-2 fill-brand-dark-color content is-rounded">
+                <div class="sml-pad-1 sml-pad-x2 fill-brand-med-color is-rounded">
+                  Please enter your phone number, so we can continue via text
+                  message.
+                </div> <!-- message -->
+
+                <form action="#TODO" class="flex-row sml-push-y3 med-push-y4">
+                  <input type="tel" placeholder="Phone number" class="med-flex-2" />
+                  <button class="btn btn-block btn-lrg" href="#TODO">
+                    Text me
+                  </button>
+                </form>
+              </div> <!-- widget -->
+            </div> <!-- .with-glow -->
           </div> <!-- .c -->
         </div> <!-- .row -->
       </div> <!-- .wrapper -->

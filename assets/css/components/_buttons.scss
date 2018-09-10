@@ -3,7 +3,7 @@
 // Button > Default
 .btn {
   display: inline-block;
-  padding: ($gutter + 2) $gutter*4 ($gutter + 3);
+  padding: ($gutter + 2) $gutter*2 ($gutter + 3);
   overflow: hidden;
   background: $brand-secondary-color;
   background: linear-gradient(
@@ -27,6 +27,11 @@
     -webkit-user-select: none;
   user-select:           none;
   -webkit-appearance: none;
+
+  @include respond-to(med) {
+    padding-right: $gutter*4;
+    padding-left:  $gutter*4;
+  }
 }
 .btn:hover,
 .btn:focus {
@@ -70,7 +75,7 @@ button.btn {
 .btn.btn-lrg {
   padding-top:    ($gutter*1.6 - 1);
   padding-bottom: ($gutter*1.6 + 1);
-  font-size:  $m-font-size-2;
+  font-size:  $base-font-size;
 
   @include respond-to(lrg) {
     font-size: $font-size-3;

@@ -9,6 +9,7 @@ $grey-light-color:            #D6D6D6;
 // $grey-color:                  #999;
 // $grey-dark-color:             #222;
 $brand-color:                 #A424F5; // purple
+$brand-med-color:             #5831a3; // medium purple
 $brand-dark-color:            #2C1B57; // dark purple slightly lightend
 $brand-darkest-color:         #151231; // dark purple
 $brand-secondary-color:       #FF754A; // orange
@@ -20,6 +21,8 @@ $background-light-color:      $brand-dark-color;
 $text-color:                  $white;
 $success-color:               #58BAAE;
 $warn-color:                  red; // TODO
+$glow-start-color:            #5A00FF; // blue
+$glow-end-color:              #FE734C; // orange
 
 $facebook-color:          #405993;
 $facebook-dark-color:     darken($facebook-color, 10%);

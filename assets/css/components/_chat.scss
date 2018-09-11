@@ -48,3 +48,76 @@
   right: -12px;
   background: transparent url('~assets/images/message-right.svg') bottom right no-repeat;
 }
+
+// Chat > Message transitions
+.message-transition-enter-active,
+.message-transition-leave-active {
+  transition: opacity 1s;
+}
+.message-transition-enter,
+.message-transition-leave-to {
+  opacity: 0;
+}
+
+// Chat > Loading dots
+
+$dot_animation_duration: 1s;
+$dot_blend_opacity: .3;
+
+@-webkit-keyframes dot {
+  0% { opacity: $dot_blend_opacity; }
+  50% { opacity: 1; }
+  100% { opacity: $dot_blend_opacity; }
+}
+
+@keyframes dot {
+  0% { opacity: $dot_blend_opacity; }
+  50% { opacity: 1; }
+  100% { opacity: $dot_blend_opacity; }
+}
+
+.dots > div {
+  display: inline-block;
+  width: 5px;
+  height: 5px;
+  border-radius: 100px;
+  margin: 0px 2px;
+}
+.dots > div > div {
+  background: white;
+  width: 100%;
+  height: 100%;
+  border-radius: 100px;
+  opacity: $dot_blend_opacity;
+
+  animation-duration: $dot_animation_duration;
+  animation-name: dot;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+
+  animation-delay: ($dot_animation_duration/3)*1;
+}
+.dots > div:first-child div {
+  animation-delay: ($dot_animation_duration/3)*0;
+}
+.dots > div:last-child div {
+  animation-delay: ($dot_animation_duration/3)*2;
+}
+
+@keyframes shake {
+  10%, 90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+
+  20%, 80% {
+    transform: translate3d(2px, 0, 0);
+  }
+
+  30%, 50%, 70% {
+    transform: translate3d(-4px, 0, 0);
+  }
+
+  40%, 60% {
+    transform: translate3d(4px, 0, 0);
+  }
+}

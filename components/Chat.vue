@@ -3,29 +3,12 @@
     <div class="glow-content">
       <div class="messages sml-pad-2 is-rounded-top"
            ref="messages">
-        <div v-for="(message, index) in messages"
-             :key="index"
-             :class="{
-              'message': message.type === 'bubble',
-              'message-reply': message.style === 'reply',
-              'message-success': message.style === 'success',
-              'sml-push-y1': index > 0
-             }">
-          <span v-html="message.content"></span>
-
-          <img v-if="message.type === 'party-emoji'"
-               src="~assets/images/party-emoji.png"
-               alt="Hooray!"
-               class="img-party-emoji">
-
-          <p v-if="message.type === 'disclaimer'"
-             class="text-center sml-push-y1 med-push-y2">
-            <small>
-              If you didn&rsquo;t recieve a text
-              <a @click.prevent="initChatBot">click here</a> to re-enter your
-              phone number. Or report a problem <a href="#TODO">here</a>.
-            </small>
-          </p>
+        <div v-for="(message, index) in messages" :key="index">
+          <Message
+              :message="message"
+              :index="index"
+              :is-reply="message.style && message.style === 'reply' ? true : false"
+              :init-chat="initChatBot" />
         </div> <!-- message -->
       </div> <!-- .messages -->
 
@@ -54,8 +37,13 @@
 
 <script>
 import { smoothScrollWithinElement } from '~/assets/js/helpers'
+import Message from '~/components/Message'
 
 export default {
+  components: {
+    Message
+  },
+
   data () {
     return {
       phoneNumber: null,
@@ -93,19 +81,26 @@ export default {
         content: this.phoneNumber
       })
       // TODO: real success
-      this.messages.push(
-        {
+      // WARNING: Since there is no server a setTimeout is ok. However, with a
+      // server this is a dangerous eval. Remove if this project ever is hosted
+      // with a JS server.
+      setTimeout(() => {
+        this.messages.push({
           type: 'party-emoji'
-        },
-        {
+        })
+      }, 1500)
+      setTimeout(() => {
+        this.messages.push({
           type: 'bubble',
           style: 'success',
           content: "<strong>Awesome!</strong> I just sent you a text. Check your phone to make sure you received it."
-        },
-        {
+        })
+      }, 3000)
+      setTimeout(() => {
+        this.messages.push({
           type: 'disclaimer'
-        }
-      )
+        })
+      }, 4500)
     }
   }
 }

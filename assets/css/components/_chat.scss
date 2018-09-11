@@ -1,0 +1,50 @@
+/// Chat
+
+// Chat > Messages
+.messages {
+  display: flex;
+  flex-direction: column;
+  height: $gutter*28;
+  overflow-y: scroll;
+}
+
+// Chat > Message on the left
+.message {
+  position: relative;
+  margin-left: 12px;
+  padding: $gutter*1.5 $gutter*2;
+  max-width: $gutter*34.6;
+  background-color: $brand-med-color;
+  border-radius: $default-border-radius;
+}
+.message:after {
+  display: block;
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: -12px;
+  width: 33px;
+  height: 38px;
+  background: transparent url('~assets/images/message-left.svg') bottom left no-repeat;
+}
+
+// Chat > Message on the left > Success
+.message.message-success {
+  background-color: $success-color;
+}
+.message.message-success:after {
+  background-image: url('~assets/images/message-left-success.svg');
+}
+
+// Chat > Message reply by the voter on the right
+.message.message-reply {
+  background: $white;
+  color: $brand-darkest-color;
+  margin-left: auto;
+  margin-right: 12px;
+}
+.message.message-reply:after {
+  left: auto;
+  right: -12px;
+  background: transparent url('~assets/images/message-right.svg') bottom right no-repeat;
+}

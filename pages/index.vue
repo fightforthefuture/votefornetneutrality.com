@@ -7,21 +7,7 @@
             <img src="~assets/images/logo.png" class="img-logo grid-center"
                  alt="Vote for Net Neutrality logo" />
 
-            <div class="sml-push-y3 med-push-y6 with-glow">
-              <div class="sml-pad-2 fill-brand-dark-color content is-rounded">
-                <div class="sml-pad-1 sml-pad-x2 fill-brand-med-color is-rounded">
-                  Please enter your phone number, so we can continue via text
-                  message.
-                </div> <!-- message -->
-
-                <form action="#TODO" class="flex-row sml-push-y3 med-push-y4">
-                  <input type="tel" placeholder="Phone number" class="med-flex-2" />
-                  <button class="btn btn-block btn-lrg" href="#TODO">
-                    Text me
-                  </button>
-                </form>
-              </div> <!-- widget -->
-            </div> <!-- .with-glow -->
+            <Chat :messages="{todo: 'TODO'}"/>
           </div> <!-- .c -->
         </div> <!-- .row -->
       </div> <!-- .wrapper -->
@@ -248,10 +234,12 @@
 <script>
 import config from '~/config'
 import { createMetaTags, smoothScrollToElement } from '~/assets/js/helpers'
+import Chat from '~/components/Chat'
 import SocialSidebar from '~/components/SocialSidebar'
 
 export default {
   components: {
+    Chat,
     SocialSidebar
   },
 

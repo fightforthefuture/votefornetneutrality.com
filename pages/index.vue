@@ -66,6 +66,9 @@
                 <a class="btn btn-light sml-push-y2 med-push-y3"
                    href="https://m.me/hellovote"
                    target="_blank">
+                  <img src="~assets/images/facebook-messenger-logo.png"
+                       alt="Facebook messenger logo"
+                       class="img-fb-messenger">
                   Sign up with Messenger
                 </a>
               </li>

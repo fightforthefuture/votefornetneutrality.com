@@ -4,9 +4,7 @@
       <div class="wrapper">
         <div class="row">
           <div class="sml-c12 lrg-c8 grid-center">
-            <img src="~assets/images/logo.png" class="img-logo grid-center"
-                 alt="Vote for Net Neutrality logo" />
-
+            <Logo/>
             <Chat/>
           </div> <!-- .c -->
         </div> <!-- .row -->
@@ -237,11 +235,13 @@
 <script>
 import config from '~/config'
 import { createMetaTags, smoothScrollToElement } from '~/assets/js/helpers'
+import Logo from '~/components/Logo'
 import Chat from '~/components/Chat'
 import SocialSidebar from '~/components/SocialSidebar'
 
 export default {
   components: {
+    Logo,
     Chat,
     SocialSidebar
   },

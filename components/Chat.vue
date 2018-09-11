@@ -27,7 +27,7 @@
             <a href="https://www.fightforthefuture.org/" target="_blank">
               Fight for the Future</a>
             &amp; its Education Fund will contact you.
-            <a href="#TODO">Privacy Policy</a>
+            <nuxt-link to="/privacy">Privacy Policy</nuxt-link>
           </small>
         </p>
       </div> <!-- form container -->

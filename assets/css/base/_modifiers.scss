@@ -2,23 +2,55 @@
 
 // Modifiers > Borders
 
-// TODO: use if needed
-// .with-border {
-//   border: 1px solid $grey-light;
-// }
-// .is-rounded {
-//   border-radius: $default-border-radius;
-// }
+.is-rounded {
+  border-radius: $default-border-radius;
+}
+.is-rounded-top {
+  border-top-left-radius:  $default-border-radius;
+  border-top-right-radius: $default-border-radius;
+}
+.is-rounded-bottom {
+  border-bottom-left-radius:  $default-border-radius;
+  border-bottom-right-radius: $default-border-radius;
+}
+
+// Modifiers > Glow
+
+@keyframes animateGlow {
+  0%{ background-position: 0% 50% }
+  50%{ background-position: 100% 50% }
+  100%{ background-position: 0% 50% }
+}
+.with-glow {
+  position: relative;
+  margin-bottom: $gutter*10; // NOTE: accounts for glow overflow
+}
+.with-glow:after {
+  display: block;
+  content: "";
+  position: absolute;
+  top: $gutter;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  filter: blur(40px); // NOTE: works only in newer browsers
+  background: linear-gradient(270deg, $glow-start-color, $glow-end-color);
+  background-size: 200% 200%;
+  animation: animateGlow 10s ease infinite;
+}
+.with-glow .glow-content {
+  position: relative;
+  z-index: 10;
+  background: $brand-dark-color;
+  border-radius: $default-border-radius;
+}
 
 // Modifiers > Fills
 
-// TODO: use if needed
-.fill-grey-light {
-  background: $grey-light-color;
+.fill-brand-dark-color {
+  background: $brand-dark-color;
 }
-// .fill-white {
-//   background: $white;
-// }
-// .fill-brand {
-//   background: $brand-color;
-// }
+.fill-brand-darkest-color {
+  background: $brand-darkest-color;
+}

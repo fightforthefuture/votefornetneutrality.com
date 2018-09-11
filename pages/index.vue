@@ -3,16 +3,11 @@
     <section id="text-me" class="sml-pad-y2 med-pad-y4">
       <div class="wrapper">
         <div class="row">
-          <div class="sml-c12 lrg-c8 grid-center text-center">
+          <div class="sml-c12 lrg-c8 grid-center">
             <img src="~assets/images/logo.png" class="img-logo grid-center"
                  alt="Vote for Net Neutrality logo" />
 
-            <p class="sml-push-y2 med-push-y3">
-              TODO: widget
-            </p>
-            <a class="btn btn-block btn-lrg sml-push-y2 med-push-y3" href="#TODO">
-              Text me
-            </a>
+            <Chat/>
           </div> <!-- .c -->
         </div> <!-- .row -->
       </div> <!-- .wrapper -->
@@ -239,10 +234,12 @@
 <script>
 import config from '~/config'
 import { createMetaTags, smoothScrollToElement } from '~/assets/js/helpers'
+import Chat from '~/components/Chat'
 import SocialSidebar from '~/components/SocialSidebar'
 
 export default {
   components: {
+    Chat,
     SocialSidebar
   },
 

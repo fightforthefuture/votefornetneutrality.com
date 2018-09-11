@@ -1,0 +1,123 @@
+/// Chat
+
+// Chat > Messages
+.messages {
+  display: flex;
+  flex-direction: column;
+  height: $gutter*28;
+  overflow-y: scroll;
+}
+
+// Chat > Message on the left
+.message {
+  position: relative;
+  margin-left: 12px;
+  padding: $gutter*1.5 $gutter*2;
+  max-width: $gutter*34.6;
+  background-color: $brand-med-color;
+  border-radius: $default-border-radius;
+}
+.message:after {
+  display: block;
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: -12px;
+  width: 33px;
+  height: 38px;
+  background: transparent url('~assets/images/message-left.svg') bottom left no-repeat;
+}
+
+// Chat > Message on the left > Success
+.message.message-success {
+  background-color: $success-color;
+}
+.message.message-success:after {
+  background-image: url('~assets/images/message-left-success.svg');
+}
+
+// Chat > Message reply by the voter on the right
+.message.message-reply {
+  background: $white;
+  color: $brand-darkest-color;
+  margin-left: auto;
+  margin-right: 12px;
+}
+.message.message-reply:after {
+  left: auto;
+  right: -12px;
+  background: transparent url('~assets/images/message-right.svg') bottom right no-repeat;
+}
+
+// Chat > Message transitions
+.message-transition-enter-active,
+.message-transition-leave-active {
+  transition: opacity 1s;
+}
+.message-transition-enter,
+.message-transition-leave-to {
+  opacity: 0;
+}
+
+// Chat > Loading dots
+
+$dot_animation_duration: 1s;
+$dot_blend_opacity: .3;
+
+@-webkit-keyframes dot {
+  0% { opacity: $dot_blend_opacity; }
+  50% { opacity: 1; }
+  100% { opacity: $dot_blend_opacity; }
+}
+
+@keyframes dot {
+  0% { opacity: $dot_blend_opacity; }
+  50% { opacity: 1; }
+  100% { opacity: $dot_blend_opacity; }
+}
+
+.dots > div {
+  display: inline-block;
+  width: 5px;
+  height: 5px;
+  border-radius: 100px;
+  margin: 0px 2px;
+}
+.dots > div > div {
+  background: white;
+  width: 100%;
+  height: 100%;
+  border-radius: 100px;
+  opacity: $dot_blend_opacity;
+
+  animation-duration: $dot_animation_duration;
+  animation-name: dot;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+
+  animation-delay: ($dot_animation_duration/3)*1;
+}
+.dots > div:first-child div {
+  animation-delay: ($dot_animation_duration/3)*0;
+}
+.dots > div:last-child div {
+  animation-delay: ($dot_animation_duration/3)*2;
+}
+
+@keyframes shake {
+  10%, 90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+
+  20%, 80% {
+    transform: translate3d(2px, 0, 0);
+  }
+
+  30%, 50%, 70% {
+    transform: translate3d(-4px, 0, 0);
+  }
+
+  40%, 60% {
+    transform: translate3d(4px, 0, 0);
+  }
+}

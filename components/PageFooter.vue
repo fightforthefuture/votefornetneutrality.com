@@ -1,8 +1,8 @@
 <template>
   <div class="page-footer text-center">
-    <div class="sml-pad-y4">
+    <div class="sml-pad-y4 logo-block">
       <div class="wrapper">
-        <p class="text-loud">Built by:</p>
+        <p class="text-loud text-brand-med">Made by:</p>
         <a href="https://www.fightforthefuture.org">
           <img src="~assets/images/fftf-logo.svg" class="grid-center"
                alt="Fight for the Future logo" />

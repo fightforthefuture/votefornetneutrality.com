@@ -42,6 +42,8 @@
 .with-glow .glow-content {
   position: relative;
   z-index: 10;
+  background: $brand-dark-color;
+  border-radius: $default-border-radius;
 }
 
 // Modifiers > Fills

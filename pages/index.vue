@@ -7,7 +7,7 @@
             <img src="~assets/images/logo.png" class="img-logo grid-center"
                  alt="Vote for Net Neutrality logo" />
 
-            <Chat :messages="{todo: 'TODO'}"/>
+            <Chat/>
           </div> <!-- .c -->
         </div> <!-- .row -->
       </div> <!-- .wrapper -->

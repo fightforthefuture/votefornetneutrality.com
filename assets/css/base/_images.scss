@@ -4,11 +4,19 @@ img {
   display: block;
   max-width: 100%;
 }
+
+// Images > Retina
 .img-logo {
-  max-width: 294px; // Half width for retina
+  max-width: 294px;
   background-size: 100%;
 }
 .img-party-emoji {
-  max-width: 65px; // Half width for retina
+  max-width: 65px;
+  background-size: 100%;
+}
+.img-fb-messenger {
+  float: left;
+  margin-right: $gutter;
+  max-width: 26px;
   background-size: 100%;
 }

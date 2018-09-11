@@ -1,7 +1,19 @@
 // Page Footer
 
 .page-footer {
-  background: $background-light-color;
+  margin-top: 74px; // NOTE: matches before image height
+}
+.page-footer:before {
+  display: block;
+  content: '';
+  height: 74px;
+  width: auto;
+  background: transparent url('~assets/images/footer-bg-1.png') bottom center no-repeat;
+  background-size: auto 74px;
+}
+.page-footer .logo-block {
+  background: $background-light-color url('~assets/images/footer-bg-2.png') bottom center no-repeat;
+  background-size: auto 92px;
 }
 .page-footer .contact-block {
   position: relative;

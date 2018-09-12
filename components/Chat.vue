@@ -84,7 +84,15 @@ export default {
 
   watch: {
     messages(newVal, oldVal) {
-      smoothScrollWithinElement(this.$refs.messages, this.$refs.messages.scrollHeight, 500)
+      // Scroll once on the initial update to the loading dots and again after
+      // the message transition is finished (especially for longer messages)
+      this.scrollToLastMessage()
+      // WARNING: Since there is no server a setTimeout is ok. However, with a
+      // server this is a dangerous eval. Remove if this project ever is hosted
+      // with a JS server.
+      setTimeout(() => {
+        this.scrollToLastMessage()
+      }, 1000) // Allows time for the CSS transition in
     }
   },
 
@@ -99,6 +107,10 @@ export default {
         style: 'default',
         content: 'Please enter your phone number, so we can continue via text message.'
       })
+    },
+
+    scrollToLastMessage(){
+      smoothScrollWithinElement(this.$refs.messages, this.$refs.messages.scrollHeight, 500)
     },
 
     async formSubmit() {
@@ -132,14 +144,9 @@ export default {
           this.messages.push({
             type: 'bubble',
             style: 'success',
-            content: "<strong>Awesome!</strong> I just sent you a text. Check your phone to make sure you received it."
+            customContent: 'subscribed'
           })
         }, 2500) // +1.5 seconds
-        setTimeout(() => {
-          this.messages.push({
-            type: 'disclaimer'
-          })
-        }, 4000) // +1.5 seconds
         return data
       }
       catch (error) {

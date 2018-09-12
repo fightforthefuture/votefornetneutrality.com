@@ -8,5 +8,6 @@
   },
   "googleAnalyticsId": "UA-26576645-45",
   "actionNetworkPetitonId": "",
+  "botApiUrl": "https://vfnnbot-api.herokuapp.com",
   "botPhoneNumber": "215-709-8535"
 }

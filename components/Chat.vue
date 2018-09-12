@@ -59,6 +59,7 @@
 </template>
 
 <script>
+import config from '~/config'
 import axios from 'axios'
 import { smoothScrollWithinElement } from '~/assets/js/helpers'
 import Message from '~/components/Message'
@@ -124,7 +125,7 @@ export default {
       // POST to Chatbot API
       try {
         const { data } = await axios.post(
-          'https://vfnnbot-api.herokuapp.com/conversations',
+          `${config.botApiUrl}/conversations`,
           {
             "type": "web",
             "recipients": [ {"username": this.phoneNumber } ]

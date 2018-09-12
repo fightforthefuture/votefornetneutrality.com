@@ -24,13 +24,9 @@
              alt="Hooray!"
              class="img-party-emoji">
 
-        <p v-if="message.type === 'disclaimer'"
-           class="text-center sml-push-y1 med-push-y2">
-          <small>
-            If you didn&rsquo;t recieve a text
-            <a @click.prevent="initChat">click here</a> to re-enter your
-            phone number. Or report a problem <a href="#TODO">here</a>.
-          </small>
+        <p v-if="message.customContent === 'subscribed'">
+          <strong>Awesome!</strong> I just sent you a text. If you didn&rsquo;t
+          receive it, <a @click.prevent="initChat">click here</a>.
         </p>
       </div> <!-- message -->
     </transition-group>

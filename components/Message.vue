@@ -13,6 +13,7 @@
             'message': message.type === 'bubble',
             'message-reply': message.style === 'reply',
             'message-success': message.style === 'success',
+            'message-error': message.style === 'error',
             'sml-push-y1': index > 0
            }">
 

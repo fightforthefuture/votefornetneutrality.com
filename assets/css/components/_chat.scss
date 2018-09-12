@@ -36,6 +36,14 @@
   background-image: url('~assets/images/message-left-success.svg');
 }
 
+// Chat > Message on the left > Error
+.message.message-error {
+  background-color: $warn-color;
+}
+.message.message-error:after {
+  background-image: url('~assets/images/message-left-error.svg');
+}
+
 // Chat > Message reply by the voter on the right
 .message.message-reply {
   background: $white;

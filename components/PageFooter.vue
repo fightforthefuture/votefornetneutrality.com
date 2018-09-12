@@ -9,7 +9,7 @@
         </a>
       </div> <!-- .wrapper -->
     </div> <!-- .pad -->
-    <div class="contact-block sml-pad-y5 sml-push-y2">
+    <div class="contact-block sml-pad-y5">
       <div class="wrapper">
         <p class="text-loud tuck-bottom">
           For press inquiries, please contact us at:

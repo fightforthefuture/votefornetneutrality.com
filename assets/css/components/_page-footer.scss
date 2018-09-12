@@ -19,15 +19,3 @@
   position: relative;
   background: $background-color;
 }
-.page-footer .contact-block:before {
-  display: block;
-  content: '';
-  height: 0;
-  width: 0;
-  position: absolute;
-  top: -40px;
-  left: 50%;
-  margin-left: -10px;
-  border: 20px solid transparent;
-  border-bottom-color: $background-color;
-}

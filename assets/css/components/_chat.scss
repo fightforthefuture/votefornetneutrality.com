@@ -6,6 +6,10 @@
   flex-direction: column;
   height: $gutter*28;
   overflow-y: auto;
+  padding-bottom: 0;
+}
+.messages > :last-child {
+  padding-bottom: $gutter*2; // NOTE: Workaround for this bug: https://bugzilla.mozilla.org/show_bug.cgi?id=748518
 }
 
 // Chat > Message on the left

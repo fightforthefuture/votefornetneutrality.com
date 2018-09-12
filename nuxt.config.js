@@ -25,7 +25,13 @@ module.exports = {
   /*
   ** Customize the progress bar color
   */
-  loading: { color: '#3B8070' }, // TODO: choose theme color
+  loading: { color: '#FF754A' },
+  /*
+  ** Environment configuration
+  */
+  env: {
+    botApiUrl: process.env.BOT_API_URL || 'https://vfnnbot-api.herokuapp.com'
+  },
   /*
   ** Build configuration
   */

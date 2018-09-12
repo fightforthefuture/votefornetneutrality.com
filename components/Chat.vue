@@ -124,7 +124,7 @@ export default {
       // POST to Chatbot API
       try {
         const { data } = await axios.post(
-          'https://vfnnbot-api.herokuapp.com/conversations',
+          `${process.env.botApiUrl}/conversations`,
           {
             "type": "web",
             "recipients": [ {"username": this.phoneNumber } ]

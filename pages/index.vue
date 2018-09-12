@@ -17,8 +17,9 @@
           <div class="sml-c12 lrg-c8 grid-center text-center">
             <h2>How does it work?</h2>
             <p class="sml-push-y2 med-push-y3">
-              Simply enter your number above or text HELLO to (XXX) XXX-XXXX and
-              respond to a few questions&hellip; it only takes a minute to
+              Simply enter your number above or text
+              <strong>HELLO</strong> to <strong>{{ botPhoneNumber }}</strong>
+              and respond to a few questions&hellip; it only takes a minute to
               complete! Once you&rsquo;re done, we&rsquo;ll help you register to
               vote and give you everything you need to get to the polls. In
               several states, your answers submit directly to state online forms
@@ -256,6 +257,10 @@ export default {
         url: config.sharing.url
       })
     }
+  },
+
+  computed: {
+    botPhoneNumber() { return config.botPhoneNumber }
   },
 
   methods: {

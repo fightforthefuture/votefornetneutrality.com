@@ -17,8 +17,10 @@
           <input type="tel"
                  v-model="phoneNumber"
                  placeholder="Phone number"
-                 class="med-flex-2" />
-          <button class="btn btn-block btn-lrg" href="#TODO">
+                 class="med-flex-2"
+                 required />
+          <button class="btn btn-block btn-lrg"
+                  :disabled="phoneNumber === null || phoneNumber.length <= 0">
             Text me
           </button>
         </form>
@@ -36,6 +38,7 @@
 </template>
 
 <script>
+import axios from 'axios'
 import { smoothScrollWithinElement } from '~/assets/js/helpers'
 import Message from '~/components/Message'
 
@@ -73,34 +76,55 @@ export default {
       })
     },
 
-    formSubmit() {
-      // TODO: validate and real submit
+    async formSubmit() {
+      // Display phone number the voter typed as their "reply"
       this.messages.push({
         type: 'bubble',
         style: 'reply',
         content: this.phoneNumber
       })
-      // TODO: real success
-      // WARNING: Since there is no server a setTimeout is ok. However, with a
-      // server this is a dangerous eval. Remove if this project ever is hosted
-      // with a JS server.
-      setTimeout(() => {
-        this.messages.push({
-          type: 'party-emoji'
-        })
-      }, 1500)
-      setTimeout(() => {
+
+      // POST to Chatbot API
+      try {
+        const { data } = await axios.post(
+          'https://vfnnbot-api.herokuapp.com/conversations',
+          {
+            "type": "web",
+            "recipients": [ {"username": this.phoneNumber } ]
+          }
+        )
+        // Display messages on success
+        // WARNING: Since there is no server a setTimeout is ok. However, with a
+        // server this is a dangerous eval. Remove if this project ever is hosted
+        // with a JS server.
+        setTimeout(() => {
+          this.messages.push({
+            type: 'party-emoji'
+          })
+        }, 1500)
+        setTimeout(() => {
+          this.messages.push({
+            type: 'bubble',
+            style: 'success',
+            content: "<strong>Awesome!</strong> I just sent you a text. Check your phone to make sure you received it."
+          })
+        }, 3000)
+        setTimeout(() => {
+          this.messages.push({
+            type: 'disclaimer'
+          })
+        }, 4500)
+        return data
+      }
+      catch (error) {
+        // Display messages on error
         this.messages.push({
           type: 'bubble',
-          style: 'success',
-          content: "<strong>Awesome!</strong> I just sent you a text. Check your phone to make sure you received it."
+          style: 'error',
+          content: 'Sorry something went wrong. Please check your phone number and try again.'
         })
-      }, 3000)
-      setTimeout(() => {
-        this.messages.push({
-          type: 'disclaimer'
-        })
-      }, 4500)
+        return error
+      }
     }
   }
 }

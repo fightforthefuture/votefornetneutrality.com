@@ -228,8 +228,6 @@
         </div> <!-- .row -->
       </div> <!-- .wrapper -->
     </section>
-
-    <SocialSidebar />
   </div>
 </template>
 
@@ -238,13 +236,11 @@ import config from '~/config'
 import { createMetaTags, smoothScrollToElement } from '~/assets/js/helpers'
 import Logo from '~/components/Logo'
 import Chat from '~/components/Chat'
-import SocialSidebar from '~/components/SocialSidebar'
 
 export default {
   components: {
     Logo,
-    Chat,
-    SocialSidebar
+    Chat
   },
 
   head() {

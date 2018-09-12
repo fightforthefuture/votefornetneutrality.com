@@ -13,25 +13,46 @@
       </div> <!-- .messages -->
 
       <div class="sml-pad-2 fill-brand-darkest-color is-rounded-bottom">
-        <form @submit.prevent="formSubmit" class="flex-row">
-          <input type="tel"
-                 v-model="phoneNumber"
-                 placeholder="Phone number"
-                 class="med-flex-2"
-                 required />
-          <button class="btn btn-block btn-lrg"
-                  :disabled="phoneNumber === null || phoneNumber.length <= 0">
-            Text me
-          </button>
-        </form>
-        <p class="sml-push-y1 text-center">
-          <small>
-            <a href="https://www.fightforthefuture.org/" target="_blank">
-              Fight for the Future</a>
-            &amp; its Education Fund will contact you.
-            <nuxt-link to="/privacy">Privacy Policy</nuxt-link>
-          </small>
-        </p>
+        <div v-if="!isFormCompleted">
+          <form @submit.prevent="formSubmit" class="flex-row">
+            <input type="tel"
+                   v-model="phoneNumber"
+                   placeholder="Phone number"
+                   class="med-flex-2"
+                   required />
+            <button class="btn btn-block btn-lrg"
+                    :disabled="phoneNumber === null || phoneNumber.length <= 0">
+              Text me
+            </button>
+          </form>
+          <p class="sml-push-y1 text-center">
+            <small>
+              <a href="https://www.fightforthefuture.org/" target="_blank">
+                Fight for the Future</a>
+              &amp; its Education Fund will contact you.
+              <nuxt-link to="/privacy">Privacy Policy</nuxt-link>
+            </small>
+          </p>
+        </div> <!-- v-if-->
+        <div v-if="isFormCompleted">
+          <ul class="flex-center text-center">
+            <li class="sml-pad-x1">Help us spread the word:</li>
+            <li>
+              <ShareButton
+                network="twitter"
+                :is-button="false"
+                :should-display-text="false"
+                @click.native="$trackClick('twitter_share_button_after_signup')" />
+            </li>
+            <li class="sml-pad-x1">
+              <ShareButton
+                network="facebook"
+                :is-button="false"
+                :should-display-text="false"
+                @click.native="$trackClick('facebook_share_button_after_signup')" />
+            </li>
+          </ul>
+        </div> <!-- v-if-->
       </div> <!-- form container -->
     </div> <!-- widget -->
   </div> <!-- .with-glow -->
@@ -41,16 +62,19 @@
 import axios from 'axios'
 import { smoothScrollWithinElement } from '~/assets/js/helpers'
 import Message from '~/components/Message'
+import ShareButton from '~/components/ShareButton'
 
 export default {
   components: {
-    Message
+    Message,
+    ShareButton
   },
 
   data () {
     return {
       phoneNumber: null,
-      messages: []
+      messages: [],
+      isFormCompleted: false
     }
   },
 
@@ -68,6 +92,7 @@ export default {
     initChatBot() {
       // Start a new chat flow and clear any existing ones
       this.phoneNumber = null
+      this.isFormCompleted = false
       this.messages = []
       this.messages.push({
         type: 'bubble',
@@ -101,19 +126,20 @@ export default {
           this.messages.push({
             type: 'party-emoji'
           })
-        }, 1500)
+          this.isFormCompleted = true
+        }, 1000) // Allows time for the "reply" message's CSS transition in
         setTimeout(() => {
           this.messages.push({
             type: 'bubble',
             style: 'success',
             content: "<strong>Awesome!</strong> I just sent you a text. Check your phone to make sure you received it."
           })
-        }, 3000)
+        }, 2500) // +1.5 seconds
         setTimeout(() => {
           this.messages.push({
             type: 'disclaimer'
           })
-        }, 4500)
+        }, 4000) // +1.5 seconds
         return data
       }
       catch (error) {

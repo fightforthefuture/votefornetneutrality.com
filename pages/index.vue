@@ -206,28 +206,7 @@
       </div> <!-- .wrapper -->
     </section>
 
-    <section id="scoreboard" class="sml-pad-y2 med-pad-y4">
-      <div class="wrapper">
-        <div class="row">
-          <div class="sml-c12 lrg-c8 grid-center text-center">
-            <h2>Find out where your lawmakers stand</h2>
-            <p class="sml-push-y2 med-push-y3">
-              We&rsquo;re keeping track of who supports net neutrality&hellip;
-              and who doesn&rsquo;t. Now you can, too. Below you'll find a link
-              to a list of your state&rsquo;s Senators and Representatives.
-              Check out whether or not your lawmakers have signed the CRA to
-              support net neutrality protections. If not, let them know how
-              important this issue is to you.
-            </p>
-            <a class="btn btn-block sml-push-y2 med-push-y3"
-               href="https://www.battleforthenet.com/scoreboard/"
-               target="_blank">
-              View the scoreboard
-            </a>
-          </div> <!-- .c -->
-        </div> <!-- .row -->
-      </div> <!-- .wrapper -->
-    </section>
+    <Scoreboard/>
   </div>
 </template>
 
@@ -236,16 +215,23 @@ import config from '~/config'
 import { createMetaTags, smoothScrollToElement } from '~/assets/js/helpers'
 import Logo from '~/components/Logo'
 import Chat from '~/components/Chat'
+import Scoreboard from '~/components/Scoreboard'
 
 export default {
   components: {
     Logo,
-    Chat
+    Chat,
+    Scoreboard
   },
 
   head() {
     return {
       title: config.sharing.title,
+
+      script: [
+        { src: `https://maps.googleapis.com/maps/api/js?key=${config.googleApiKey}&libraries=places` }
+      ],
+
       meta: createMetaTags({
         title: config.sharing.title,
         description: config.sharing.description,

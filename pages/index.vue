@@ -77,7 +77,7 @@
       </div> <!-- .wrapper -->
     </section>
 
-    <section id="widget" class="sml-pad-y2 med-pad-y4 fill-brand-dark-color">
+    <section id="widget" class="sml-pad-y2 med-pad-y4 fill-brand-dark">
       <div class="wrapper">
         <div class="row">
           <div class="sml-c12 lrg-c8 grid-center text-center">

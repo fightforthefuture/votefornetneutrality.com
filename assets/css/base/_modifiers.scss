@@ -49,9 +49,15 @@
 
 // Modifiers > Fills
 
-.fill-brand-dark-color {
+.fill-brand-dark {
   background: $brand-dark-color;
 }
-.fill-brand-darkest-color {
+.fill-brand-darkest {
   background: $brand-darkest-color;
+}
+.fill-success {
+  background: $success-color;
+}
+.fill-warn {
+  background: $warn-color;
 }

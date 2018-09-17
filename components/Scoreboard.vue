@@ -28,11 +28,11 @@
 
     <section v-if="results"
              id="results"
-             class="sml-pad-y2 med-pad-y4 fill-brand-dark-color">
+             class="sml-pad-y2 med-pad-y4 fill-brand-dark">
       <div class="wrapper">
         <div class="row">
-          <div class="sml-c12 lrg-c8 grid-center text-center">
-            <h2>Results</h2>
+          <div class="sml-c12 lrg-c8 grid-center">
+            <h2 class="text-center">Results</h2>
 
             <Candidates :race="results.senate" title="Senate" />
             <Candidates :race="results.house" title="House" />

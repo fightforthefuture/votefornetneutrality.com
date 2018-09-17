@@ -12,7 +12,7 @@
         </div> <!-- message -->
       </div> <!-- .messages -->
 
-      <div class="sml-pad-2 fill-brand-darkest-color is-rounded-bottom">
+      <div class="sml-pad-2 fill-brand-darkest is-rounded-bottom">
         <div v-if="!isFormCompleted">
           <form @submit.prevent="formSubmit" class="flex-row">
             <input type="tel"

@@ -229,7 +229,7 @@ export default {
       title: config.sharing.title,
 
       script: [
-        { src: `https://maps.googleapis.com/maps/api/js?key=${config.googleApiKey}&libraries=places` }
+        { src: `https://maps.googleapis.com/maps/api/js?key=${process.env.googleApiKey}&libraries=places` }
       ],
 
       meta: createMetaTags({

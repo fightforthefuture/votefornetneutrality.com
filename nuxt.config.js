@@ -30,7 +30,8 @@ module.exports = {
   ** Environment configuration
   */
   env: {
-    botApiUrl: process.env.BOT_API_URL || 'https://vfnnbot-api.herokuapp.com'
+    botApiUrl: process.env.BOT_API_URL || 'https://vfnnbot-api.herokuapp.com',
+    googleApiKey: process.env.GOOGLE_API_KEY || 'AIzaSyAYnLN4teGy30Kjenl6taaMq5kPg2CkXwU'
   },
   /*
   ** Build configuration

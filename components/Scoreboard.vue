@@ -40,14 +40,36 @@
               <Candidates :race="results.senate" />
               <Candidates :race="results.house" />
             </section>
+          </div> <!-- .c -->
+        </div> <!-- .row -->
+      </div> <!-- .wrapper -->
+    </section>
 
-            <section id="key-races"
-                     class="sml-pad-2 med-pad-4 sml-push-y4 is-rounded with-border-warn">
-              <p class="text-warn">
-                We&rsquo;ve identified 10 extremely close races across the
-                country where net neutrality supporters can make a difference.
-                Click on the links below to help out.
-              </p>
+    <section id="key-races" class="sml-pad-y2 med-pad-y4">
+      <div class="wrapper">
+        <div class="row">
+          <div class="sml-c12 lrg-c8 grid-center text-center">
+            <h2>Help out in these key races</h2>
+            <p class="sml-push-y2 med-push-y3">
+              We&rsquo;ve identified 22 extremely close races across the country
+              where net neutrality supporters can make a difference. Click on
+              the links below to help out.
+            </p>
+          </div> <!-- .c -->
+        </div> <!-- .row -->
+
+        <div class="row">
+          <div class="sml-c12 lrg-c9 grid-center">
+            <section v-if="keyRaces"
+                     class="sml-pad-2 med-pad-4 sml-push-y4 fill-brand-darkest is-rounded">
+              <Candidates
+                v-for="(race, index) in keyRaces.senate"
+                :key="`key-senate-race-${index}`"
+                :race="race" />
+              <Candidates
+                v-for="(race, index) in keyRaces.house"
+                :key="`key-house-race-${index}`"
+                :race="race" />
             </section>
           </div> <!-- .c -->
         </div> <!-- .row -->
@@ -69,12 +91,14 @@ export default {
     return {
       isLoading: false,
       address: null,
-      results: null
+      results: null,
+      keyRaces: null
     }
   },
 
   mounted() {
-    this.autocompleteAddress();
+    this.autocompleteAddress()
+    this.fetchKeyRaces()
   },
 
   methods: {
@@ -99,6 +123,16 @@ export default {
       const { data } = await axios.get(`https://vfnn-scoreboard-api.fftf.xyz/?address=${this.address}`)
       this.results = data
       this.isLoading = false
+    },
+
+    async fetchKeyRaces(){
+      try {
+        const { data } = await axios.get('https://data.battleforthenet.com/vfnn/scoreboard/important.json')
+        this.keyRaces = data
+      }
+      catch (error) {
+        console.error(error)
+      }
     }
   }
 }

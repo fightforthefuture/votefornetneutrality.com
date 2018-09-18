@@ -6,8 +6,11 @@
           <div class="sml-c12 lrg-c8 grid-center text-center">
             <h2>See where the canidates stand</h2>
             <p class="sml-push-y2 med-push-y3">
-              We&rsquo;re keeping track of who supports net neutrality&hellip;
-              and who doesn&rsquo;t.
+              Enter your address below. We&rsquo;ll provide you with a list of
+              all the candidates running for the Senate and House in your
+              district, and show you where they stand on restoring net
+              neutrality. Then we&rsquo;ll show you the most important things
+              you can do to make sure the free and open Internet wins in 2018.
             </p>
 
             <form class="flex-row sml-push-y2 med-push-y3"
@@ -18,7 +21,7 @@
                      placeholder="Street Address, City, State ZIP"
                      ref="addressInput" />
               <button class="btn" :disabled="isLoading">
-                Search
+                Let&rsquo;s go
               </button>
             </form>
           </div> <!-- .c -->
@@ -37,16 +40,15 @@
               <Candidates :race="results.senate" />
               <Candidates :race="results.house" />
             </section>
-          </div> <!-- .c -->
-        </div> <!-- .row -->
-      </div> <!-- .wrapper -->
-    </section>
 
-    <section id="key-races" class="sml-pad-y2 med-pad-y4">
-      <div class="wrapper">
-        <div class="row">
-          <div class="sml-c12 lrg-c8 grid-center text-center">
-            <h2>Key Races</h2>
+            <section id="key-races"
+                     class="sml-pad-2 med-pad-4 sml-push-y4 is-rounded with-border-warn">
+              <p class="text-warn">
+                We&rsquo;ve identified 10 extremely close races across the
+                country where net neutrality supporters can make a difference.
+                Click on the links below to help out.
+              </p>
+            </section>
           </div> <!-- .c -->
         </div> <!-- .row -->
       </div> <!-- .wrapper -->

@@ -55,6 +55,25 @@
               where net neutrality supporters can make a difference. Click on
               the links below to help out.
             </p>
+
+            <div class="row">
+              <div class="sml-c12 lrg-c4 sml-push-y2">
+                <a href="#TODO" target="_blank" class="btn btn-block btn-dark">
+                  Volunteer <small>to text people in key districts</small>
+                </a>
+              </div> <!-- .c -->
+              <div class="sml-c12 lrg-c4 sml-push-y2">
+                <a href="#TODO" target="_blank" class="btn btn-block btn-dark">
+                  Join <small>your local Facebook Group</small>
+                </a>
+              </div> <!-- .c -->
+              <div class="sml-c12 lrg-c4 sml-push-y2">
+                <a href="#TODO" target="_blank" class="btn btn-block btn-dark">
+                  Donate <small>to educate voters in key districts</small>
+                </a>
+              </div> <!-- .c -->
+            </div> <!-- .row -->
+
           </div> <!-- .c -->
         </div> <!-- .row -->
 

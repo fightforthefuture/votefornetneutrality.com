@@ -1,0 +1,16 @@
+// Candidate
+
+.candidate {
+  position: relative;
+}
+.candidate .candidate-content {
+  min-height: 109px; // NOTE: magic number could change
+  padding-bottom: $gutter*2 + 4; // NOTE: Height of "vote" tag
+}
+.candidate .vote-tag {
+  position: absolute;
+  bottom: $gutter;
+  right:  $gutter;
+  padding: $gutter/2 0 0 $gutter;
+  border-top-left-radius: $default-border-radius;
+}

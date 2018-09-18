@@ -37,8 +37,8 @@
                 Neutrality
               </h2>
 
-              <Candidates :race="results.senate" />
-              <Candidates :race="results.house" />
+              <Candidates :race="results.senate" key="local-senate" />
+              <Candidates :race="results.house" key="local-house" />
             </section>
           </div> <!-- .c -->
         </div> <!-- .row -->

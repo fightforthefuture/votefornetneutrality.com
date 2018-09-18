@@ -1,9 +1,9 @@
 <template>
-  <div v-if="race" class="sml-push-y2">
-    <h3 class="text-center">{{ title }}</h3>
+  <div v-if="race" class="sml-push-y2 med-push-y4">
+    <h3 class="section-title text-center"><span>{{ race.title }}</span></h3>
     <div class="row">
       <div v-for="candidate in race.candidates" :key="candidate.id"
-           class="sml-c12 med-c6 sml-push-y2">
+           class="sml-c12 med-c6 sml-push-y2 med-push-y3">
         <div class="sml-pad-1 is-rounded candidate fill-brand-med"
              :class="{
                 'fill-success': candidate.supporter === true,
@@ -41,10 +41,6 @@
 <script>
 export default {
   props: {
-    title: {
-      type: String,
-      required: true
-    },
     race: {
       type: Object,
       required: true

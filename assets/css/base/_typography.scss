@@ -43,7 +43,6 @@ h2 {
 }
 h3 {
   font-size: $m-font-size-3;
-  text-transform: none;
 
   @include respond-to(lrg) {
     font-size: $font-size-3;
@@ -58,6 +57,43 @@ h6 {
   @include respond-to(lrg) {
     font-size: $font-size-6;
   }
+}
+
+// Typography > Headings > Section Title
+.section-title {
+  position: relative;
+}
+.section-title:before {
+  display: block;
+  content: '';
+  position: absolute;
+  top: 17px; // NOTE: magic number
+  width: 100%;
+  height: $gutter/2;
+  background: $brand-dark-color;
+}
+.section-title span {
+  position: relative;
+  display: inline-block;
+  padding: $gutter/2 $gutter*2;
+  z-index: 10;
+  background: $brand-dark-color;
+  border-radius: $default-border-radius;
+}
+.section-title span:before,
+.section-title span:after {
+  display: block;
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -$gutter*2;
+  width: $gutter*2;
+  height: 100%;
+  background: $brand-darkest-color;
+}
+.section-title span:after {
+  left: auto;
+  right: -$gutter*2;
 }
 
 // Typography > Text
@@ -91,6 +127,7 @@ small {
 }
 .text-white {
   color: $white;
+  -webkit-text-fill-color: $white;
 }
 .text-brand {
   color: $brand-color;

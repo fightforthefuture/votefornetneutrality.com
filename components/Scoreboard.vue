@@ -23,19 +23,20 @@
             </form>
           </div> <!-- .c -->
         </div> <!-- .row -->
-      </div> <!-- .wrapper -->
-    </section>
 
-    <section v-if="results"
-             id="results"
-             class="sml-pad-y2 med-pad-y4 fill-brand-dark">
-      <div class="wrapper">
         <div class="row">
-          <div class="sml-c12 lrg-c8 grid-center">
-            <h2 class="text-center">Results</h2>
+          <div class="sml-c12 lrg-c9 grid-center">
+            <section v-if="results"
+                     id="results"
+                     class="sml-pad-2 med-pad-4 sml-push-y4 fill-brand-darkest is-rounded">
+              <h2 class="text-center text-white">
+                Here&rsquo;s where candidates in your area stand on Net
+                Neutrality
+              </h2>
 
-            <Candidates :race="results.senate" title="Senate" />
-            <Candidates :race="results.house" title="House" />
+              <Candidates :race="results.senate" />
+              <Candidates :race="results.house" />
+            </section>
           </div> <!-- .c -->
         </div> <!-- .row -->
       </div> <!-- .wrapper -->

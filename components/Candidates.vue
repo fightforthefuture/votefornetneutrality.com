@@ -3,12 +3,19 @@
     <h3 class="section-title text-center"><span>{{ race.title }}</span></h3>
     <div class="row">
       <div v-for="candidate in race.candidates" :key="candidate.id"
-           class="sml-c12 med-c6 sml-push-y2 med-push-y3">
+           class="sml-c12 lrg-c6 sml-push-y2 med-push-y3">
         <div class="sml-pad-1 is-rounded candidate fill-brand-med"
              :class="{
                 'fill-success': candidate.supporter === true,
                 'fill-warn': candidate.supporter === false
              }">
+          <div class="candidate-photo"
+               :class="{
+                  'vote-yes': candidate.supporter === true,
+                  'vote-no': candidate.supporter === false
+               }">
+            <img :src="candidate.photo" :alt="`${candidate.name} photo`"/>
+          </div> <!-- .candidate-photo -->
           <div class="sml-pad-1 is-rounded fill-brand-darkest candidate-content">
             <h4 :class="{
                     'text-success': candidate.supporter === true,

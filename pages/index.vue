@@ -11,72 +11,6 @@
       </div> <!-- .wrapper -->
     </section>
 
-    <section id="how" class="sml-pad-y2 med-pad-y4">
-      <div class="wrapper">
-        <div class="row">
-          <div class="sml-c12 lrg-c8 grid-center text-center">
-            <h2>How does it work?</h2>
-            <p class="sml-push-y2 med-push-y3">
-              Simply enter your number above or text
-              <strong>HELLO</strong> to <strong>{{ botPhoneNumber }}</strong>
-              and respond to a few questions&hellip; it only takes a minute to
-              complete! Once you&rsquo;re done, we&rsquo;ll help you register to
-              vote and give you everything you need to get to the polls. In
-              several states, your answers submit directly to state online forms
-              for voter registration, so there are no paper forms to fill out.
-              In other states, we send you a pre-filled form by email or — if
-              you don&rsquo;t have a printer — by mail. We include a stamped
-              envelope, so to complete your registration you just have to sign
-              and mail it.
-            </p>
-            <p>
-              We also provide links to your state&rsquo;s own online
-              registration system, if they have one. And as election day
-              approaches, we send you all the information you need to vote,
-              including your polling location, early voting info, election day
-              reminders including a handy calendar invite, voter ID requirements
-              &amp; more.
-            </p>
-            <p>
-              Before submitting your registration, we&rsquo;ll give you the
-              chance to verify that your information is correct. Do not provide
-              false information, as your state may consider that a criminal
-              offense. When you&rsquo;re done, we will send you your polling
-              location, early voting info, an &ldquo;I&rsquo;m voting&rdquo;
-              selfie badge, election day reminders (including a handy calendar
-              invite), voter ID requirements, streamlined ways to register to
-              vote &amp; more.
-            </p>
-            <p>
-              And don&rsquo;t worry. We won&rsquo;t share your phone number with
-              anyone, ever. You can read about our privacy policy or check out
-              our terms of service. Remember that you&rsquo;re texting, so data
-              &amp; message rates may apply. You can text STOP any time to stop
-              receiving messages.
-            </p>
-            <ul class="hoz">
-              <li>
-                <a class="btn btn-dark sml-push-y2 med-push-y3"
-                   @click.prevent="scrollTo('#text-me')">
-                  Text Me!
-                </a>
-              </li>
-              <li>
-                <a class="btn btn-light sml-push-y2 med-push-y3"
-                   href="https://m.me/hellovote"
-                   target="_blank">
-                  <img src="~assets/images/facebook-messenger-logo.png"
-                       alt="Facebook messenger logo"
-                       class="img-fb-messenger">
-                  Sign up with Messenger
-                </a>
-              </li>
-            </ul>
-          </div> <!-- .c -->
-        </div> <!-- .row -->
-      </div> <!-- .wrapper -->
-    </section>
-
     <Scoreboard/>
 
     <section id="widget" class="sml-pad-y2 med-pad-y4 fill-brand-dark">
@@ -182,6 +116,59 @@
             </p>
             <p>
               TODO: Instagram Story Images
+            </p>
+          </div> <!-- .c -->
+        </div> <!-- .row -->
+      </div> <!-- .wrapper -->
+    </section>
+
+    <section id="how" class="sml-pad-y2 med-pad-y4">
+      <div class="wrapper">
+        <div class="row">
+          <div class="sml-c12 lrg-c8 grid-center text-center">
+            <h2>How does this work?</h2>
+            <p class="sml-push-y2 med-push-y3">
+              Simply enter your number above or text
+              <strong>HELLO</strong> to <strong>{{ botPhoneNumber }}</strong>
+              and respond to a few questions&hellip; it only takes a minute to
+            </p>
+
+            <p class="sml-push-y2 med-push-y3">
+              Simply enter your number above or text <strong>VOTE</strong> to
+              <strong>{{ botPhoneNumber }}</strong> and respond to a few
+              questions&hellip; it only takes a minute to complete! Once
+              you&rsquo;re done, we&rsquo;ll help you register to vote and give
+              you everything you need to get to the polls. In several states,
+              your answers submit directly to state online forms for voter
+              registration, so there are no paper forms to fill out. In other
+              states, we send you a pre-filled form by email or — if you
+              don&rsquo;t have a printer — by mail. We include a stamped
+              envelope, so to complete your registration you just have to sign
+              and mail it.
+            </p>
+            <p>
+              We also provide links to your state&rsquo;s own online
+              registration system, if they have one. And as election day
+              approaches, we send you all the information you need to vote,
+              including your polling location, early voting info, election day
+              reminders including a handy calendar invite, voter ID requirements
+              &amp; more.
+            </p>
+            <p>
+              Before submitting your registration, we&rsquo;ll give you the
+              chance to verify that your information is correct. Do not provide
+              false information, as your state may consider that a criminal
+              offense. When you&rsquo;re done, we will send you your polling
+              location, early voting info, an &ldquo;I&rsquo;m voting&rdquo;
+              selfie badge, election day reminders (including a handy calendar
+              invite), voter ID requirements, streamlined ways to register to
+              vote &amp; more.
+            </p>
+            <p>
+              You can read about our privacy policy or check out our terms of
+              service. Remember that you&rsquo;re texting, so data &amp; message
+              rates may apply. You can text STOP to 384-387 any time to stop
+              receiving messages.
             </p>
           </div> <!-- .c -->
         </div> <!-- .row -->

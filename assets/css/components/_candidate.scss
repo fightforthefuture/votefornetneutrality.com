@@ -4,7 +4,7 @@
   position: relative;
 }
 .candidate .candidate-content {
-  min-height: 109px; // NOTE: magic number could change
+  min-height: 118px; // NOTE: magic number could change
   padding-bottom: $gutter*2 + 4; // NOTE: Height of "vote" tag
 }
 .candidate .vote-tag {

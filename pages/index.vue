@@ -165,10 +165,13 @@
               vote &amp; more.
             </p>
             <p>
-              You can read about our privacy policy or check out our terms of
-              service. Remember that you&rsquo;re texting, so data &amp; message
-              rates may apply. You can text STOP to 384-387 any time to stop
-              receiving messages.
+              You can read about our
+              <nuxt-link to="/privacy">privacy policy</nuxt-link> or check out
+              our <nuxt-link to="/terms">terms of service</nuxt-link>.
+              Remember that you&rsquo;re texting, so data &amp; message
+              rates may apply. You can text <strong>STOP</strong> to
+              <strong>{{ botPhoneNumber }}</strong> any time to stop receiving
+              messages.
             </p>
           </div> <!-- .c -->
         </div> <!-- .row -->

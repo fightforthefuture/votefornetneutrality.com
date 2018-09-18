@@ -29,8 +29,9 @@
             <small>
               <a href="https://www.fightforthefuture.org/" target="_blank">
                 Fight for the Future</a>
-              &amp; its Education Fund will contact you.
-              <nuxt-link to="/privacy">Privacy Policy</nuxt-link>
+              will contact you via SMS. Message &amp; data rates apply. Read our
+              <nuxt-link to="/privacy">Privacy Policy</nuxt-link> and
+              <nuxt-link to="/terms">Terms of Service</nuxt-link>.
             </small>
           </p>
         </div> <!-- v-if-->

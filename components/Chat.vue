@@ -36,23 +36,7 @@
           </p>
         </div> <!-- v-if-->
         <div v-if="isFormCompleted">
-          <ul class="flex-center text-center">
-            <li class="sml-pad-x1">Help us spread the word:</li>
-            <li>
-              <ShareButton
-                network="twitter"
-                :is-button="false"
-                :should-display-text="false"
-                @click.native="$trackClick('twitter_share_button_after_signup')" />
-            </li>
-            <li class="sml-pad-x1">
-              <ShareButton
-                network="facebook"
-                :is-button="false"
-                :should-display-text="false"
-                @click.native="$trackClick('facebook_share_button_after_signup')" />
-            </li>
-          </ul>
+          <SocialShareButtons/>
         </div> <!-- v-if-->
       </div> <!-- form container -->
     </div> <!-- widget -->
@@ -63,12 +47,12 @@
 import axios from 'axios'
 import { smoothScrollWithinElement } from '~/assets/js/helpers'
 import Message from '~/components/Message'
-import ShareButton from '~/components/ShareButton'
+import SocialShareButtons from '~/components/SocialShareButtons'
 
 export default {
   components: {
     Message,
-    ShareButton
+    SocialShareButtons
   },
 
   data () {

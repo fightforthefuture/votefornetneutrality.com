@@ -105,8 +105,23 @@ export default {
       this.messages.push({
         type: 'bubble',
         style: 'default',
-        content: 'Please enter your phone number, so we can continue via text message.'
+        content: "Hi! I\'m HelloVote, and I\'m here to help."
       })
+      // WARNING: Dangerous eval. Remove `setTimeout` if hosted with a JS server.
+      setTimeout(() => {
+        this.messages.push({
+          type: 'bubble',
+          style: 'default',
+          content: "I can tell you where candidates in your area stand on net neutrality, help you register to vote, remind your friends to vote, and more."
+        })
+      }, 1500) // +1.5 seconds
+      setTimeout(() => {
+        this.messages.push({
+          type: 'bubble',
+          style: 'default',
+          content: "Please enter your phone number, and I\'ll text you to get started."
+        })
+      }, 3000) // +1.5 seconds
     },
 
     scrollToLastMessage(){

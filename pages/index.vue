@@ -77,11 +77,13 @@
       </div> <!-- .wrapper -->
     </section>
 
+    <Scoreboard/>
+
     <section id="widget" class="sml-pad-y2 med-pad-y4 fill-brand-dark">
       <div class="wrapper">
         <div class="row">
           <div class="sml-c12 lrg-c8 grid-center text-center">
-            <h2>Widgets</h2>
+            <h2>Widget</h2>
             <p class="sml-push-y2 med-push-y3">
               Add our widget to your site. It&rsquo;s a small (but powerful!)
               notice to your site&rsquo;s users that something BIG is happening
@@ -185,28 +187,6 @@
         </div> <!-- .row -->
       </div> <!-- .wrapper -->
     </section>
-
-    <section id="participants" class="sml-pad-y2 med-pad-y4">
-      <div class="wrapper">
-        <div class="row">
-          <div class="sml-c12 lrg-c8 grid-center text-center">
-            <h2>Participants</h2>
-            <p class="sml-push-y2 med-push-y3">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus
-              suscipit odio sapien, vitae suscipit nibh accumsan quis. Lorem
-              ipsum dolor sit amet, consectetur adipiscing elit. Orci varius
-              natoque penatibus et magnis dis parturient montes, nascetur
-              ridiculus mus.
-            </p>
-            <p>
-              TODO: Participant logos, or remove section
-            </p>
-          </div> <!-- .c -->
-        </div> <!-- .row -->
-      </div> <!-- .wrapper -->
-    </section>
-
-    <Scoreboard/>
   </div>
 </template>
 

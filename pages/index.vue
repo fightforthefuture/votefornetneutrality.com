@@ -1,3 +1,29 @@
+<style lang="scss" scoped>
+ul.fancy-bullets {
+  margin: $gutter * 2;
+  font-size: 90%;
+
+  li {
+    border: 1px solid $brand-med-color;
+    border-radius: $default-border-radius;
+    margin-bottom: $gutter;
+    padding: $gutter $gutter * 1.5;
+    position: relative;
+
+    &:before {
+      content: " ";
+      background-color: $brand-med-color;
+      position: absolute;
+      left: -5px;
+      top: 20px;
+      width: 10px;
+      height: 10px;
+      border-radius: 100%;
+    }
+  }
+}
+</style>
+
 <template>
   <div>
     <section id="text-me" class="sml-pad-y2 med-pad-y4">
@@ -9,6 +35,24 @@
           </div> <!-- .c -->
         </div> <!-- .row -->
       </div> <!-- .wrapper -->
+    </section>
+
+    <section id="plan" class="sml-pad-y2 med-pad-y4">
+      <div class="wrapper">
+        <div class="row">
+          <div class="sml-c12 lrg-c8 grid-center text-center">
+            <h2>HERE’S THE PLAN</h2>
+            <p class="sml-push-y2 med-push-y3">Congress can save net neutrality but House leadership is blocking the vote to restore it. To force the vote and win, we have to make net neutrality a deciding factor in the 2018 elections. We’re telling our elected officials: sign the discharge petition to restore net neutrality, or face the wrath of the Internet on Election Day. Starting September 25th, we’re enlisting the entire Internet in a mission to educate every single voter about where the candidates stand on restoring net neutrality, and mobilize net neutrality supporters to get out the vote in and make a difference in the most important races. Here’s how:</p>
+            <ul class="fancy-bullets">
+              <li>Registering as many net neutrality supporters to vote for the first time as possible. Tell everyone to text VOTE to 384-387 to get started. (Message and data rates apply, reply STOP to opt out.)</li>
+              <li>Educating first-time and non voters about where their candidates stand with our updated Vote for Net Neutrality <a href="#">scorecard</a>.</li>
+              <li>Mobilizing <a href="#">volunteers</a> across the Internet to text voters in key districts where we can have the most impact.</li>
+              <li>Recruiting <a href="#">local action teams</a> to organize protests, pass out lawn signs, and do voter education at the polls in key districts.</li>
+              <li>Spreading the word. <a href="#">Click here to find</a> Vote for Net Neutrality tweets, social media materials, graphics, and more.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
     </section>
 
     <Scoreboard/>

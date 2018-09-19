@@ -1,3 +1,53 @@
+<style lang="scss" scoped>
+$warning-color: #f97054;
+
+@mixin party-button($bg-color, $small-color) {
+  background-color: $bg-color;
+  box-shadow: 0px -1px 0px lighten($bg-color, 10%);
+
+  small {
+    color: $small-color;
+  }
+
+  &:hover {
+    background-color: darken($bg-color, 10%);
+    box-shadow: 0px -1px 0px $bg-color;
+
+    small {
+      color: darken($small-color, 5%);
+    }
+  }
+}
+
+.btn-dark {
+  text-transform: none;
+  padding-left: 20px;
+  padding-right: 20px;
+  font-size: 20px;
+
+  small {
+    text-transform: uppercase;
+    line-height: 1.1;
+  }
+}
+
+.btn-donate {
+  @include party-button(#7845bc, #d7bdff);
+}
+
+.btn-facebook-group {
+  @include party-button(#3f63a5, #b2c8ff);
+}
+
+.btn-volunteer {
+  @include party-button(#d95391, #581827);
+}
+
+#key-races .fill-brand-darkest {
+  border: 1px solid $warning-color;
+}
+</style>
+
 <template>
   <div>
     <section id="scoreboard" class="sml-pad-y2 med-pad-y4">
@@ -21,7 +71,8 @@
                      placeholder="Street Address, City, State ZIP"
                      ref="addressInput" />
               <button class="btn" :disabled="isLoading">
-                Let&rsquo;s go
+                <span v-if="isLoading">Loading...</span>
+                <span v-else>Let&rsquo;s go</span>
               </button>
             </form>
           </div> <!-- .c -->
@@ -48,39 +99,37 @@
     <section id="key-races" class="sml-pad-y2 med-pad-y4">
       <div class="wrapper">
         <div class="row">
-          <div class="sml-c12 lrg-c8 grid-center text-center">
-            <h2>Help out in these key races</h2>
-            <p class="sml-push-y2 med-push-y3">
-              We&rsquo;ve identified 22 extremely close races across the country
-              where net neutrality supporters can make a difference. Click on
-              the links below to help out.
-            </p>
-
-            <div class="row">
-              <div class="sml-c12 lrg-c4 sml-push-y2">
-                <a href="#TODO" target="_blank" class="btn btn-block btn-dark">
-                  Volunteer <small>to text people in key districts</small>
-                </a>
-              </div> <!-- .c -->
-              <div class="sml-c12 lrg-c4 sml-push-y2">
-                <a href="#TODO" target="_blank" class="btn btn-block btn-dark">
-                  Join <small>your local Facebook Group</small>
-                </a>
-              </div> <!-- .c -->
-              <div class="sml-c12 lrg-c4 sml-push-y2">
-                <a href="#TODO" target="_blank" class="btn btn-block btn-dark">
-                  Donate <small>to educate voters in key districts</small>
-                </a>
-              </div> <!-- .c -->
-            </div> <!-- .row -->
-
-          </div> <!-- .c -->
-        </div> <!-- .row -->
-
-        <div class="row">
           <div class="sml-c12 lrg-c9 grid-center">
             <section v-if="keyRaces"
                      class="sml-pad-2 med-pad-4 sml-push-y4 fill-brand-darkest is-rounded">
+
+              <div class="text-center">
+                <h2>Help out in these key races</h2>
+                <p class="sml-push-y2 med-push-y3">
+                 We&rsquo;ve identified <a href="/races/">22 extremely close races</a> across the country
+                 where net neutrality supporters can make a difference. Click on
+                 the links below to help out.
+                </p>
+
+                <div class="row">
+                 <div class="sml-c12 lrg-c4 sml-push-y2">
+                   <a href="#TODO" target="_blank" class="btn btn-block btn-dark btn-volunteer">
+                     Volunteer <small>to text people in key districts</small>
+                   </a>
+                 </div> <!-- .c -->
+                 <div class="sml-c12 lrg-c4 sml-push-y2">
+                   <a href="#TODO" target="_blank" class="btn btn-block btn-dark btn-facebook-group">
+                     Join <small>your local Facebook Group</small>
+                   </a>
+                 </div> <!-- .c -->
+                 <div class="sml-c12 lrg-c4 sml-push-y2">
+                   <a href="#TODO" target="_blank" class="btn btn-block btn-dark btn-donate">
+                     Donate <small>to educate voters in key districts</small>
+                   </a>
+                 </div> <!-- .c -->
+                </div> <!-- .row -->
+              </div>
+
               <Candidates
                 v-for="(race, index) in keyRaces.senate"
                 :key="`key-senate-race-${index}`"
@@ -132,6 +181,7 @@ export default {
 
         if (place.formatted_address) {
           self.address = place.formatted_address
+          self.fetchCandidates()
         }
       })
     },

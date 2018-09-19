@@ -1,6 +1,4 @@
 <style lang="scss" scoped>
-$warning-color: #f97054;
-
 @mixin party-button($bg-color, $small-color) {
   background-color: $bg-color;
   box-shadow: 0px -1px 0px lighten($bg-color, 10%);
@@ -19,7 +17,7 @@ $warning-color: #f97054;
   }
 }
 
-.btn-dark {
+.btn-party {
   text-transform: none;
   padding-left: 20px;
   padding-right: 20px;
@@ -43,8 +41,34 @@ $warning-color: #f97054;
   @include party-button(#d95391, #581827);
 }
 
-#key-races .fill-brand-darkest {
-  border: 1px solid $warning-color;
+.warning-border {
+  border: 1px solid #f97054;
+  border-radius: $default-border-radius;
+}
+
+.target-photo {
+  position: relative;
+  border-radius: $default-border-radius;
+
+  img {
+    filter: grayscale(100%);
+    border-radius: $default-border-radius;
+  }
+
+  &:after {
+    border-radius: $default-border-radius;
+    display: block;
+    content: '';
+    position: absolute;
+    top:    0;
+    left:   0;
+    bottom: 0;
+    right:  0;
+    width:  100%;
+    height: 100%;
+    background: $warn-color;
+    opacity: 0.5;
+  }
 }
 </style>
 
@@ -78,11 +102,42 @@ $warning-color: #f97054;
           </div> <!-- .c -->
         </div> <!-- .row -->
 
-        <div class="row">
+        <div class="row" v-if="results">
           <div class="sml-c12 lrg-c9 grid-center">
-            <section v-if="results"
-                     id="results"
+            <section id="results"
                      class="sml-pad-2 med-pad-4 sml-push-y4 fill-brand-darkest is-rounded">
+
+              <div v-if="targetPolitician">
+                <div class="target-politician">
+                  <h2 class="text-center text-white">YOUR {{ targetPolitician.title }} OPPOSES NET NEUTRALITY AND THEY’RE FACING A TIGHT ELECTION</h2>
+
+                  <div class="warning-border sml-push-y2 sml-pad-2">
+                    <div class="row">
+                      <div class="sml-c12 sml-pad-x6 med-c4 med-pad-x1">
+                        <div class="target-photo">
+                          <img :src="targetPolitician.photo" :alt="targetPolitician.name">
+                        </div>
+                      </div>
+                      <div class="sml-c12 med-c8 sml-pad-y2 med-pad-y0">
+                        <p>Your current member of Congress, {{ targetPolitician.name }} took {{ targetPolitician.cable_contributions }} in “campaign donations” from big ISPs and refuses to support a resolution to restore net neutrality. Tell them to get on the right side of history or face the consequences. Then share this so everyone in your area knows where the candidates stand on the free and open Internet when they head to the polls.</p>
+                        <div class="row med-pad-y1">
+                          <div class="sml-c12 sml-pad-y1 med-c6 med-pad-y0">
+                            <a href="https://www.battleforthenet.com/call" class="btn btn-block btn-success">Call</a>
+                          </div>
+                          <div class="sml-c12 med-c6">
+                            <a href="https://www.battleforthenet.com" class="btn btn-block btn-brand-med">Write</a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="sml-pad-y2 grid-center">
+                  <SocialShareButtons />
+                </div>
+                <div class="sml-push-y4"></div>
+              </div>
+
               <h2 class="text-center text-white">
                 Here&rsquo;s where candidates in your area stand on Net
                 Neutrality
@@ -96,12 +151,12 @@ $warning-color: #f97054;
       </div> <!-- .wrapper -->
     </section>
 
-    <section id="key-races" class="sml-pad-y2 med-pad-y4">
+    <section id="key-races" class="sml-pad-y2">
       <div class="wrapper">
         <div class="row">
           <div class="sml-c12 lrg-c9 grid-center">
             <section v-if="keyRaces"
-                     class="sml-pad-2 med-pad-4 sml-push-y4 fill-brand-darkest is-rounded">
+                     class="sml-pad-2 med-pad-4 sml-push-y4 fill-brand-darkest is-rounded warning-border">
 
               <div class="text-center">
                 <h2>Help out in these key races</h2>
@@ -113,17 +168,17 @@ $warning-color: #f97054;
 
                 <div class="row">
                  <div class="sml-c12 lrg-c4 sml-push-y2">
-                   <a href="#TODO" target="_blank" class="btn btn-block btn-dark btn-volunteer">
+                   <a href="#TODO" target="_blank" class="btn btn-block btn-dark btn-party btn-volunteer">
                      Volunteer <small>to text people in key districts</small>
                    </a>
                  </div> <!-- .c -->
                  <div class="sml-c12 lrg-c4 sml-push-y2">
-                   <a href="#TODO" target="_blank" class="btn btn-block btn-dark btn-facebook-group">
+                   <a href="#TODO" target="_blank" class="btn btn-block btn-dark btn-party btn-facebook-group">
                      Join <small>your local Facebook Group</small>
                    </a>
                  </div> <!-- .c -->
                  <div class="sml-c12 lrg-c4 sml-push-y2">
-                   <a href="#TODO" target="_blank" class="btn btn-block btn-dark btn-donate">
+                   <a href="#TODO" target="_blank" class="btn btn-block btn-dark btn-party btn-donate">
                      Donate <small>to educate voters in key districts</small>
                    </a>
                  </div> <!-- .c -->
@@ -149,10 +204,12 @@ $warning-color: #f97054;
 <script>
 import axios from 'axios'
 import Candidates from '~/components/Candidates'
+import SocialShareButtons from '~/components/SocialShareButtons'
 
 export default {
   components: {
-    Candidates
+    Candidates,
+    SocialShareButtons
   },
 
   data () {
@@ -161,6 +218,22 @@ export default {
       address: null,
       results: null,
       keyRaces: null
+    }
+  },
+
+  computed: {
+    targetPolitician() {
+      if (this.results) {
+        for (let race of ['house', 'senate']) {
+          const target = this.results[race].candidates.find(c => c.incumbent && c.supporter === false)
+
+          if (target) {
+            return Object.assign({
+              title: race === 'senate' ? 'Senator' : 'Representative'
+            }, target)
+          }
+        }
+      }
     }
   },
 

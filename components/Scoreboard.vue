@@ -168,17 +168,17 @@
 
                 <div class="row">
                  <div class="sml-c12 lrg-c4 sml-push-y2">
-                   <a href="#TODO" target="_blank" class="btn btn-block btn-dark btn-party btn-volunteer">
+                   <a :href="$store.state.volunteerURL" target="_blank" class="btn btn-block btn-dark btn-party btn-volunteer">
                      Volunteer <small>to text people in key districts</small>
                    </a>
                  </div> <!-- .c -->
                  <div class="sml-c12 lrg-c4 sml-push-y2">
-                   <a href="#TODO" target="_blank" class="btn btn-block btn-dark btn-party btn-facebook-group">
+                   <a :href="$store.state.joinURL" target="_blank" class="btn btn-block btn-dark btn-party btn-facebook-group">
                      Join <small>your local Facebook Group</small>
                    </a>
                  </div> <!-- .c -->
                  <div class="sml-c12 lrg-c4 sml-push-y2">
-                   <a href="#TODO" target="_blank" class="btn btn-block btn-dark btn-party btn-donate">
+                   <a :href="$store.state.donateURL" target="_blank" class="btn btn-block btn-dark btn-party btn-donate">
                      Donate <small>to educate voters in key districts</small>
                    </a>
                  </div> <!-- .c -->

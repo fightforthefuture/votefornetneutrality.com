@@ -11,77 +11,13 @@
       </div> <!-- .wrapper -->
     </section>
 
-    <section id="how" class="sml-pad-y2 med-pad-y4">
-      <div class="wrapper">
-        <div class="row">
-          <div class="sml-c12 lrg-c8 grid-center text-center">
-            <h2>How does it work?</h2>
-            <p class="sml-push-y2 med-push-y3">
-              Simply enter your number above or text
-              <strong>HELLO</strong> to <strong>{{ botPhoneNumber }}</strong>
-              and respond to a few questions&hellip; it only takes a minute to
-              complete! Once you&rsquo;re done, we&rsquo;ll help you register to
-              vote and give you everything you need to get to the polls. In
-              several states, your answers submit directly to state online forms
-              for voter registration, so there are no paper forms to fill out.
-              In other states, we send you a pre-filled form by email or — if
-              you don&rsquo;t have a printer — by mail. We include a stamped
-              envelope, so to complete your registration you just have to sign
-              and mail it.
-            </p>
-            <p>
-              We also provide links to your state&rsquo;s own online
-              registration system, if they have one. And as election day
-              approaches, we send you all the information you need to vote,
-              including your polling location, early voting info, election day
-              reminders including a handy calendar invite, voter ID requirements
-              &amp; more.
-            </p>
-            <p>
-              Before submitting your registration, we&rsquo;ll give you the
-              chance to verify that your information is correct. Do not provide
-              false information, as your state may consider that a criminal
-              offense. When you&rsquo;re done, we will send you your polling
-              location, early voting info, an &ldquo;I&rsquo;m voting&rdquo;
-              selfie badge, election day reminders (including a handy calendar
-              invite), voter ID requirements, streamlined ways to register to
-              vote &amp; more.
-            </p>
-            <p>
-              And don&rsquo;t worry. We won&rsquo;t share your phone number with
-              anyone, ever. You can read about our privacy policy or check out
-              our terms of service. Remember that you&rsquo;re texting, so data
-              &amp; message rates may apply. You can text STOP any time to stop
-              receiving messages.
-            </p>
-            <ul class="hoz">
-              <li>
-                <a class="btn btn-dark sml-push-y2 med-push-y3"
-                   @click.prevent="scrollTo('#text-me')">
-                  Text Me!
-                </a>
-              </li>
-              <li>
-                <a class="btn btn-light sml-push-y2 med-push-y3"
-                   href="https://m.me/hellovote"
-                   target="_blank">
-                  <img src="~assets/images/facebook-messenger-logo.png"
-                       alt="Facebook messenger logo"
-                       class="img-fb-messenger">
-                  Sign up with Messenger
-                </a>
-              </li>
-            </ul>
-          </div> <!-- .c -->
-        </div> <!-- .row -->
-      </div> <!-- .wrapper -->
-    </section>
+    <Scoreboard/>
 
-    <section id="widget" class="sml-pad-y2 med-pad-y4 fill-brand-dark-color">
+    <section id="widget" class="sml-pad-y2 med-pad-y4 fill-brand-dark">
       <div class="wrapper">
         <div class="row">
           <div class="sml-c12 lrg-c8 grid-center text-center">
-            <h2>Widgets</h2>
+            <h2>Widget</h2>
             <p class="sml-push-y2 med-push-y3">
               Add our widget to your site. It&rsquo;s a small (but powerful!)
               notice to your site&rsquo;s users that something BIG is happening
@@ -186,44 +122,57 @@
       </div> <!-- .wrapper -->
     </section>
 
-    <section id="participants" class="sml-pad-y2 med-pad-y4">
+    <section id="how" class="sml-pad-y2 med-pad-y4">
       <div class="wrapper">
         <div class="row">
           <div class="sml-c12 lrg-c8 grid-center text-center">
-            <h2>Participants</h2>
+            <h2>How does this work?</h2>
             <p class="sml-push-y2 med-push-y3">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus
-              suscipit odio sapien, vitae suscipit nibh accumsan quis. Lorem
-              ipsum dolor sit amet, consectetur adipiscing elit. Orci varius
-              natoque penatibus et magnis dis parturient montes, nascetur
-              ridiculus mus.
+              Simply enter your number above or text
+              <strong>HELLO</strong> to <strong>{{ botPhoneNumber }}</strong>
+              and respond to a few questions&hellip; it only takes a minute to
+            </p>
+
+            <p class="sml-push-y2 med-push-y3">
+              Simply enter your number above or text <strong>VOTE</strong> to
+              <strong>{{ botPhoneNumber }}</strong> and respond to a few
+              questions&hellip; it only takes a minute to complete! Once
+              you&rsquo;re done, we&rsquo;ll help you register to vote and give
+              you everything you need to get to the polls. In several states,
+              your answers submit directly to state online forms for voter
+              registration, so there are no paper forms to fill out. In other
+              states, we send you a pre-filled form by email or — if you
+              don&rsquo;t have a printer — by mail. We include a stamped
+              envelope, so to complete your registration you just have to sign
+              and mail it.
             </p>
             <p>
-              TODO: Participant logos, or remove section
+              We also provide links to your state&rsquo;s own online
+              registration system, if they have one. And as election day
+              approaches, we send you all the information you need to vote,
+              including your polling location, early voting info, election day
+              reminders including a handy calendar invite, voter ID requirements
+              &amp; more.
             </p>
-          </div> <!-- .c -->
-        </div> <!-- .row -->
-      </div> <!-- .wrapper -->
-    </section>
-
-    <section id="scoreboard" class="sml-pad-y2 med-pad-y4">
-      <div class="wrapper">
-        <div class="row">
-          <div class="sml-c12 lrg-c8 grid-center text-center">
-            <h2>Find out where your lawmakers stand</h2>
-            <p class="sml-push-y2 med-push-y3">
-              We&rsquo;re keeping track of who supports net neutrality&hellip;
-              and who doesn&rsquo;t. Now you can, too. Below you'll find a link
-              to a list of your state&rsquo;s Senators and Representatives.
-              Check out whether or not your lawmakers have signed the CRA to
-              support net neutrality protections. If not, let them know how
-              important this issue is to you.
+            <p>
+              Before submitting your registration, we&rsquo;ll give you the
+              chance to verify that your information is correct. Do not provide
+              false information, as your state may consider that a criminal
+              offense. When you&rsquo;re done, we will send you your polling
+              location, early voting info, an &ldquo;I&rsquo;m voting&rdquo;
+              selfie badge, election day reminders (including a handy calendar
+              invite), voter ID requirements, streamlined ways to register to
+              vote &amp; more.
             </p>
-            <a class="btn btn-block sml-push-y2 med-push-y3"
-               href="https://www.battleforthenet.com/scoreboard/"
-               target="_blank">
-              View the scoreboard
-            </a>
+            <p>
+              You can read about our
+              <nuxt-link to="/privacy">privacy policy</nuxt-link> or check out
+              our <nuxt-link to="/terms">terms of service</nuxt-link>.
+              Remember that you&rsquo;re texting, so data &amp; message
+              rates may apply. You can text <strong>STOP</strong> to
+              <strong>{{ botPhoneNumber }}</strong> any time to stop receiving
+              messages.
+            </p>
           </div> <!-- .c -->
         </div> <!-- .row -->
       </div> <!-- .wrapper -->
@@ -236,16 +185,23 @@ import config from '~/config'
 import { createMetaTags, smoothScrollToElement } from '~/assets/js/helpers'
 import Logo from '~/components/Logo'
 import Chat from '~/components/Chat'
+import Scoreboard from '~/components/Scoreboard'
 
 export default {
   components: {
     Logo,
-    Chat
+    Chat,
+    Scoreboard
   },
 
   head() {
     return {
       title: config.sharing.title,
+
+      script: [
+        { src: `https://maps.googleapis.com/maps/api/js?key=${process.env.googleApiKey}&libraries=places` }
+      ],
+
       meta: createMetaTags({
         title: config.sharing.title,
         description: config.sharing.description,

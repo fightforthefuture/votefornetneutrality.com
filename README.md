@@ -19,5 +19,10 @@ $ npm start
 $ npm run generate
 ```
 
+## Environment Setup
+
+Copy `.env.example` to a new file called `.env` and replace current values with
+values for development, if desired.
+
 For detailed explanation on how things work, checkout the [Nuxt.js docs](https://github.com/nuxt/nuxt.js).
 

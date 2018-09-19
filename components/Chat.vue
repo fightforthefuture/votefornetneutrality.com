@@ -12,7 +12,7 @@
         </div> <!-- message -->
       </div> <!-- .messages -->
 
-      <div class="sml-pad-2 fill-brand-darkest-color is-rounded-bottom">
+      <div class="sml-pad-2 fill-brand-darkest is-rounded-bottom">
         <div v-if="!isFormCompleted">
           <form @submit.prevent="formSubmit" class="flex-row">
             <input type="tel"
@@ -29,29 +29,14 @@
             <small>
               <a href="https://www.fightforthefuture.org/" target="_blank">
                 Fight for the Future</a>
-              &amp; its Education Fund will contact you.
-              <nuxt-link to="/privacy">Privacy Policy</nuxt-link>
+              will contact you via SMS. Message &amp; data rates apply. Read our
+              <nuxt-link to="/privacy">Privacy Policy</nuxt-link> and
+              <nuxt-link to="/terms">Terms of Service</nuxt-link>.
             </small>
           </p>
         </div> <!-- v-if-->
         <div v-if="isFormCompleted">
-          <ul class="flex-center text-center">
-            <li class="sml-pad-x1">Help us spread the word:</li>
-            <li>
-              <ShareButton
-                network="twitter"
-                :is-button="false"
-                :should-display-text="false"
-                @click.native="$trackClick('twitter_share_button_after_signup')" />
-            </li>
-            <li class="sml-pad-x1">
-              <ShareButton
-                network="facebook"
-                :is-button="false"
-                :should-display-text="false"
-                @click.native="$trackClick('facebook_share_button_after_signup')" />
-            </li>
-          </ul>
+          <SocialShareButtons/>
         </div> <!-- v-if-->
       </div> <!-- form container -->
     </div> <!-- widget -->
@@ -62,12 +47,12 @@
 import axios from 'axios'
 import { smoothScrollWithinElement } from '~/assets/js/helpers'
 import Message from '~/components/Message'
-import ShareButton from '~/components/ShareButton'
+import SocialShareButtons from '~/components/SocialShareButtons'
 
 export default {
   components: {
     Message,
-    ShareButton
+    SocialShareButtons
   },
 
   data () {
@@ -105,8 +90,23 @@ export default {
       this.messages.push({
         type: 'bubble',
         style: 'default',
-        content: 'Please enter your phone number, so we can continue via text message.'
+        content: "Hi! I\'m HelloVote, and I\'m here to help."
       })
+      // WARNING: Dangerous eval. Remove `setTimeout` if hosted with a JS server.
+      setTimeout(() => {
+        this.messages.push({
+          type: 'bubble',
+          style: 'default',
+          content: "I can tell you where candidates in your area stand on net neutrality, help you register to vote, remind your friends to vote, and more."
+        })
+      }, 1500) // +1.5 seconds
+      setTimeout(() => {
+        this.messages.push({
+          type: 'bubble',
+          style: 'default',
+          content: "Please enter your phone number, and I\'ll text you to get started."
+        })
+      }, 3000) // +1.5 seconds
     },
 
     scrollToLastMessage(){

@@ -8,6 +8,11 @@ body, select, input, textarea {
 
 // Typography > Headings
 h1, h2, h3, h4, h5, h6 {
+  font-family: $heading-stack;
+  font-weight: $bold-font-weight;
+  text-transform: uppercase;
+}
+h1, h2 {
   background: linear-gradient(
     0deg,
     $brand-color                 0%,
@@ -16,9 +21,6 @@ h1, h2, h3, h4, h5, h6 {
     $brand-secondary-light-color 100%
   );
   color: $brand-secondary-color;
-  font-family: $heading-stack;
-  font-weight: $bold-font-weight;
-  text-transform: uppercase;
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -41,11 +43,58 @@ h2 {
 }
 h3 {
   font-size: $m-font-size-3;
-  text-transform: none;
 
   @include respond-to(lrg) {
     font-size: $font-size-3;
   }
+}
+h4 {
+  line-height: 1.3;
+  text-transform: none;
+}
+h6 {
+  font-size: $m-font-size-6;
+
+  @include respond-to(lrg) {
+    font-size: $font-size-6;
+  }
+}
+
+// Typography > Headings > Section Title
+.section-title {
+  position: relative;
+}
+.section-title:before {
+  display: block;
+  content: '';
+  position: absolute;
+  top: 17px; // NOTE: magic number
+  width: 100%;
+  height: $gutter/2;
+  background: $brand-dark-color;
+}
+.section-title span {
+  position: relative;
+  display: inline-block;
+  padding: $gutter/2 $gutter*2;
+  z-index: 10;
+  background: $brand-dark-color;
+  border-radius: $default-border-radius;
+}
+.section-title span:before,
+.section-title span:after {
+  display: block;
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -$gutter*2;
+  width: $gutter*2;
+  height: 100%;
+  background: $brand-darkest-color;
+}
+.section-title span:after {
+  left: auto;
+  right: -$gutter*2;
 }
 
 // Typography > Text
@@ -79,12 +128,16 @@ small {
 }
 .text-white {
   color: $white;
+  -webkit-text-fill-color: $white;
 }
 .text-brand {
   color: $brand-color;
 }
 .text-brand-med {
   color: $brand-med-color;
+}
+.text-brand-darkest {
+  color: $brand-darkest-color;
 }
 .text-warn {
   color: $warn-color;
@@ -93,6 +146,14 @@ small {
   color: $success-color;
 }
 
+// Typography > Tag
+.tag {
+  display: inline-block;
+  padding: 0 $gutter;
+  background: $white;
+  border-radius: $default-border-radius;
+  color: $brand-darkest-color;
+}
 
 // Typography > Links
 a,

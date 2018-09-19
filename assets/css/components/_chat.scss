@@ -17,7 +17,7 @@
   position: relative;
   margin-left: 12px;
   padding: $gutter*1.5 $gutter*2;
-  max-width: $gutter*34.6;
+  max-width: $gutter*40;
   background-color: $brand-med-color;
   border-radius: $default-border-radius;
 }
@@ -50,6 +50,7 @@
 
 // Chat > Message reply by the voter on the right
 .message.message-reply {
+  float: right;
   background: $white;
   color: $brand-darkest-color;
   margin-left: auto;

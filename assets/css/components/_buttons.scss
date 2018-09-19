@@ -93,17 +93,6 @@ button.btn {
   background: $brand-tertiary-light-color;
 }
 
-// Buttons > Light
-.btn.btn-light {
-  background: $white;
-  color: $brand-darkest-color;
-}
-.btn.btn-light:hover,
-.btn.btn-light:focus {
-  background: $grey-light-color;
-  color: $brand-darkest-color;
-}
-
 // Buttons > Sharing
 .btn.btn-twitter {
   background: $twitter-color;

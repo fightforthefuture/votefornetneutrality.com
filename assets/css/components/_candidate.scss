@@ -1,0 +1,52 @@
+// Candidate
+
+$candidate-block-height: 118px; // NOTE: magic number could change
+
+.candidate {
+  position: relative;
+}
+.candidate .candidate-photo {
+  float: left;
+  position: relative;
+  margin-right: $gutter;
+  border-top-left-radius:    $default-border-radius;
+  border-bottom-left-radius: $default-border-radius;
+}
+.candidate .candidate-photo:after {
+  display: block;
+  content: '';
+  position: absolute;
+  top:    0;
+  left:   0;
+  bottom: 0;
+  right:  0;
+  width:  100%;
+  height: 100%;
+  background: $brand-med-color;
+  opacity: 0.5;
+}
+.candidate .candidate-photo.vote-yes:after {
+  background: $success-color;
+}
+.candidate .candidate-photo.vote-no:after {
+  background: $warn-color;
+}
+.candidate .candidate-photo img {
+  height: $candidate-block-height;
+  width: auto;
+  max-width: 97px;
+  border-top-left-radius:    $default-border-radius;
+  border-bottom-left-radius: $default-border-radius;
+  filter: grayscale(100%);
+}
+.candidate .candidate-content {
+  min-height: $candidate-block-height;
+  padding-bottom: $gutter*2 + 4; // NOTE: Height of "vote" tag
+}
+.candidate .vote-tag {
+  position: absolute;
+  bottom: $gutter;
+  right:  $gutter;
+  padding: $gutter/2 0 0 $gutter;
+  border-top-left-radius: $default-border-radius;
+}

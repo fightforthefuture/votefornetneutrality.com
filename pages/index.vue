@@ -13,7 +13,7 @@
 
     <Scoreboard/>
 
-    <section id="widget" class="sml-pad-y2 med-pad-y4 fill-brand-dark">
+<!--     <section id="widget" class="sml-pad-y2 med-pad-y4 fill-brand-dark">
       <div class="wrapper">
         <div class="row">
           <div class="sml-c12 lrg-c8 grid-center text-center">
@@ -51,12 +51,12 @@
               Congress. But whatever you do, make sure it&rsquo;s epic. THIS is
               the moment to fight!
             </p>
-          </div> <!-- .c -->
-        </div> <!-- .row -->
-      </div> <!-- .wrapper -->
-    </section>
+          </div>
+        </div>
+      </div>
+    </section> -->
 
-    <section id="banner-ads" class="sml-pad-y2 med-pad-y4">
+<!--     <section id="banner-ads" class="sml-pad-y2 med-pad-y4">
       <div class="wrapper">
         <div class="row">
           <div class="sml-c12 lrg-c8 grid-center text-center">
@@ -72,12 +72,12 @@
             <p>
               TODO: Banner Ad Images
             </p>
-          </div> <!-- .c -->
-        </div> <!-- .row -->
-      </div> <!-- .wrapper -->
-    </section>
+          </div>
+        </div>
+      </div>
+    </section> -->
 
-    <section id="social" class="sml-pad-y2 med-pad-y4">
+<!--     <section id="social" class="sml-pad-y2 med-pad-y4">
       <div class="wrapper">
         <div class="row">
           <div class="sml-c12 lrg-c8 grid-center text-center">
@@ -117,10 +117,10 @@
             <p>
               TODO: Instagram Story Images
             </p>
-          </div> <!-- .c -->
-        </div> <!-- .row -->
-      </div> <!-- .wrapper -->
-    </section>
+          </div>
+        </div>
+      </div>
+    </section> -->
 
     <section id="how" class="sml-pad-y2 med-pad-y4">
       <div class="wrapper">

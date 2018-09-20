@@ -35,9 +35,9 @@
           <div class="sml-c12 lrg-c9 grid-center">
             <section id="results"
                      class="sml-pad-2 med-pad-4 sml-push-y4 fill-black is-rounded">
-              <div v-if="targetPolitician">
+              <div v-if="results.target">
                 <h2 class="text-center text-warn">
-                  Your {{ targetPolitician.title }} opposes Net Neutrality and
+                  Your {{ results.target.title }} opposes Net Neutrality and
                   they&rsquo;re facing a tight election
                 </h2>
 
@@ -45,14 +45,14 @@
                   <div class="row">
                     <div class="sml-c12 lrg-c4">
                       <div class="candidate-photo vote-no grid-center">
-                        <img :src="targetPolitician.photo" :alt="targetPolitician.name">
+                        <img :src="results.target.photo" :alt="results.target.name">
                       </div> <!-- .target-photo -->
                     </div> <!-- .c -->
                     <div class="sml-c12 lrg-c8 sml-push-y2 lrg-push-y0">
                       <p>
                         Your current member of Congress,
-                        {{ targetPolitician.name }} took
-                        {{ targetPolitician.cable_contributions }} in
+                        {{ results.target.name }} took
+                        {{ results.target.cable_contributions }} in
                         &ldquo;campaign donations&rdquo; from big ISPs and
                         refuses to support a resolution to restore net
                         neutrality. Tell them to get on the right side of
@@ -152,22 +152,6 @@ export default {
       results: null,
       keyRaces: null,
       errorMessage: null
-    }
-  },
-
-  computed: {
-    targetPolitician() {
-      if (this.results) {
-        for (let race of ['house', 'senate']) {
-          const target = this.results[race].candidates.find(c => c.incumbent && c.supporter === false)
-
-          if (target) {
-            return Object.assign({
-              title: race === 'senate' ? 'Senator' : 'Representative'
-            }, target)
-          }
-        }
-      }
     }
   },
 

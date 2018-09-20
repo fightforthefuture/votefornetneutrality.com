@@ -20,8 +20,7 @@
                    placeholder="Phone number"
                    class="med-flex-2"
                    required />
-            <button class="btn btn-block btn-lrg"
-                    :disabled="phoneNumber === null || phoneNumber.length <= 0">
+            <button class="btn btn-block btn-lrg">
               Text me
             </button>
           </form>

@@ -55,7 +55,7 @@
   position: relative;
   padding: $gutter $gutter*2;
   margin-bottom: $gutter;
-  border: 1px solid $brand-med-color;
+  border: 1px solid $brand-color;
   border-radius: $default-border-radius;
 }
 .fancy-bullets li:before {
@@ -65,6 +65,6 @@
   left: -5px;
   width:  10px;
   height: 10px;
-  background-color: $brand-med-color;
+  background-color: $brand-color;
   border-radius: 100%;
 }

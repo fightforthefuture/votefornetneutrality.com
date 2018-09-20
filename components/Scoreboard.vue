@@ -1,51 +1,4 @@
 <style lang="scss" scoped>
-@mixin party-button($bg-color, $small-color) {
-  background-color: $bg-color;
-  box-shadow: 0px -1px 0px lighten($bg-color, 10%);
-
-  small {
-    color: $small-color;
-  }
-
-  &:hover {
-    background-color: darken($bg-color, 10%);
-    box-shadow: 0px -1px 0px $bg-color;
-
-    small {
-      color: darken($small-color, 5%);
-    }
-  }
-}
-
-.btn-party {
-  text-transform: none;
-  padding-left: 20px;
-  padding-right: 20px;
-  font-size: 20px;
-
-  small {
-    text-transform: uppercase;
-    line-height: 1.1;
-  }
-}
-
-.btn-donate {
-  @include party-button(#7845bc, #d7bdff);
-}
-
-.btn-facebook-group {
-  @include party-button(#3f63a5, #b2c8ff);
-}
-
-.btn-volunteer {
-  @include party-button(#d95391, #581827);
-}
-
-.warning-border {
-  border: 1px solid #f97054;
-  border-radius: $default-border-radius;
-}
-
 .target-photo {
   position: relative;
   border-radius: $default-border-radius;
@@ -97,7 +50,7 @@
                      placeholder="Street Address, City, State ZIP"
                      ref="addressInput"
                      required />
-              <button class="btn" :disabled="isLoading">
+              <button class="btn btn-lrg" :disabled="isLoading">
                 <span v-if="isLoading">Loading...</span>
                 <span v-else>Let&rsquo;s go</span>
               </button>
@@ -108,38 +61,51 @@
         <div class="row" v-if="results">
           <div class="sml-c12 lrg-c9 grid-center">
             <section id="results"
-                     class="sml-pad-2 med-pad-4 sml-push-y4 fill-brand-darkest is-rounded">
-
+                     class="sml-pad-2 med-pad-4 sml-push-y4 fill-black is-rounded">
               <div v-if="targetPolitician">
                 <div class="target-politician">
-                  <h2 class="text-center text-white">YOUR {{ targetPolitician.title }} OPPOSES NET NEUTRALITY AND THEY’RE FACING A TIGHT ELECTION</h2>
+                  <h2 class="text-center text-warn">
+                    Your {{ targetPolitician.title }} opposes Net Neutrality and
+                    they&rsquo;re facing a tight election
+                  </h2>
 
-                  <div class="warning-border sml-push-y2 sml-pad-2">
+                  <div class="with-border-warn is-rounded sml-push-y2 sml-pad-2">
                     <div class="row">
                       <div class="sml-c12 sml-pad-x6 med-c4 med-pad-x1">
                         <div class="target-photo">
                           <img :src="targetPolitician.photo" :alt="targetPolitician.name">
-                        </div>
-                      </div>
+                        </div> <!-- .target-photo -->
+                      </div> <!-- .c -->
                       <div class="sml-c12 med-c8 sml-pad-y2 med-pad-y0">
-                        <p>Your current member of Congress, {{ targetPolitician.name }} took {{ targetPolitician.cable_contributions }} in “campaign donations” from big ISPs and refuses to support a resolution to restore net neutrality. Tell them to get on the right side of history or face the consequences. Then share this so everyone in your area knows where the candidates stand on the free and open Internet when they head to the polls.</p>
+                        <p>
+                          Your current member of Congress,
+                          {{ targetPolitician.name }} took
+                          {{ targetPolitician.cable_contributions }} in
+                          &ldquo;campaign donations&rdquo; from big ISPs and
+                          refuses to support a resolution to restore net
+                          neutrality. Tell them to get on the right side of
+                          history or face the consequences. Then share this so
+                          everyone in your area knows where the candidates stand
+                          on the free and open Internet when they head to the
+                          polls.
+                        </p>
                         <div class="row med-pad-y1">
                           <div class="sml-c12 sml-pad-y1 med-c6 med-pad-y0">
                             <a href="https://www.battleforthenet.com/call" class="btn btn-block btn-success">Call</a>
-                          </div>
+                          </div> <!-- .c -->
                           <div class="sml-c12 med-c6">
-                            <a href="https://www.battleforthenet.com" class="btn btn-block btn-brand-med">Write</a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+                            <a href="https://www.battleforthenet.com" class="btn btn-block btn-brand">Write</a>
+                          </div> <!-- .c -->
+                        </div> <!-- .row -->
+                      </div> <!-- .c -->
+                    </div> <!-- .row -->
+                  </div> <!-- .pad -->
+                </div> <!-- .target-politician -->
                 <div class="sml-pad-y2 grid-center">
                   <SocialShareButtons />
-                </div>
+                </div> <!-- .pad -->
                 <div class="sml-push-y4"></div>
-              </div>
+              </div> <!-- v-if -->
 
               <h2 class="text-center text-white">
                 Here&rsquo;s where candidates in your area stand on Net
@@ -159,33 +125,17 @@
         <div class="row">
           <div class="sml-c12 lrg-c9 grid-center">
             <section v-if="keyRaces"
-                     class="sml-pad-2 med-pad-4 sml-push-y4 fill-brand-darkest is-rounded warning-border">
+                     class="sml-pad-2 med-pad-4 sml-push-y4 fill-black is-rounded">
 
               <div class="text-center">
-                <h2>Help out in these key races</h2>
+                <h2 class="lrg-pad-x4">Help out in these key races</h2>
                 <p class="sml-push-y2 med-push-y3">
                  We&rsquo;ve identified <a href="/races/">22 extremely close races</a> across the country
                  where net neutrality supporters can make a difference. Click on
                  the links below to help out.
                 </p>
 
-                <div class="row">
-                 <div class="sml-c12 lrg-c4 sml-push-y2">
-                   <a :href="$store.state.volunteerURL" target="_blank" class="btn btn-block btn-dark btn-party btn-volunteer">
-                     Volunteer <small>to text people in key districts</small>
-                   </a>
-                 </div> <!-- .c -->
-                 <div class="sml-c12 lrg-c4 sml-push-y2">
-                   <a :href="$store.state.joinURL" target="_blank" class="btn btn-block btn-dark btn-party btn-facebook-group">
-                     Join <small>your local Facebook Group</small>
-                   </a>
-                 </div> <!-- .c -->
-                 <div class="sml-c12 lrg-c4 sml-push-y2">
-                   <a :href="$store.state.donateURL" target="_blank" class="btn btn-block btn-dark btn-party btn-donate">
-                     Donate <small>to educate voters in key districts</small>
-                   </a>
-                 </div> <!-- .c -->
-                </div> <!-- .row -->
+                <ActionButtons/>
               </div>
 
               <Candidates
@@ -207,11 +157,13 @@
 <script>
 import axios from 'axios'
 import Candidates from '~/components/Candidates'
+import ActionButtons from '~/components/ActionButtons'
 import SocialShareButtons from '~/components/SocialShareButtons'
 
 export default {
   components: {
     Candidates,
+    ActionButtons,
     SocialShareButtons
   },
 

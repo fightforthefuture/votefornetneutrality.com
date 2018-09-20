@@ -93,7 +93,8 @@
                      v-model="address"
                      class="sml-flex-2 med-flex-3"
                      placeholder="Street Address, City, State ZIP"
-                     ref="addressInput" />
+                     ref="addressInput"
+                     required />
               <button class="btn" :disabled="isLoading">
                 <span v-if="isLoading">Loading...</span>
                 <span v-else>Let&rsquo;s go</span>

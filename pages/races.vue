@@ -4,7 +4,7 @@
 
     <p>Every election is important. And we want every candidate for office to publicly support strong net neutrality protections. But there are certain races where we have the greatest chance to make net neutrality a top issue and get more members of Congress on our side. Here’s a list of competitive races where we think constituents can really make a difference:</p>
 
-    <div class="sml-pad-x6">
+    <div class="sml-pad-x2 med-pad-x6">
       <h3 class="sml-push-y4 text-left">House of Representatives</h3>
       <ul class="bullets">
         <li>CA-10 - Denham</li>

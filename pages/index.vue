@@ -181,12 +181,6 @@
           <div class="sml-c12 lrg-c8 grid-center text-center">
             <h2>How does this work?</h2>
             <p class="sml-push-y2 med-push-y3">
-              Simply enter your number above or text
-              <strong>HELLO</strong> to <strong>{{ botPhoneNumber }}</strong>
-              and respond to a few questions&hellip; it only takes a minute to
-            </p>
-
-            <p class="sml-push-y2 med-push-y3">
               Simply enter your number above or text <strong>VOTE</strong> to
               <strong>{{ botPhoneNumber }}</strong> and respond to a few
               questions&hellip; it only takes a minute to complete! Once

@@ -7,7 +7,8 @@
 }
 .bullets > li,
 .numbers > li {
-  padding-top: $gutter*2;
+  margin-top:    $gutter;
+  margin-bottom: $gutter;
   text-align: left;
 }
 .bullets > li:first-of-type,

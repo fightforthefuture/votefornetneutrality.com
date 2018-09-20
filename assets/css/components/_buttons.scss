@@ -84,6 +84,12 @@ button.btn {
   }
 }
 
+// Buttons > Small
+.btn.btn-sml {
+  padding: $gutter/2 $gutter;
+  font-size:  $font-size-5;
+}
+
 // Buttons > Dark
 .btn.btn-dark {
   background: $brand-tertiary-color;
@@ -91,6 +97,17 @@ button.btn {
 .btn.btn-dark:hover,
 .btn.btn-dark:focus {
   background: $brand-tertiary-light-color;
+}
+
+// Buttons > Light
+.btn.btn-light {
+  background: $brand-light-color;
+  color: $brand-dark-color;
+}
+.btn.btn-light:hover,
+.btn.btn-light:focus {
+  background: $brand-dark-color;
+  color: $brand-light-color;
 }
 
 // Buttons > Success

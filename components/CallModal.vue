@@ -47,7 +47,7 @@
 
       <h3 class="sml-push-y3">Done calling? Do these things, too!</h3>
       <ActionButtons />
-    </div>
+    </div> <!-- v-if -->
   </div>
 </template>
 

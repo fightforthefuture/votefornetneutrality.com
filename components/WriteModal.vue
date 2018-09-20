@@ -13,6 +13,12 @@
                  class="sml-flex-4">
           <input v-model="zipCode" type="tel" placeholder="ZIP Code">
         </div> <!-- .flex-row -->
+        <div class="sml-push-y2 clear-wrapper">
+          <textarea v-model="comments" ref="comments"></textarea>
+          <a href="#" class="clear btn btn-light btn-sml" @click.prevent="clearComments()">
+            Clear Letter
+          </a>
+        </div>
          <button class="btn btn-block sml-push-y2 med-push-y3" :disabled="isSending">
           <span v-if="isSending">
             Sending...
@@ -60,7 +66,8 @@ export default {
       name: null,
       email: null,
       address: null,
-      zipCode: null
+      zipCode: null,
+      comments: "Last December\'s FCC vote to destroy the net neutrality protections cannot stand.\n\nI\’m calling on you to work with your colleagues to use the Congressional Review Act to pass a \"resolution of disapproval\" reversing the FCC's vote.\n\nThe FCC's December decision willfully ignored the outcry of tens of millions of people, and it abdicated the FCC's responsibility to protect the internet from ISP blocking and discrimination. The FCC has injured our economy and free speech in just one action, all without so much as a single public hearing.\n\nWe need members of Congress to stand up for the open internet and for the digital rights of their constituents now. Please co-sponsor, sign the discharge petition for, and vote for the CRA Resolution of Disapproval that would overturn the FCC's December \"Restoring Internet Freedom\" vote.\n\nThank you."
     }
   },
 
@@ -82,11 +89,11 @@ export default {
           },
           hp_enabled: 'true',
           guard: '',
-          // contact_congress: 1, // TODO: Optional
-          // fcc_ecfs_docket: "17-108", // TODO: Optional
+          contact_congress: 1,
+          fcc_ecfs_docket: "17-108",
           an_tags: "[\"net-neutrality\"]",
-          an_petition_id: this.$store.state.anPetitionId
-          // action_comment: TODO add if desired
+          an_petition_id: this.$store.state.anPetitionId,
+          action_comment: this.comments
         })
 
         this.$trackEvent('petition_form', 'submit')
@@ -98,6 +105,12 @@ export default {
         self.errorMessage = "Sorry, that didn’t work for some reason. Please try again."
       }
     },
+
+    clearComments() {
+      this.$trackEvent('clear_comments_button', 'click')
+      this.comments = null
+      this.$refs.comments.focus()
+    }
   }
 }
 </script>

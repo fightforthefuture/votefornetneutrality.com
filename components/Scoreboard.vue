@@ -87,6 +87,8 @@
               you can do to make sure the free and open Internet wins in 2018.
             </p>
 
+            <p class="text-warn" v-if="errorMessage">{{ errorMessage }}</p>
+
             <form class="flex-row sml-push-y2 med-push-y3"
                   @submit.prevent="fetchCandidates">
               <input type="text"
@@ -218,7 +220,8 @@ export default {
       isLoading: false,
       address: null,
       results: null,
-      keyRaces: null
+      keyRaces: null,
+      errorMessage: null
     }
   },
 
@@ -241,6 +244,10 @@ export default {
   mounted() {
     this.autocompleteAddress()
     this.fetchKeyRaces()
+
+    // uncomment to test target politician
+    // this.address = '120 N California St, Yerington, NV'
+    // this.fetchCandidates()
   },
 
   methods: {
@@ -263,8 +270,16 @@ export default {
     async fetchCandidates() {
       this.results = null
       this.isLoading = true
-      const { data } = await axios.get(`https://vfnn-scoreboard-api.fftf.xyz/?address=${this.address}`)
-      this.results = data
+      this.errorMessage = null
+
+      try {
+        const { data } = await axios.get(`https://vfnn-scoreboard-api.fftf.xyz/?address=${this.address}`)
+        this.results = data
+      }
+      catch (error) {
+        this.errorMessage = "😳 Oh no! We couldn't find any information for your address."
+      }
+
       this.isLoading = false
     },
 

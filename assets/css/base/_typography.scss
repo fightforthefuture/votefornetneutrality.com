@@ -139,6 +139,7 @@ small {
 }
 .text-success {
   color: $success-color;
+  -webkit-text-fill-color: $success-color;
 }
 .text-emoji {
   font-size: 120%;

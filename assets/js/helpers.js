@@ -58,6 +58,11 @@ export function postFormData(url, data={}) {
   })
 }
 
+// POST form data to Mothership
+export function sendToMothership(data={}, submission={}) {
+  return postFormData('https://queue.fightforthefuture.org/action', data)
+}
+
 // Open a pop-up window (mostly for sharing actions)
 export function openPopup(url, title='popup', w=600, h=500) {
   // Fixes dual-screen position

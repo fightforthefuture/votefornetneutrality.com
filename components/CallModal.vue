@@ -6,6 +6,7 @@
         Enter your phone number below. We&rsquo;ll provide you with a suggestion
         of what to say and we&rsquo;ll connect you with your lawmakers.
       </p>
+      <p class="text-warn sml-push-y2" v-if="errorMessage">{{ errorMessage }}</p>
       <form @submit.prevent="submitForm()"
             class="flex-row sml-flex-col med-flex-row sml-push-y3">
         <input class="phone sml-flex-2"

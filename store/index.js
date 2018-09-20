@@ -7,6 +7,7 @@ const createStore = () => {
       donateURL: config.donateURL,
       joinURL: config.joinURL,
       volunteerURL: config.volunteerURL,
+      anPetitionId: config.actionNetworkPetitonId,
       modalVisible: false,
       modalType: null,
       zipCode: null,

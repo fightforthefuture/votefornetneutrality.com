@@ -63,13 +63,13 @@
                       </p>
                       <div class="row med-pad-y1">
                         <div class="sml-c12 sml-pad-y1 med-c6 med-pad-y0">
-                          <a @click="callPolitician()"
+                          <a @click="openModal('call')"
                              class="btn btn-block btn-success">
                             Call
                           </a>
                         </div> <!-- .c -->
                         <div class="sml-c12 med-c6">
-                          <a href="https://www.battleforthenet.com"
+                          <a @click="openModal('write')"
                              class="btn btn-block btn-brand">
                             Write
                           </a>
@@ -214,9 +214,9 @@ export default {
       }
     },
 
-    callPolitician() {
+    openModal(type) {
       this.$store.commit('setModalVisibility', true)
-      this.$store.commit('setModalType', 'call')
+      this.$store.commit('setModalType', type)
     }
   }
 }

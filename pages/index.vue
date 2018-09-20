@@ -227,6 +227,7 @@
 
     <Modal>
       <CallModal v-if="modalType === 'call'"/>
+      <WriteModal v-if="modalType === 'write'"/>
     </Modal>
   </div>
 </template>
@@ -239,6 +240,7 @@ import Chat from '~/components/Chat'
 import Scoreboard from '~/components/Scoreboard'
 import Modal from '~/components/Modal'
 import CallModal from '~/components/CallModal'
+import WriteModal from '~/components/WriteModal'
 
 export default {
   components: {
@@ -246,7 +248,8 @@ export default {
     Chat,
     Scoreboard,
     Modal,
-    CallModal
+    CallModal,
+    WriteModal
   },
 
   head() {

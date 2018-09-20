@@ -1,29 +1,3 @@
-<style lang="scss" scoped>
-ul.fancy-bullets {
-  margin: $gutter * 2;
-  font-size: 90%;
-
-  li {
-    border: 1px solid $brand-med-color;
-    border-radius: $default-border-radius;
-    margin-bottom: $gutter;
-    padding: $gutter $gutter * 1.5;
-    position: relative;
-
-    &:before {
-      content: " ";
-      background-color: $brand-med-color;
-      position: absolute;
-      left: -5px;
-      top: 20px;
-      width: 10px;
-      height: 10px;
-      border-radius: 100%;
-    }
-  }
-}
-</style>
-
 <template>
   <div>
     <section id="text-me" class="sml-pad-y2 med-pad-y4">

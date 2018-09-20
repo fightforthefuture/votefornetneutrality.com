@@ -45,3 +45,26 @@
     padding-right: 0;
   }
 }
+
+// Lists > Fancy Bullets
+.fancy-bullets {
+  margin: $gutter * 2;
+  font-size: $font-size-5;
+}
+.fancy-bullets li {
+  position: relative;
+  padding: $gutter $gutter*2;
+  margin-bottom: $gutter;
+  border: 1px solid $brand-med-color;
+  border-radius: $default-border-radius;
+}
+.fancy-bullets li:before {
+  content: '';
+  position: absolute;
+  top: 20px;
+  left: -5px;
+  width:  10px;
+  height: 10px;
+  background-color: $brand-med-color;
+  border-radius: 100%;
+}

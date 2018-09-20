@@ -90,7 +90,7 @@ export default {
       this.messages.push({
         type: 'bubble',
         style: 'default',
-        content: "Hi! I\'m HelloVote, and I\'m here to help. <em>🤖</em>"
+        content: "Hi! I\'m HelloVote, and I\'m here to help. <span class=\"text-emoji\">🤖</span>"
       })
       // WARNING: Dangerous eval. Remove `setTimeout` if hosted with a JS server.
       setTimeout(() => {

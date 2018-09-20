@@ -108,7 +108,7 @@
               <div class="text-center">
                 <h2 class="lrg-pad-x4">Help out in these key races</h2>
                 <p class="sml-push-y2 med-push-y3">
-                 We&rsquo;ve identified <a href="/races/">22 extremely close races</a> across the country
+                 We&rsquo;ve identified <a href="/races/">{{ keyRaceCount }} extremely close races</a> across the country
                  where net neutrality supporters can make a difference. Click on
                  the links below to help out.
                 </p>
@@ -152,6 +152,17 @@ export default {
       results: null,
       keyRaces: null,
       errorMessage: null
+    }
+  },
+
+  computed: {
+    keyRaceCount() {
+      if (this.keyRaces) {
+        return this.keyRaces.senate.length + this.keyRaces.house.length
+      }
+      else {
+        return 'several'
+      }
     }
   },
 

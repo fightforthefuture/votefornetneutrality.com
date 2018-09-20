@@ -20,11 +20,6 @@
   max-width: $gutter*40;
   background-color: $brand-med-color;
   border-radius: $default-border-radius;
-
-  em {
-    font-size: 120%;
-    font-style: normal;
-  }
 }
 .message:after {
   display: block;

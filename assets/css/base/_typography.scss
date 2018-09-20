@@ -145,6 +145,10 @@ small {
 .text-success {
   color: $success-color;
 }
+.text-emoji {
+  font-size: 120%;
+  line-height: 1;
+}
 
 // Typography > Tag
 .tag {

@@ -18,7 +18,7 @@
             Sending...
           </span>
           <span v-else>
-            Take action
+            Write Congress
           </span>
         </button>
         <p class="sml-push-y1"><small>

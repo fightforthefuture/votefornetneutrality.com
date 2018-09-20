@@ -35,7 +35,18 @@
 
     <div v-if="hasCalled">
       <h2>Calling you now</h2>
-      <h3 class="sml-push-y1">Introduce yourself, be polite, and say:</h3>
+      <h3 class="sml-push-y2">Introduce yourself, be polite, and say:</h3>
+      <blockquote class="sml-push-y2 text-brand-light">
+        I&rsquo;m calling to ask my lawmakers to support the Congressional
+        Review Act resolution to block the FCC&rsquo;s repeal of net neutrality
+        and restore an open Internet. Thank you.
+      </blockquote>
+      <p class="sml-push-y2 text-brand-light">
+        If lines are busy, we may call you in a few minutes.
+      </p>
+
+      <h3 class="sml-push-y3">Done calling? Do these things, too!</h3>
+      <ActionButtons />
     </div>
   </div>
 </template>
@@ -43,8 +54,13 @@
 <script>
 import axios from 'axios'
 import { postFormData } from '~/assets/js/helpers'
+import ActionButtons from '~/components/ActionButtons'
 
 export default {
+  components: {
+    ActionButtons
+  },
+
   data() {
     return {
       isSending: false,

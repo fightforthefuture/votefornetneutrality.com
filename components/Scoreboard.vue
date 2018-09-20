@@ -50,7 +50,7 @@
                      placeholder="Street Address, City, State ZIP"
                      ref="addressInput"
                      required />
-              <button class="btn" :disabled="isLoading">
+              <button class="btn btn-lrg" :disabled="isLoading">
                 <span v-if="isLoading">Loading...</span>
                 <span v-else>Let&rsquo;s go</span>
               </button>
@@ -61,8 +61,7 @@
         <div class="row" v-if="results">
           <div class="sml-c12 lrg-c9 grid-center">
             <section id="results"
-                     class="sml-pad-2 med-pad-4 sml-push-y4 fill-brand-darkest is-rounded">
-
+                     class="sml-pad-2 med-pad-4 sml-push-y4 fill-black is-rounded">
               <div v-if="targetPolitician">
                 <div class="target-politician">
                   <h2 class="text-center text-warn">
@@ -95,7 +94,7 @@
                             <a href="https://www.battleforthenet.com/call" class="btn btn-block btn-success">Call</a>
                           </div> <!-- .c -->
                           <div class="sml-c12 med-c6">
-                            <a href="https://www.battleforthenet.com" class="btn btn-block btn-brand-med">Write</a>
+                            <a href="https://www.battleforthenet.com" class="btn btn-block btn-brand">Write</a>
                           </div> <!-- .c -->
                         </div> <!-- .row -->
                       </div> <!-- .c -->
@@ -126,39 +125,17 @@
         <div class="row">
           <div class="sml-c12 lrg-c9 grid-center">
             <section v-if="keyRaces"
-                     class="sml-pad-2 med-pad-4 sml-push-y4 fill-brand-darkest is-rounded warning-border">
+                     class="sml-pad-2 med-pad-4 sml-push-y4 fill-black is-rounded">
 
               <div class="text-center">
-                <h2>Help out in these key races</h2>
+                <h2 class="lrg-pad-x4">Help out in these key races</h2>
                 <p class="sml-push-y2 med-push-y3">
                  We&rsquo;ve identified <a href="/races/">22 extremely close races</a> across the country
                  where net neutrality supporters can make a difference. Click on
                  the links below to help out.
                 </p>
 
-                <div class="row">
-                 <div class="sml-c12 lrg-c4 sml-push-y2">
-                   <a :href="$store.state.volunteerURL"
-                      target="_blank"
-                      class="btn btn-block btn-party btn-volunteer">
-                     Volunteer <small>to text people in key districts</small>
-                   </a>
-                 </div> <!-- .c -->
-                 <div class="sml-c12 lrg-c4 sml-push-y2">
-                   <a :href="$store.state.joinURL"
-                      target="_blank"
-                      class="btn btn-block btn-party btn-facebook-group">
-                     Join <small>your local Facebook Group</small>
-                   </a>
-                 </div> <!-- .c -->
-                 <div class="sml-c12 lrg-c4 sml-push-y2">
-                   <a :href="$store.state.donateURL"
-                      target="_blank"
-                      class="btn btn-block btn-party btn-donate">
-                     Donate <small>to educate voters in key districts</small>
-                   </a>
-                 </div> <!-- .c -->
-                </div> <!-- .row -->
+                <ActionButtons/>
               </div>
 
               <Candidates
@@ -180,11 +157,13 @@
 <script>
 import axios from 'axios'
 import Candidates from '~/components/Candidates'
+import ActionButtons from '~/components/ActionButtons'
 import SocialShareButtons from '~/components/SocialShareButtons'
 
 export default {
   components: {
     Candidates,
+    ActionButtons,
     SocialShareButtons
   },
 

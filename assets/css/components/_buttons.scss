@@ -103,11 +103,11 @@ button.btn {
 }
 
 // Buttons > Brand Med
-.btn.btn-brand-med {
-  background: $brand-med-color;
+.btn.btn-brand {
+  background: $brand-color;
 }
-.btn.btn-brand-med:hover,
-.btn.btn-brand-med:focus {
+.btn.btn-brand:hover,
+.btn.btn-brand:focus {
   background: $brand-med-dark-color;
 }
 
@@ -125,44 +125,4 @@ button.btn {
 .btn.btn-facebook:hover,
 .btn.btn-facebook:focus {
   background: $facebook-dark-color;
-}
-
-// Buttons > Party buttons
-@mixin party-button($bg-color, $small-color) {
-  background: $bg-color;
-  box-shadow: 0px -1px 0px lighten($bg-color, 10%);
-
-  small {
-    color: $small-color;
-  }
-
-  &:hover {
-    background: darken($bg-color, 10%);
-    box-shadow: 0px -1px 0px $bg-color;
-
-    small {
-      color: darken($small-color, 5%);
-    }
-  }
-}
-
-.btn-party {
-  padding-left: $gutter;
-  padding-right: $gutter;
-  font-size: $font-size-3;
-  text-transform: none;
-
-  small {
-    line-height: 1.1;
-    text-transform: uppercase;
-  }
-}
-.btn-donate {
-  @include party-button($purple-alt-color, $purple-alt-light-color);
-}
-.btn-facebook-group {
-  @include party-button($blue-alt-color, $blue-alt-light-color);
-}
-.btn-volunteer {
-  @include party-button($pink-color, $pink-dark-color);
 }

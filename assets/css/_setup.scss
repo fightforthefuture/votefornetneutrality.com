@@ -4,39 +4,38 @@
 
 // Colors
 $white:                       #FFF;
-$black:                       #000;
+$black:                       #11062E;
 $grey-light-color:            #D6D6D6;
-$brand-color:                 #A424F5; // purple
-$brand-med-color:             #592BA6; // medium purple
-$brand-med-dark-color:        darken($brand-med-color, 10%); // darker medium purple
-$brand-dark-color:            #2C1B57; // dark purple slightly lightend
-$brand-darkest-color:         #180F37; // dark purple
-$brand-secondary-color:       #FF754A; // orange
-$brand-secondary-light-color: #F5B77D; // light orange
+$brand-light-color:           #826FA5;
+$brand-color:                 #6C10EC; // purple
+$brand-med-dark-color:        darken($brand-color, 10%); // darker medium purple
+$brand-dark-color:            #23124D; // dark purple slightly lightend
+$brand-darkest-color:         #1B0E3C; // dark purple
+$brand-secondary-color:       #FF693B; // orange
+$brand-secondary-light-color: #FFBA79; // light orange
 $brand-tertiary-color:        #3F63A5; // blue purple
 $brand-tertiary-light-color:  lighten($brand-tertiary-color, 6%); // lighter blue purple
 $background-color:            $brand-darkest-color;
-$background-light-color:      $brand-dark-color;
 $text-color:                  $white;
 $success-color:               #58BAAE; // green
 $success-dark-color:          darken($success-color, 10%);
-$warn-color:                  #B61424; // red
-$warn-light-color:            #F97054; // orange-y red
+$warn-color:                  #FF2F0B; // red
 $glow-start-color:            #5A00FF; // blue
 $glow-end-color:              #FE734C; // orange
-
-// Alt Colors (mostly for party buttons)
-$purple-alt-color:            #7845bc;
-$purple-alt-light-color:      #d7bdff;
-$blue-alt-color:              #3f63a5;
-$blue-alt-light-color:        #b2c8ff;
-$pink-color:                  #d95391;
-$pink-dark-color:             #581827;
 
 $facebook-color:          #405993;
 $facebook-dark-color:     darken($facebook-color, 10%);
 $twitter-color:           #499FEC;
 $twitter-dark-color:      darken($twitter-color, 10%);
+
+$text-gradient: linear-gradient(
+  180deg,
+  #ff9b5e 0%,
+  #ef705a 17%,
+  #df5a7a 50%,
+  #de597c 59%,
+  #a006f6 100%
+);
 
 // Typography
 $base-text-align: left; // switch for rtl
@@ -47,15 +46,15 @@ $base-font-weight: normal;
 $bold-font-weight: bold;
 $base-line-height: 1.6;
 
-$font-size-1: 42px;
-$font-size-2: 30px;
+$font-size-1: 56px;
+$font-size-2: 48px;
 $font-size-3: 20px;
 // $font-size-4: $base-font-size;
 $font-size-5: 14px;
 $font-size-6: 12px;
 
-$m-font-size-1: 24px;
-$m-font-size-2: 20px;
+$m-font-size-1: 30px;
+$m-font-size-2: 26px;
 $m-font-size-3: $base-font-size;
 $m-font-size-6: 10px;
 

@@ -4,7 +4,7 @@
     <div class="row">
       <div v-for="candidate in race.candidates" :key="candidate.id"
            class="sml-c12 lrg-c6 sml-push-y2 med-push-y3">
-        <div class="sml-pad-1 is-rounded candidate fill-brand-med"
+        <div class="sml-pad-1 is-rounded candidate fill-brand-dark"
              :class="{
                 'fill-success': candidate.supporter === true,
                 'fill-warn': candidate.supporter === false
@@ -16,24 +16,24 @@
                }">
             <img :src="candidate.photo" :alt="`${candidate.name} photo`"/>
           </div> <!-- .candidate-photo -->
-          <div class="sml-pad-1 is-rounded fill-brand-darkest candidate-content">
+          <div class="sml-pad-1 is-rounded fill-black candidate-content">
             <h4 :class="{
                     'text-success': candidate.supporter === true,
                     'text-warn': candidate.supporter === false
                  }">
               {{ candidate.name }}
             </h4>
-            <h6 :class="{ 'text-brand-med': candidate.supporter === null }">
+            <h6 :class="{ 'text-brand-light': candidate.supporter === null }">
               {{ candidate.party }}
             </h6>
             <h6 v-if="candidate.incumbent" class="tag">Incumbent</h6>
           </div> <!-- .candidate-content -->
-          <div class="vote-tag fill-brand-med"
+          <div class="vote-tag fill-brand-dark"
                :class="{
                   'fill-success': candidate.supporter === true,
                   'fill-warn': candidate.supporter === false
                }">
-            <h6 class="text-brand-darkest">
+            <h6>
               <span v-if="candidate.supporter === true">Supports</span>
               <span v-else-if="candidate.supporter === false">Opposes</span>
               <span v-else>No Stance</span>

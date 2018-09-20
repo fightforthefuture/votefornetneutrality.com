@@ -2,42 +2,9 @@
 
 $candidate-block-height: 118px; // NOTE: magic number could change
 
+// Candidate Block
 .candidate {
   position: relative;
-}
-.candidate .candidate-photo {
-  float: left;
-  position: relative;
-  margin-right: $gutter;
-  border-top-left-radius:    $default-border-radius;
-  border-bottom-left-radius: $default-border-radius;
-}
-.candidate .candidate-photo:after {
-  display: block;
-  content: '';
-  position: absolute;
-  top:    0;
-  left:   0;
-  bottom: 0;
-  right:  0;
-  width:  100%;
-  height: 100%;
-  background: $brand-color;
-  opacity: 0.3;
-}
-.candidate .candidate-photo.vote-yes:after {
-  background: $success-color;
-}
-.candidate .candidate-photo.vote-no:after {
-  background: $warn-color;
-}
-.candidate .candidate-photo img {
-  height: $candidate-block-height;
-  width: auto;
-  max-width: 97px;
-  border-top-left-radius:    $default-border-radius;
-  border-bottom-left-radius: $default-border-radius;
-  filter: grayscale(100%);
 }
 .candidate .candidate-content {
   min-height: $candidate-block-height;
@@ -49,4 +16,51 @@ $candidate-block-height: 118px; // NOTE: magic number could change
   right:  $gutter;
   padding: $gutter/2 0 0 $gutter;
   border-top-left-radius: $default-border-radius;
+}
+
+// Candidate Photo
+.candidate-photo {
+  position: relative;
+  max-width: 194px;
+  border-radius: $default-border-radius;
+}
+.candidate-photo:after {
+  display: block;
+  content: '';
+  position: absolute;
+  top:    0;
+  left:   0;
+  bottom: 0;
+  right:  0;
+  width:  100%;
+  height: 100%;
+  background: $brand-color;
+  border-radius: $default-border-radius;
+  opacity: 0.3;
+}
+.candidate-photo.vote-yes:after {
+  background: $success-color;
+}
+.candidate-photo.vote-no:after {
+  background: $warn-color;
+}
+.candidate-photo img {
+  border-radius: $default-border-radius;
+  filter: grayscale(100%);
+}
+
+// Candidate Photo in Candidate Block
+.candidate .candidate-photo {
+  float: left;
+  position: relative;
+  margin-right: $gutter;
+  border-top-right-radius:    0;
+  border-bottom-right-radius: 0;
+}
+.candidate .candidate-photo img {
+  height: $candidate-block-height;
+  width: auto;
+  max-width: 97px;
+  border-top-right-radius:    0;
+  border-bottom-right-radius: 0;
 }

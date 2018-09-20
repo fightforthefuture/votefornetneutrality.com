@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h2>HOW WE CHOSE KEY DISTRICTS</h2>
+    <h2>How We Chose Key Districts</h2>
 
     <p>Every election is important. And we want every candidate for office to publicly support strong net neutrality protections. But there are certain races where we have the greatest chance to make net neutrality a top issue and get more members of Congress on our side. Here’s the criteria we’re using:</p>
 

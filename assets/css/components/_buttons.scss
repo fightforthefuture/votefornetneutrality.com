@@ -93,6 +93,24 @@ button.btn {
   background: $brand-tertiary-light-color;
 }
 
+// Buttons > Success
+.btn.btn-success {
+  background: $success-color;
+}
+.btn.btn-success:hover,
+.btn.btn-success:focus {
+  background: $success-dark-color;
+}
+
+// Buttons > Brand Med
+.btn.btn-brand-med {
+  background: $brand-med-color;
+}
+.btn.btn-brand-med:hover,
+.btn.btn-brand-med:focus {
+  background: $brand-med-dark-color;
+}
+
 // Buttons > Sharing
 .btn.btn-twitter {
   background: $twitter-color;
@@ -107,23 +125,4 @@ button.btn {
 .btn.btn-facebook:hover,
 .btn.btn-facebook:focus {
   background: $facebook-dark-color;
-}
-
-// Basic color buttons
-@mixin color-btn($color) {
-  background: $color;
-
-  &:hover {
-    background: darken($color, 10%);
-  }
-}
-
-.btn {
-  &.btn-success {
-    @include color-btn($success-color);
-  }
-
-  &.btn-brand-med {
-    @include color-btn($brand-med-color);
-  }
 }

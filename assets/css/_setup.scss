@@ -6,10 +6,9 @@
 $white:                       #FFF;
 $black:                       #000;
 $grey-light-color:            #D6D6D6;
-// $grey-color:                  #999;
-// $grey-dark-color:             #222;
 $brand-color:                 #A424F5; // purple
 $brand-med-color:             #592BA6; // medium purple
+$brand-med-dark-color:        darken($brand-med-color, 10%); // darker medium purple
 $brand-dark-color:            #2C1B57; // dark purple slightly lightend
 $brand-darkest-color:         #180F37; // dark purple
 $brand-secondary-color:       #FF754A; // orange
@@ -19,8 +18,10 @@ $brand-tertiary-light-color:  lighten($brand-tertiary-color, 6%); // lighter blu
 $background-color:            $brand-darkest-color;
 $background-light-color:      $brand-dark-color;
 $text-color:                  $white;
-$success-color:               #58BAAE;
-$warn-color:                  #B61424;
+$success-color:               #58BAAE; // green
+$success-dark-color:          darken($success-color, 10%);
+$warn-color:                  #B61424; // red
+$warn-light-color:            #F97054; // orange-y red
 $glow-start-color:            #5A00FF; // blue
 $glow-end-color:              #FE734C; // orange
 

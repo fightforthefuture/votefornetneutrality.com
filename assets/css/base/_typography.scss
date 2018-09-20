@@ -141,6 +141,7 @@ small {
 }
 .text-warn {
   color: $warn-color;
+  -webkit-text-fill-color: $warn-color;
 }
 .text-success {
   color: $success-color;

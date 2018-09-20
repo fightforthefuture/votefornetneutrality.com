@@ -162,6 +162,13 @@ export default {
     // uncomment to test target politician
     // this.address = '120 N California St, Yerington, NV'
     // this.fetchCandidates()
+
+    // if address param is present, auto-fill scoreboard form
+    if (this.$route.query && this.$route.query.address) {
+      this.address = this.$route.query.address
+      this.fetchCandidates()
+      location.hash = '#scoreboard'
+    }
   },
 
   methods: {

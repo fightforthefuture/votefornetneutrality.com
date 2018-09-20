@@ -224,6 +224,10 @@
         </div> <!-- .row -->
       </div> <!-- .wrapper -->
     </section>
+
+    <Modal>
+      <CallModal v-if="modalType === 'call'"/>
+    </Modal>
   </div>
 </template>
 
@@ -233,12 +237,16 @@ import { createMetaTags, smoothScrollToElement } from '~/assets/js/helpers'
 import Logo from '~/components/Logo'
 import Chat from '~/components/Chat'
 import Scoreboard from '~/components/Scoreboard'
+import Modal from '~/components/Modal'
+import CallModal from '~/components/CallModal'
 
 export default {
   components: {
     Logo,
     Chat,
-    Scoreboard
+    Scoreboard,
+    Modal,
+    CallModal
   },
 
   head() {
@@ -259,7 +267,8 @@ export default {
   },
 
   computed: {
-    botPhoneNumber() { return config.botPhoneNumber }
+    botPhoneNumber() { return config.botPhoneNumber },
+    modalType () { return this.$store.state.modalType }
   },
 
   methods: {

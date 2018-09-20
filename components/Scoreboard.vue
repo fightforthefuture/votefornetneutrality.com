@@ -63,7 +63,7 @@
                       </p>
                       <div class="row med-pad-y1">
                         <div class="sml-c12 sml-pad-y1 med-c6 med-pad-y0">
-                          <a href="https://www.battleforthenet.com/call"
+                          <a @click="callPolitician()"
                              class="btn btn-block btn-success">
                             Call
                           </a>
@@ -213,7 +213,7 @@ export default {
       this.isLoading = false
     },
 
-    async fetchKeyRaces(){
+    async fetchKeyRaces() {
       try {
         const { data } = await axios.get('https://data.battleforthenet.com/vfnn/scoreboard/important.json')
         this.keyRaces = data
@@ -221,6 +221,11 @@ export default {
       catch (error) {
         console.error(error)
       }
+    },
+
+    callPolitician() {
+      this.$store.commit('setModalVisibility', true)
+      this.$store.commit('setModalType', 'call')
     }
   }
 }

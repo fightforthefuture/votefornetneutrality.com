@@ -15,6 +15,7 @@
 </template>
 
 <script>
+import config from '~/config'
 import Logo from '~/components/Logo'
 import PageFooter from '~/components/PageFooter'
 import { createMetaTags } from '~/assets/js/helpers'

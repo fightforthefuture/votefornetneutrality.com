@@ -22,12 +22,11 @@
               net neutrality a deciding factor in the 2018 elections.
               We&rsquo;re telling our elected officials: sign the discharge
               petition to restore net neutrality, or face the wrath of the
-              Internet on Election Day. Starting September 25th, we&rsquo;re
-              enlisting the entire Internet in a mission to educate every single
-              voter about where the candidates stand on restoring net
-              neutrality, and mobilize net neutrality supporters to get out the
-              vote in and make a difference in the most important races.
-              Here&rsquo;s how:
+              Internet on Election Day. We&rsquo;re enlisting the entire Internet 
+              in a mission to educate voters en masse about where their elected 
+              officials stand, with a focus on sitting members of Congress facing 
+              tight races, where our pressure can have the most impact to reverse 
+              the FCC’s repeal. Here&rsquo;s how:
             </p>
             <ul class="fancy-bullets">
               <li>
@@ -45,8 +44,8 @@
               <li>
                 Mobilizing
                 <a :href="$store.state.volunteerURL" target="_blank">volunteers</a>
-                across the Internet to text voters in key districts where we can
-                have the most impact.
+                across the Internet to text voters in key districts where our 
+                pressure calling for lawmakers to act can have the most impact.
               </li>
               <li>
                 Recruiting

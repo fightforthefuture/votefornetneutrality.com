@@ -45,10 +45,10 @@
               net neutrality a deciding factor in the 2018 elections.
               We&rsquo;re telling our elected officials: sign the discharge
               petition to restore net neutrality, or face the wrath of the
-              Internet on Election Day. We&rsquo;re enlisting the entire Internet 
-              in a mission to educate voters en masse about where their elected 
-              officials stand, with a focus on sitting members of Congress facing 
-              tight races, where our pressure can have the most impact to reverse 
+              Internet on Election Day. We&rsquo;re enlisting the entire Internet
+              in a mission to educate voters en masse about where their elected
+              officials stand, with a focus on sitting members of Congress facing
+              tight races, where our pressure can have the most impact to reverse
               the FCC’s repeal. Here&rsquo;s how:
             </p>
             <ul class="fancy-bullets">
@@ -67,12 +67,12 @@
               <li>
                 Mobilizing
                 <a :href="$store.state.volunteerURL" target="_blank">volunteers</a>
-                across the Internet to text voters in key districts where our 
+                across the Internet to text voters in key districts where our
                 pressure calling for lawmakers to act can have the most impact.
               </li>
               <li>
                 Recruiting
-                <a :href="$store.state.joinURL" target="_blank">local action teams</a>
+                <a href="#join" @click.prevent="scrollTo('#join')">local action teams</a>
                 to organize protests, pass out lawn signs, and do voter
                 education at the polls in key districts.
               </li>

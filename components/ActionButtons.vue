@@ -14,7 +14,7 @@
     </div> <!-- .c -->
     <div class="sml-c12 lrg-c4 sml-push-y2">
       <div class="with-border is-rounded sml-pad-1">
-        <a :href="$store.state.joinURL"
+        <a href="#join" @click.prevent="scrollTo('#join')"
            target="_blank"
            class="btn btn-block btn-brand">
           Join
@@ -38,3 +38,22 @@
     </div> <!-- .c -->
   </div> <!-- .row -->
 </template>
+
+<script>
+import { smoothScrollToElement } from '~/assets/js/helpers'
+
+export default {
+  methods: {
+    scrollTo(hash) {
+      const duration = 500
+      smoothScrollToElement(hash, duration)
+      // WARNING: Since there is no server a setTimeout is ok. However, with a
+      // server this is a dangerous eval. Remove if this project ever is hosted
+      // with a JS server.
+      setTimeout(() => {
+        location.hash = hash
+      }, duration)
+    }
+  }
+}
+</script>

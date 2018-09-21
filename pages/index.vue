@@ -11,11 +11,11 @@
 
   .btn {
     background: transparent;
-    border: 1px solid $brand-tertiary-color;
+    border: 1px solid $brand-color;
 
     &:hover {
-      background: $success-color;
-      border-color: $success-color;
+      background: $brand-color;
+      border-color: $brand-color;
     }
   }
 }
@@ -41,8 +41,8 @@
             <h2>Here&rsquo;s the Plan</h2>
             <p class="sml-push-y2 med-push-y3">
               The FCC killed net neutrality. But Congress can still restore it using
-              The Congressional Review Act (CRA).  So we&rsquo;re telling our elected 
-              officials: sign the discharge petition to restore net neutrality, or face 
+              The Congressional Review Act (CRA).  So we&rsquo;re telling our elected
+              officials: sign the discharge petition to restore net neutrality, or face
               the wrath of the Internet on Election Day. Here&rsquo;s what we're doing:
             </p>
             <ul class="fancy-bullets">
@@ -86,7 +86,7 @@
       <div class="wrapper">
         <div class="row">
           <div class="sml-c12 lrg-c8 grid-center text-center">
-            <h2>JOIN A LOCAL ACTION GROUP</h2>
+            <h2>JOIN A LOCAL<br> ACTION GROUP</h2>
             <p class="sml-push-y2 med-push-y3">We’ve created Facebook groups so that people all across America can organize protests, pass out lawn signs, and help educate voters at the polls in key districts.  There are many different ways to to help out in a lot of important races, so join a local action group today!</p>
             <p class="sml-push-y2"><img src="https://data.battleforthenet.com/events.png" alt="A map of net neutrality Facebook Groups" class="is-rounded"></p>
             <div class="facebook-groups sml-push-y2">

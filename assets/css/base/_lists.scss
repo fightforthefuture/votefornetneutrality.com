@@ -53,18 +53,19 @@
 }
 .fancy-bullets li {
   position: relative;
-  padding: $gutter $gutter*2;
+  padding: $gutter $gutter*2 $gutter $gutter*7;
   margin-bottom: $gutter;
   border: 1px solid $brand-color;
   border-radius: $default-border-radius;
+  text-align: left;
+
+  @for $i from 1 through 5 {
+    &:nth-child(#{$i}) {
+      background-image: url('~assets/images/bullet-#{$i}.svg');
+      background-size: #{$gutter * 3} auto;
+      background-repeat: no-repeat;
+      background-position: #{$gutter * 2} center;
+    }
+  }
 }
-.fancy-bullets li:before {
-  content: '';
-  position: absolute;
-  top: 20px;
-  left: -5px;
-  width:  10px;
-  height: 10px;
-  background-color: $brand-color;
-  border-radius: 100%;
-}
+

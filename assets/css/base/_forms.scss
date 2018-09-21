@@ -124,3 +124,16 @@ form .radio label {
   background-color: $brand-color;
   color: $white;
 }
+
+// Form > Clear
+form .clear-wrapper {
+  position: relative;
+}
+form .clear-wrapper textarea {
+  padding-right: $gutter*15;
+}
+form .clear {
+  position: absolute;
+  right: $gutter;
+  top: $gutter;
+}

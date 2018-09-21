@@ -63,13 +63,13 @@
                       </p>
                       <div class="row med-pad-y1">
                         <div class="sml-c12 sml-pad-y1 med-c6 med-pad-y0">
-                          <a href="https://www.battleforthenet.com/call"
+                          <a @click="openModal('call')"
                              class="btn btn-block btn-success">
                             Call
                           </a>
                         </div> <!-- .c -->
                         <div class="sml-c12 med-c6">
-                          <a href="https://www.battleforthenet.com"
+                          <a @click="openModal('write')"
                              class="btn btn-block btn-brand">
                             Write
                           </a>
@@ -215,7 +215,7 @@ export default {
       this.isLoading = false
     },
 
-    async fetchKeyRaces(){
+    async fetchKeyRaces() {
       try {
         const { data } = await axios.get('https://data.battleforthenet.com/vfnn/scoreboard/important.json')
         this.keyRaces = data
@@ -223,6 +223,11 @@ export default {
       catch (error) {
         console.error(error)
       }
+    },
+
+    openModal(type) {
+      this.$store.commit('setModalVisibility', true)
+      this.$store.commit('setModalType', type)
     }
   }
 }

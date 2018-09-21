@@ -6,7 +6,29 @@ const createStore = () => {
     state: {
       donateURL: config.donateURL,
       joinURL: config.joinURL,
-      volunteerURL: config.volunteerURL
+      volunteerURL: config.volunteerURL,
+      anPetitionId: config.actionNetworkPetitonId,
+      modalVisible: false,
+      modalType: null,
+      zipCode: null,
+      phone: null
+    },
+    mutations: {
+      setModalVisibility(state, value) {
+        state.modalVisible = value
+      },
+
+      setModalType(state, value) {
+        state.modalType = value
+      },
+
+      setZipCode(state, value) {
+        state.zipCode = value
+      },
+
+      setPhone(state, value) {
+        state.phone = value
+      }
     }
   })
 }

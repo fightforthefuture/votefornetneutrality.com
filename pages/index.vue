@@ -19,6 +19,23 @@
     }
   }
 }
+
+#social img {
+  transition: transform .3s;
+
+  &:hover {
+    transform: scale(1.04);
+  }
+}
+
+.img-instagram-story {
+  max-width: 300px;
+}
+
+.img-avatar {
+  max-width: 150px;
+  margin: 0 $gutter;
+}
 </style>
 
 <template>
@@ -70,10 +87,10 @@
                 to organize protests, pass out lawn signs, and do voter
                 education at the polls in key districts.
               </li>
-              <!-- <li>
-                Spreading the word. <a href="#">Click here to find</a> Vote for
+              <li>
+                Spreading the word. <a href="#social" @click.prevent="scrollTo('#social')">Click here to find</a> Vote for
                 Net Neutrality tweets, social media materials, graphics, and more.
-              </li> -->
+              </li>
             </ul>
           </div>
         </div>
@@ -164,50 +181,36 @@
       </div>
     </section> -->
 
-<!--     <section id="social" class="sml-pad-y2 med-pad-y4">
+    <section id="social" class="sml-pad-y2 med-pad-y4">
       <div class="wrapper">
         <div class="row">
           <div class="sml-c12 lrg-c8 grid-center text-center">
             <h2>Social media</h2>
             <p class="sml-push-y2 med-push-y3">
-              If you&rsquo;re active on social media, have a video channel, or
-              moderate an online forum, put your small piece of the Internet on
-              alert by changing your profile on social media to the images
-              below. You can also schedule frequent posts linking to
-              <a href="https://www.battleforthenet.com/" target="_blank">
-                BattleForThe.Net</a>
-              where people can take action.
-              <a href="#TODO" target="_blank">Click here</a> to see ideas for
-              blog posts, emails, tweets and more.
+              If you’re active on social media, have a video channel, or moderate an online forum, put your small piece of the Internet on alert by changing your profile on social media to the images below.  You can also schedule frequent posts linking to <a href="https://www.votefornetneutrality.com/">VoteForNetNeutrality.com</a> where people can take action.
             </p>
             <p>
-              <strong>Avatar Images</strong>
+              <a href="https://docs.google.com/document/d/1aRhHsHCW1HB2fOJW4lIOurYYpXP2kb3vlZ2O7vniMoo/edit?disco=uiAAAACMaQa_s&ts=5ba2d9b3" target="_blank">Click here</a> to see ideas for blog posts, emails, tweets and more.
             </p>
-            <p>
-              TODO: Avatar Images
-            </p>
-            <p>
-              <strong>Facebook Header Images</strong>
-            </p>
-            <p>
-              TODO: Facebook Header Images
-            </p>
-            <p>
-              <strong>Twitter Header Images</strong>
-            </p>
-            <p>
-              TODO: Twitter Header Images
-            </p>
-            <p>
-              <strong>Instagram Story</strong>
-            </p>
-            <p>
-              TODO: Instagram Story Images
-            </p>
+
+            <h3 class="sml-push-y2">Avatar Images</h3>
+            <div class="flex-center sml-push-y1">
+              <a href="/media/Avatar.png"><img src="/media/Avatar.png" alt="Vote for Net Neutrality avatar image" class="img-avatar"></a>
+            </div>
+
+            <h3 class="sml-push-y2">Facebook Header Images</h3>
+            <div class="flex-center sml-push-y1">
+              <a href="/media/Facebook_Cover.png"><img src="/media/Facebook_Cover.png" alt="Vote for Net Neutrality Facebook header image"></a>
+            </div>
+
+            <h3 class="sml-push-y2">Instagram Story</h3>
+            <div class="flex-center sml-push-y1">
+              <a href="/media/Instagram_Story.png"><img src="/media/Instagram_Story.png" alt="Vote for Net Neutrality Instagram story image" class="img-instagram-story"></a>
+            </div>
           </div>
         </div>
       </div>
-    </section> -->
+    </section>
 
     <section id="how" class="sml-pad-y2 med-pad-y4">
       <div class="wrapper">

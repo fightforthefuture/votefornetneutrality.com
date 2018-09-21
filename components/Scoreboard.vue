@@ -34,6 +34,9 @@
                 <span v-else>Let&rsquo;s go</span>
               </button>
             </form>
+            <p class="sml-push-y1 text-center">
+              <small> Data from Fight for the Future and Common Cause’s <a href="https://democracy2018.org/" target="_blank">Our Democracy 2018</a>.</small>
+            </p>
           </div> <!-- .c -->
         </div> <!-- .row -->
 

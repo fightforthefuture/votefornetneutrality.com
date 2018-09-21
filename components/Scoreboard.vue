@@ -1,10 +1,16 @@
+<style lang="scss" scoped>
+#results h2 {
+  font-size: $font-size-2-part-duex;
+}
+</style>
+
 <template>
   <div>
     <section id="scoreboard" class="sml-pad-y2 med-pad-y4">
       <div class="wrapper">
         <div class="row">
           <div class="sml-c12 lrg-c8 grid-center text-center">
-            <h2>See where the canidates stand</h2>
+            <h2>See where the candidates stand</h2>
             <p class="sml-push-y2 med-push-y3">
               Enter your address below. We&rsquo;ll provide you with a list of
               all the candidates running for the Senate and House in your

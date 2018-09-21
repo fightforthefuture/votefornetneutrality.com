@@ -40,16 +40,10 @@
           <div class="sml-c12 lrg-c8 grid-center text-center">
             <h2>Here&rsquo;s the Plan</h2>
             <p class="sml-push-y2 med-push-y3">
-              Congress can save net neutrality but House leadership is blocking
-              the vote to restore it. To force the vote and win, we have to make
-              net neutrality a deciding factor in the 2018 elections.
-              We&rsquo;re telling our elected officials: sign the discharge
-              petition to restore net neutrality, or face the wrath of the
-              Internet on Election Day. We&rsquo;re enlisting the entire Internet
-              in a mission to educate voters en masse about where their elected
-              officials stand, with a focus on sitting members of Congress facing
-              tight races, where our pressure can have the most impact to reverse
-              the FCC’s repeal. Here&rsquo;s how:
+              The FCC killed net neutrality. But Congress can still restore it using
+              The Congressional Review Act (CRA).  So we&rsquo;re telling our elected 
+              officials: sign the discharge petition to restore net neutrality, or face 
+              the wrath of the Internet on Election Day. Here&rsquo;s what we're doing:
             </p>
             <ul class="fancy-bullets">
               <li>

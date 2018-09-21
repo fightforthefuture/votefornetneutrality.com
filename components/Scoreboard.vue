@@ -90,8 +90,8 @@
                 Neutrality
               </h2>
 
-              <Candidates :race="results.senate" key="local-senate" />
               <Candidates :race="results.house" key="local-house" />
+              <Candidates :race="results.senate" key="local-senate" />
             </section>
           </div> <!-- .c -->
         </div> <!-- .row -->
@@ -117,12 +117,13 @@
               </div>
 
               <Candidates
-                v-for="(race, index) in keyRaces.senate"
-                :key="`key-senate-race-${index}`"
-                :race="race" />
-              <Candidates
                 v-for="(race, index) in keyRaces.house"
                 :key="`key-house-race-${index}`"
+                :race="race" />
+
+              <Candidates
+                v-for="(race, index) in keyRaces.senate"
+                :key="`key-senate-race-${index}`"
                 :race="race" />
             </section>
           </div> <!-- .c -->

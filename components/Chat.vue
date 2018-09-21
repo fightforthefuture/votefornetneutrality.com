@@ -96,7 +96,7 @@ export default {
         this.messages.push({
           type: 'bubble',
           style: 'default',
-          content: "I can tell you where candidates in your area stand on net neutrality, help you contact them, register to vote, and more."
+          content: "I can tell you where politicians in your area stand on net neutrality, help you contact them, register to vote, and more."
         })
       }, 1500) // +1.5 seconds
       setTimeout(() => {

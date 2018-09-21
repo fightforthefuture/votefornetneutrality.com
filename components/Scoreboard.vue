@@ -115,8 +115,8 @@
                 <h2 class="lrg-pad-x4">Help out in these key races</h2>
                 <p class="sml-push-y2 med-push-y3">
                  We&rsquo;ve identified <a href="/races/">{{ keyRaceCount }} extremely close races</a> across the country
-                 where net neutrality supporters can make a difference. Click on
-                 the links below to help out.
+                 where net neutrality supporters can make the most difference pressuring
+                 lawmakers to do the right thing. Click on the links below to help out.
                 </p>
 
                 <ActionButtons/>

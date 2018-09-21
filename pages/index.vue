@@ -1,3 +1,26 @@
+<style lang="scss" scoped>
+.facebook-groups {
+  display: grid;
+  grid-gap: $gutter;
+  grid-template-columns: repeat(2, 50%);
+  padding-right: $gutter * 1.2;
+
+  @include respond-to(med) {
+    grid-template-columns: repeat(3, 33%);
+  }
+
+  .btn {
+    background: transparent;
+    border: 1px solid $brand-tertiary-color;
+
+    &:hover {
+      background: $success-color;
+      border-color: $success-color;
+    }
+  }
+}
+</style>
+
 <template>
   <div>
     <section id="text-me" class="sml-pad-y2 med-pad-y4">
@@ -64,6 +87,24 @@
     </section>
 
     <Scoreboard/>
+
+    <section id="join" class="sml-pad-y2 med-pad-y4">
+      <div class="wrapper">
+        <div class="row">
+          <div class="sml-c12 lrg-c8 grid-center text-center">
+            <h2>JOIN A LOCAL ACTION GROUP</h2>
+            <p class="sml-push-y2 med-push-y3">We’ve created Facebook groups so that people all across America can organize protests, pass out lawn signs, and help educate voters at the polls in key districts.  There are many different ways to to help out in a lot of important races, so join a local action group today!</p>
+            <p class="sml-push-y2"><img src="https://data.battleforthenet.com/events.png" alt="A map of net neutrality Facebook Groups" class="is-rounded"></p>
+            <div class="facebook-groups sml-push-y2">
+              <a v-for="group in facebookGroups" :key="group.url"
+                :href="group.url" target="_blank" class="btn btn-dark truncate">
+                {{ group.address }}
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
 <!--     <section id="widget" class="sml-pad-y2 med-pad-y4 fill-brand-dark">
       <div class="wrapper">
@@ -232,6 +273,7 @@
 </template>
 
 <script>
+import axios from 'axios'
 import config from '~/config'
 import { createMetaTags, smoothScrollToElement } from '~/assets/js/helpers'
 import Logo from '~/components/Logo'
@@ -265,6 +307,33 @@ export default {
         image: config.sharing.image,
         url: config.sharing.url
       })
+    }
+  },
+
+  async asyncData() {
+    let facebookGroups = []
+
+    try {
+      const { data } = await axios.get('https://data.battleforthenet.com/events.json')
+
+      facebookGroups = data.filter(e => e.category === 'facebook_group').sort((a, b) => {
+        if (a.address < b.address) {
+          return -1
+        }
+        else if (a.address > b.address) {
+          return 1
+        }
+        else {
+          return 0
+        }
+      })
+    }
+    catch (error) {
+      //
+    }
+
+    return {
+      facebookGroups: facebookGroups
     }
   },
 

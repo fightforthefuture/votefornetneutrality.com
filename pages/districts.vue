@@ -18,8 +18,8 @@
         <li>FL-18 - Mast</li>
         <li>UT-4 - Love</li>
         <li>KS-3 - Yoder</li>
-        <li>NY-23 - Tom Reed</li>
-        <li>TX-23 - Will Hurd</li>
+        <li>NY-23 - Reed</li>
+        <li>TX-23 - Hurd</li>
         <li>MI-1 - Bergman</li>
         <li>ME-2 - Poliquin</li>
         <li>NY-11 - Donovan</li>

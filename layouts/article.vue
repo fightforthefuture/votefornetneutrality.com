@@ -4,7 +4,7 @@
       <div class="wrapper">
         <div class="row">
           <div class="sml-c12 lrg-c8 grid-center article text-center">
-            <Logo/>
+            <a href="/"><Logo/></a>
             <nuxt/>
           </div>
         </div>

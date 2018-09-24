@@ -98,7 +98,10 @@
                 Here&rsquo;s where candidates in your area stand on Net
                 Neutrality
               </h2>
-
+              <p>
+              Tell net neutrality supporters "Thank you!"  And tell opponents and 
+              undecideds that you demand net neutrality.
+              </p>
               <Candidates :race="results.house" key="local-house" />
               <Candidates :race="results.senate" key="local-senate" />
             </section>

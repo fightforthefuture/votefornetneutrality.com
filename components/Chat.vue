@@ -44,9 +44,10 @@
 
 <script>
 import axios from 'axios'
-import { smoothScrollWithinElement } from '~/assets/js/helpers'
+import { smoothScrollWithinElement, startTextFlow } from '~/assets/js/helpers'
 import Message from '~/components/Message'
 import SocialShareButtons from '~/components/SocialShareButtons'
+import config from '~/config'
 
 export default {
   components: {
@@ -122,13 +123,17 @@ export default {
 
       // POST to Chatbot API
       try {
-        const { data } = await axios.post(
-          `${process.env.botApiUrl}/conversations`,
-          {
-            "type": "web",
-            "recipients": [ {"username": this.phoneNumber } ]
-          }
-        )
+        const data = await startTextFlow({
+          flow: config.textFlowId,
+          phone: this.phoneNumber
+        })
+        // const { data } = await axios.post(
+        //   `${process.env.botApiUrl}/conversations`,
+        //   {
+        //     "type": "web",
+        //     "recipients": [ {"username": this.phoneNumber } ]
+        //   }
+        // )
         // Display messages on success
         // WARNING: Since there is no server a setTimeout is ok. However, with a
         // server this is a dangerous eval. Remove if this project ever is hosted

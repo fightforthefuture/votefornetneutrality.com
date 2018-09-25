@@ -99,7 +99,7 @@
                 Neutrality
               </h2>
               <p class="sml-push-y2 med-push-y3">
-              Say "Thank you!" to those who support net neutrality.  And tell opponents and 
+              Say "Thank you!" to those who support net neutrality.  And tell opponents and
               undecideds that you demand stronger net neutrality protections from your elected
               representatives.
               </p>
@@ -188,10 +188,17 @@ export default {
     // this.address = '120 N California St, Yerington, NV'
     // this.fetchCandidates()
 
+    const query = this.$route.query || {}
+
     // if address param is present, auto-fill scoreboard form
-    if (this.$route.query && this.$route.query.address) {
+    if (query.address) {
       this.address = this.$route.query.address
       this.fetchCandidates()
+      location.hash = '#scoreboard'
+    }
+    // if district param is present, fetch that scoreboard
+    else if (query.district) {
+      this.fetchCandidatesByDistrict(query.district)
       location.hash = '#scoreboard'
     }
   },
@@ -224,6 +231,22 @@ export default {
       }
       catch (error) {
         this.errorMessage = "😳 Oh no! We couldn't find any information for your address."
+      }
+
+      this.isLoading = false
+    },
+
+    async fetchCandidatesByDistrict(district) {
+      this.results = null
+      this.isLoading = true
+      this.errorMessage = null
+
+      try {
+        const { data } = await axios.get(`https://data.battleforthenet.com/vfnn/scoreboard/${district.toString().toUpperCase()}.json`)
+        this.results = data
+      }
+      catch (error) {
+        this.errorMessage = "😳 Oh no! We couldn't find any information for your district."
       }
 
       this.isLoading = false

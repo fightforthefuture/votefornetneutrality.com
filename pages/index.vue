@@ -239,6 +239,7 @@
 <script>
 import axios from 'axios'
 import config from '~/config'
+import facebookGroups from '~/data/facebook-groups.json'
 import { createMetaTags, smoothScrollToElement } from '~/assets/js/helpers'
 import Logo from '~/components/Logo'
 import Chat from '~/components/Chat'
@@ -276,36 +277,10 @@ export default {
     }
   },
 
-  async asyncData() {
-    let facebookGroups = []
-
-    try {
-      const { data } = await axios.get('https://data.battleforthenet.com/events.json')
-
-      facebookGroups = data.filter(e => e.category === 'facebook_group').sort((a, b) => {
-        if (a.address < b.address) {
-          return -1
-        }
-        else if (a.address > b.address) {
-          return 1
-        }
-        else {
-          return 0
-        }
-      })
-    }
-    catch (error) {
-      //
-    }
-
-    return {
-      facebookGroups: facebookGroups
-    }
-  },
-
   computed: {
     botPhoneNumber() { return config.botPhoneNumber },
-    modalType () { return this.$store.state.modalType }
+    modalType () { return this.$store.state.modalType },
+    facebookGroups: () => facebookGroups
   },
 
   methods: {

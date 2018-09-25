@@ -1,7 +1,7 @@
 <template>
-  <div v-if="race" class="sml-push-y2 med-push-y4">
+  <div v-if="race && race.candidates.length" class="sml-push-y2 med-push-y4">
     <h4 class="section-title text-center"><span>{{ race.title }}</span></h4>
-    <div class="row">
+    <div class="row row-clear-doubles">
       <div v-for="candidate in race.candidates" :key="candidate.id"
            class="sml-c12 lrg-c6 sml-push-y2 med-push-y3">
         <div class="sml-pad-1 is-rounded candidate fill-brand-dark"

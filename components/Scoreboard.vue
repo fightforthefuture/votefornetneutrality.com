@@ -1,9 +1,3 @@
-<style lang="scss" scoped>
-#results h2 {
-  font-size: $font-size-2-part-duex;
-}
-</style>
-
 <template>
   <div>
     <section id="scoreboard" class="sml-pad-y2 med-pad-y4">
@@ -45,10 +39,10 @@
             <section id="results"
                      class="sml-pad-2 med-pad-4 sml-push-y4 fill-black is-rounded">
               <div v-if="results.target">
-                <h2 class="text-center text-warn">
+                <h3 class="text-center text-warn">
                   Your {{ results.target.title }} opposes Net Neutrality and
                   they&rsquo;re facing a tight election
-                </h2>
+                </h3>
 
                 <div class="with-border-warn is-rounded sml-push-y2 sml-pad-2">
                   <div class="row">
@@ -99,7 +93,7 @@
                 Neutrality
               </h2>
               <p class="sml-push-y2 med-push-y3">
-              Say "Thank you!" to those who support net neutrality.  And tell opponents and 
+              Say "Thank you!" to those who support net neutrality.  And tell opponents and
               undecideds that you demand stronger net neutrality protections from your elected
               representatives.
               </p>

@@ -80,7 +80,7 @@ button.btn {
   font-size:  $base-font-size;
 
   @include respond-to(lrg) {
-    font-size: $font-size-3;
+    font-size: $font-size-4;
   }
 }
 

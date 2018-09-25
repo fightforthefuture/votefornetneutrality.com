@@ -104,3 +104,10 @@ $fix-mqs: false !default;
     @media only screen and (max-width: $content) { @content; }
   }
 }
+
+// Media Query Mixins > IE10 and IE11
+@mixin is-ie($content: true) {
+  @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+    @content;
+  }
+}

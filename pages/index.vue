@@ -169,11 +169,17 @@
       <div class="wrapper">
         <div class="row">
           <div class="sml-c12 lrg-c8 grid-center text-center">
-            <SocialMedia/>
+            <SocialMedia :show-all="false"/>
+          </div> <!-- .c -->
+        </div> <!-- .row -->
+      </div> <!-- .wrapper -->
+    </section>
 
-            <div class="sml-push-y2 med-push-y3">
-              <nuxt-link to="/media">See More</nuxt-link>
-            </div> <!-- .push -->
+    <section id="banner-ads" class="sml-pad-y2 med-pad-y4">
+      <div class="wrapper">
+        <div class="row">
+          <div class="sml-c12 lrg-c8 grid-center text-center">
+            <BannerAds :show-all="false"/>
           </div> <!-- .c -->
         </div> <!-- .row -->
       </div> <!-- .wrapper -->
@@ -245,6 +251,7 @@ import Logo from '~/components/Logo'
 import Chat from '~/components/Chat'
 import Scoreboard from '~/components/Scoreboard'
 import SocialMedia from '~/components/SocialMedia'
+import BannerAds from '~/components/BannerAds'
 import Modal from '~/components/Modal'
 import CallModal from '~/components/CallModal'
 import WriteModal from '~/components/WriteModal'
@@ -255,6 +262,7 @@ export default {
     Chat,
     Scoreboard,
     SocialMedia,
+    BannerAds,
     Modal,
     CallModal,
     WriteModal

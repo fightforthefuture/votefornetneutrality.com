@@ -3,7 +3,7 @@
     <div class="wrapper">
       <div class="row">
         <div class="sml-c12 lrg-c8 grid-center text-center">
-          <h2 id="banner-media">Banner Ads</h2>
+          <h2>Banner Ads</h2>
           <p class="sml-push-y2 med-push-y3">
             If you run a website or blog, post our banner ads to let your visitors
             know you support net neutrality. Be sure to link these ads back to
@@ -281,7 +281,7 @@
       </div> <!-- v-if -->
 
       <div v-else class="sml-push-y2 med-push-y3">
-        <nuxt-link to="/media/#banner-media">View all</nuxt-link>
+        <nuxt-link to="/media/#banner-ads">View all</nuxt-link>
       </div> <!-- .push -->
     </div> <!-- .wrapper -->
   </section>

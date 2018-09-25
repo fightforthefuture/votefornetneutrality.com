@@ -131,36 +131,7 @@
       </div>
     </section> -->
 
-<!--     <section id="banner-ads" class="sml-pad-y2 med-pad-y4">
-      <div class="wrapper">
-        <div class="row">
-          <div class="sml-c12 lrg-c8 grid-center text-center">
-            <h2>Post banner ads on your site</h2>
-            <p class="sml-push-y2 med-push-y3">
-              Do you run a site or blog? Use the banner ads below to get the
-              word out on net neutrality. Or, if you&rsquo;re feeling creative,
-              make something yourself and submit it for other sites to use by
-              emailing us at
-              <a href="mailto:team@fightforthefuture.org">
-                team@fightforthefuture.org</a>.
-            </p>
-            <p>
-              TODO: Banner Ad Images
-            </p>
-          </div>
-        </div>
-      </div>
-    </section> -->
-
-    <section id="social" class="sml-pad-y2 med-pad-y4">
-      <div class="wrapper">
-        <div class="row">
-          <div class="sml-c12 lrg-c8 grid-center text-center">
-            <SocialMedia :show-all="false"/>
-          </div> <!-- .c -->
-        </div> <!-- .row -->
-      </div> <!-- .wrapper -->
-    </section>
+    <SocialMedia :show-all="false"/>
 
     <BannerAds :show-all="false"/>
 

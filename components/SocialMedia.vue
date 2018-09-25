@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h2>Social media</h2>
+    <h2 id="social-media">Social media</h2>
     <p class="sml-push-y2 med-push-y3">
       If you&rsquo;re active on social media, have a video channel, or moderate
       an online forum, put your small piece of the Internet on alert by changing
@@ -23,22 +23,38 @@
       </a>
     </div> <!-- .push -->
 
-    <h4 class="sml-push-y2">Facebook Header Images</h4>
-    <div class="sml-push-y1">
-      <a href="/media/Facebook_Cover.png">
-        <img src="/media/Facebook_Cover.png"
-             alt="Vote for Net Neutrality Facebook header image"
-             class="grid-center img-hover-grow">
-      </a>
-    </div> <!-- .push -->
+    <div v-if="showAll">
+      <h4 class="sml-push-y2">Facebook Header Images</h4>
+      <div class="sml-push-y1">
+        <a href="/media/Facebook_Cover.png">
+          <img src="/media/Facebook_Cover.png"
+               alt="Vote for Net Neutrality Facebook header image"
+               class="grid-center img-hover-grow">
+        </a>
+      </div> <!-- .push -->
 
-    <h4 class="sml-push-y2">Instagram Story</h4>
-    <div class="sml-push-y1">
-      <a href="/media/Instagram_Story.png">
-        <img src="/media/Instagram_Story.png"
-             alt="Vote for Net Neutrality Instagram story image"
-             class="grid-center img-instagram-story img-hover-grow">
-      </a>
+      <h4 class="sml-push-y2">Instagram Story</h4>
+      <div class="sml-push-y1">
+        <a href="/media/Instagram_Story.png">
+          <img src="/media/Instagram_Story.png"
+               alt="Vote for Net Neutrality Instagram story image"
+               class="grid-center img-instagram-story img-hover-grow">
+        </a>
+      </div> <!-- .push -->
+    </div> <!-- v-if -->
+    <div v-else class="sml-push-y2 med-push-y3">
+      <nuxt-link to="/media/#social-media">View all</nuxt-link>
     </div> <!-- .push -->
   </div>
 </template>
+
+<script>
+export default {
+  props: {
+    showAll: {
+      type: Boolean,
+      default: true
+    }
+  }
+}
+</script>

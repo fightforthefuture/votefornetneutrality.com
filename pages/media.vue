@@ -11,17 +11,20 @@
     </p>
 
     <SocialMedia/>
+    <BannerAds class="sml-push-4 med-push-y6"/>
   </div>
 </template>
 
 <script>
 import SocialMedia from '~/components/SocialMedia'
+import BannerAds from '~/components/BannerAds'
 
 export default {
   layout: 'article',
 
   components: {
-    SocialMedia
+    SocialMedia,
+    BannerAds
   }
 }
 </script>

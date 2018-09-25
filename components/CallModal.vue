@@ -52,6 +52,7 @@
 </template>
 
 <script>
+import config from '~/config'
 import axios from 'axios'
 import { postFormData } from '~/assets/js/helpers'
 import ActionButtons from '~/components/ActionButtons'
@@ -70,7 +71,7 @@ export default {
   },
 
   computed: {
-    campaignId() { return "RED_ALERT_BattleForTheNet_Call_House_2Sens"},
+    campaignId: () => config.callPowerCampaignId,
 
     zipCode: {
       get() {

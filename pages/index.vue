@@ -8,16 +8,6 @@
   @include respond-to(med) {
     grid-template-columns: repeat(3, 33%);
   }
-
-  .btn {
-    background: transparent;
-    border: 1px solid $brand-color;
-
-    &:hover {
-      background: $brand-color;
-      border-color: $brand-color;
-    }
-  }
 }
 </style>
 
@@ -86,12 +76,23 @@
       <div class="wrapper">
         <div class="row">
           <div class="sml-c12 lrg-c8 grid-center text-center">
-            <h2>JOIN A LOCAL<br> ACTION GROUP</h2>
-            <p class="sml-push-y2 med-push-y3">We’ve created Facebook groups so that people all across America can organize protests, pass out lawn signs, and help educate voters at the polls in key districts.  There are many different ways to to help out in a lot of important races, so join a local action group today!</p>
-            <p class="sml-push-y2"><img src="https://data.battleforthenet.com/events.png" alt="A map of net neutrality Facebook Groups" class="is-rounded"></p>
+            <h2>Join a local<br>action group</h2>
+            <p class="sml-push-y2 med-push-y3">
+              We&rsquo;ve created Facebook groups so that people all across
+              America can organize protests, pass out lawn signs, and help
+              educate voters at the polls in key districts.  There are many
+              different ways to to help out in a lot of important races, so join
+              a local action group today!
+            </p>
+            <p class="sml-push-y2">
+              <img src="https://data.battleforthenet.com/events.png" alt="A map of net neutrality Facebook Groups" class="is-rounded">
+            </p>
             <div class="facebook-groups sml-push-y2">
-              <a v-for="group in facebookGroups" :key="group.url"
-                :href="group.url" target="_blank" class="btn btn-dark truncate">
+              <a v-for="group in facebookGroups"
+                :key="group.url"
+                :href="group.url"
+                target="_blank"
+                class="btn btn-hollow text-ellipsis">
                 {{ group.address }}
               </a>
             </div>

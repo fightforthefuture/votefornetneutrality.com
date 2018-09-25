@@ -3,7 +3,7 @@
 // Button > Default
 .btn {
   display: inline-block;
-  padding: ($gutter + 2) $gutter*2 ($gutter + 3);
+  padding: ($gutter + 2) $gutter*1.5 ($gutter + 3);
   overflow: hidden;
   background: $brand-secondary-color;
   background: linear-gradient(
@@ -108,6 +108,17 @@ button.btn {
 .btn.btn-light:focus {
   background: $brand-dark-color;
   color: $brand-light-color;
+}
+
+// Buttons > Hollow
+.btn.btn-hollow {
+  background: transparent;
+  border: 1px solid $brand-color;
+}
+.btn.btn-hollow:hover,
+.btn.btn-hollow:focus {
+  background: $brand-color;
+  border-color: $brand-color;
 }
 
 // Buttons > Success

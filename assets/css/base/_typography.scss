@@ -149,6 +149,9 @@ small {
   font-size: 120%;
   line-height: 1;
 }
+.text-ellipsis {
+  text-overflow: ellipsis;
+}
 
 // Typography > Tag
 .tag {

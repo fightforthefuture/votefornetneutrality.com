@@ -2,9 +2,10 @@
   <div>
     <section class="sml-pad-y2 med-pad-y4 text-center">
       <div class="wrapper">
+        <a href="/"><Logo/></a>
+
         <div class="row">
           <div class="sml-c12 lrg-c8 grid-center article text-center">
-            <a href="/"><Logo/></a>
             <nuxt/>
           </div>
         </div>

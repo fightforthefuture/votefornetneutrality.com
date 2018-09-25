@@ -180,38 +180,28 @@
             <p class="sml-push-y2 med-push-y3">
               Simply enter your number above or text <strong>VOTE</strong> to
               <strong>{{ botPhoneNumber }}</strong> and respond to a few
-              questions&hellip; it only takes a minute to complete! Once
-              you&rsquo;re done, we&rsquo;ll help you register to vote and give
-              you everything you need to get to the polls. In several states,
-              your answers submit directly to state online forms for voter
-              registration, so there are no paper forms to fill out. In other
-              states, we send you a pre-filled form by email or — if you
-              don&rsquo;t have a printer — by mail. We include a stamped
-              envelope, so to complete your registration you just have to sign
-              and mail it.
+              questions&hellip. First, we'll look up your voter registration status 
+              using Target Smart, a secure service.  If you are not registered to vote, 
+              we will direct you to Turbo Vote so you can make sure you are ready to 
+              participate in the 2018 elections.
             </p>
             <p>
-              We also provide links to your state&rsquo;s own online
-              registration system, if they have one. And as election day
-              approaches, we send you all the information you need to vote,
-              including your polling location, early voting info, election day
-              reminders including a handy calendar invite, voter ID requirements
-              &amp; more.
+              Next, we'll let you know who is running for the US Senate and the US 
+              House of Representatives in your district using Google Civic Information.  
+              We'll also tell you which candidates support or opppose net neutrality 
+              based on information compiled by Fight for the Future and Common Cause.  
+              We encourage you to contact these candidates and let them know you want 
+              them to support net neutrality before the election.
             </p>
             <p>
-              Before submitting your registration, we&rsquo;ll give you the
-              chance to verify that your information is correct. Do not provide
-              false information, as your state may consider that a criminal
-              offense. When you&rsquo;re done, we will send you your polling
-              location, early voting info, an &ldquo;I&rsquo;m voting&rdquo;
-              selfie badge, election day reminders (including a handy calendar
-              invite), voter ID requirements, streamlined ways to register to
-              vote &amp; more.
+              Please be aware that the services we use are not always 100% accurate.
+              You may be registered to vote even if our system says otherwise. And
+              in some rare cases, Congressional districts have been recently changed
+              and the Google Civic Information API hasn't been updated. If you find
+              an error, you can let us know by emailing team@fightforthefuture.org.
+              We'll try to fix it if we can.
             </p>
             <p>
-              You can read about our
-              <nuxt-link to="/privacy">privacy policy</nuxt-link> or check out
-              our <nuxt-link to="/terms">terms of service</nuxt-link>.
               Remember that you&rsquo;re texting, so data &amp; message
               rates may apply. You can text <strong>STOP</strong> to
               <strong>{{ botPhoneNumber }}</strong> any time to stop receiving

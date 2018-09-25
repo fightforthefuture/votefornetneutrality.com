@@ -23,6 +23,9 @@
   content: '';
   display: table;
 }
+.row-clear-doubles > :nth-of-type(2n+1) {
+  clear: left;
+}
 .tuck-bottom {
   margin-bottom: 0;
 }

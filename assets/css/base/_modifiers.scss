@@ -45,6 +45,16 @@
   background-size: 200% 200%;
   transform: translateZ(0); // NOTE: hardware accelerated, use GPU
   animation: animateGlow 10s ease infinite;
+
+  @include is-ie {
+    top:    -1px;
+    right:  -1px;
+    bottom: -1px;
+    left:   -1px;
+    width:  auto;
+    height: auto;
+    border-radius: $default-border-radius;
+  }
 }
 .with-glow .glow-content {
   position: relative;

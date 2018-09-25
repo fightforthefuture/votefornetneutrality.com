@@ -172,7 +172,7 @@
             <SocialMedia/>
 
             <div class="sml-push-y2 med-push-y3">
-              <nuxt-link to="/social-media">See More</nuxt-link>
+              <nuxt-link to="/media">See More</nuxt-link>
             </div> <!-- .push -->
           </div> <!-- .c -->
         </div> <!-- .row -->

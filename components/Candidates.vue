@@ -17,12 +17,12 @@
             <img :src="candidate.photo" :alt="`${candidate.name} photo`"/>
           </div> <!-- .candidate-photo -->
           <div class="sml-pad-1 is-rounded fill-black candidate-content">
-            <h4 :class="{
+            <h5 :class="{
                     'text-success': candidate.supporter === true,
                     'text-warn': candidate.supporter === false
                  }">
               {{ candidate.name }}
-            </h4>
+            </h5>
             <h6 :class="{ 'text-brand-light': candidate.supporter === null }">
               {{ candidate.party }}
             </h6>

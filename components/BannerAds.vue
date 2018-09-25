@@ -9,8 +9,8 @@
 
     <h4 class="sml-push-y2">300 x 300</h4>
     <div class="sml-push-y1">
-      <a href="/media/300x300.png">
-        <img src="/media/300x300.png"
+      <a href="/media/300x300-VOTE.png">
+        <img src="/media/300x300-VOTE.png"
              alt="Vote for Net Neutrality 300 x 300 image"
              class="grid-center img-hover-grow">
       </a>
@@ -19,8 +19,8 @@
     <div v-if="showAll">
       <h4 class="sml-push-y2">600 x 450</h4>
       <div class="sml-push-y1">
-        <a href="/media/600x450.png">
-          <img src="/media/600x450.png"
+        <a href="/media/600x450-VOTE.png">
+          <img src="/media/600x450-VOTE.png"
                alt="Vote for Net Neutrality 600 x 450 image"
                class="grid-center img-hover-grow">
         </a>
@@ -28,8 +28,8 @@
 
       <h4 class="sml-push-y2">600 x 500</h4>
       <div class="sml-push-y1">
-        <a href="/media/600x500.png">
-          <img src="/media/600x500.png"
+        <a href="/media/600x500-VOTE.png">
+          <img src="/media/600x500-VOTE.png"
                alt="Vote for Net Neutrality 600 x 500 image"
                class="grid-center img-hover-grow">
         </a>
@@ -37,8 +37,8 @@
 
       <h4 class="sml-push-y2">600 x 600</h4>
       <div class="sml-push-y1">
-        <a href="/media/600x600.png">
-          <img src="/media/600x600.png"
+        <a href="/media/600x600-VOTE.png">
+          <img src="/media/600x600-VOTE.png"
                alt="Vote for Net Neutrality 600 x 600 image"
                class="grid-center img-hover-grow">
         </a>

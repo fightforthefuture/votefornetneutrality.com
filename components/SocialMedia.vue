@@ -16,8 +16,8 @@
 
     <h4 class="sml-push-y2">Avatar Images</h4>
     <div class="sml-push-y1">
-      <a href="/media/Avatar.png">
-        <img src="/media/Avatar.png"
+      <a href="/media/Profile-VOTE.png">
+        <img src="/media/Profile-VOTE.png"
              alt="Vote for Net Neutrality avatar image"
              class="grid-center img-avatar img-hover-grow">
       </a>
@@ -26,8 +26,8 @@
     <div v-if="showAll">
       <h4 class="sml-push-y2">Facebook Header Images</h4>
       <div class="sml-push-y1">
-        <a href="/media/Facebook_Cover.png">
-          <img src="/media/Facebook_Cover.png"
+        <a href="/media/Cover-VOTE.png">
+          <img src="/media/Cover-VOTE.png"
                alt="Vote for Net Neutrality Facebook header image"
                class="grid-center img-hover-grow">
         </a>
@@ -35,8 +35,8 @@
 
       <h4 class="sml-push-y2">Instagram Story</h4>
       <div class="sml-push-y1">
-        <a href="/media/Instagram_Story.png">
-          <img src="/media/Instagram_Story.png"
+        <a href="/media/Instagram-Story-VOTE.png">
+          <img src="/media/Instagram-Story-VOTE.png"
                alt="Vote for Net Neutrality Instagram story image"
                class="grid-center img-instagram-story img-hover-grow">
         </a>

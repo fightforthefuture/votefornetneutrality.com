@@ -198,7 +198,8 @@
               You may be registered to vote even if our system says otherwise. And
               in some rare cases, Congressional districts have been recently changed
               and the Google Civic Information API hasn't been updated. If you find
-              an error, you can let us know by emailing team@fightforthefuture.org.
+              an error, you can let us know by emailing 
+              <a href="mailto:team@fightforthefuture.org">email team@fightforthefuture.org</a>.
               We'll try to fix it if we can.
             </p>
             <p>

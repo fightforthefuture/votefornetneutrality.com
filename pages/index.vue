@@ -175,15 +175,7 @@
       </div> <!-- .wrapper -->
     </section>
 
-    <section id="banner-ads" class="sml-pad-y2 med-pad-y4">
-      <div class="wrapper">
-        <div class="row">
-          <div class="sml-c12 lrg-c8 grid-center text-center">
-            <BannerAds :show-all="false"/>
-          </div> <!-- .c -->
-        </div> <!-- .row -->
-      </div> <!-- .wrapper -->
-    </section>
+    <BannerAds :show-all="false"/>
 
     <section id="how" class="sml-pad-y2 med-pad-y4">
       <div class="wrapper">

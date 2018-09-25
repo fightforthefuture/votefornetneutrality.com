@@ -14,7 +14,7 @@
       to see ideas for blog posts, emails, tweets and more.
     </p>
 
-    <h4 class="sml-push-y2">Avatar Images</h4>
+    <h4 class="sml-push-y2">Profile Images</h4>
     <div class="sml-push-y1">
       <a href="/media/Profile-VOTE.png">
         <img src="/media/Profile-VOTE.png"
@@ -24,7 +24,7 @@
     </div> <!-- .push -->
 
     <div v-if="showAll">
-      <h4 class="sml-push-y2">Facebook Header Images</h4>
+      <h4 class="sml-push-y2">Cover Images</h4>
       <div class="sml-push-y1">
         <a href="/media/Cover-VOTE.png">
           <img src="/media/Cover-VOTE.png"

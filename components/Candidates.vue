@@ -1,6 +1,6 @@
 <template>
   <div v-if="race" class="sml-push-y2 med-push-y4">
-    <h3 class="section-title text-center"><span>{{ race.title }}</span></h3>
+    <h4 class="section-title text-center"><span>{{ race.title }}</span></h4>
     <div class="row">
       <div v-for="candidate in race.candidates" :key="candidate.id"
            class="sml-c12 lrg-c6 sml-push-y2 med-push-y3">

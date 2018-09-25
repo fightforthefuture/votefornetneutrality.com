@@ -8,33 +8,6 @@
   @include respond-to(med) {
     grid-template-columns: repeat(3, 33%);
   }
-
-  .btn {
-    background: transparent;
-    border: 1px solid $brand-color;
-
-    &:hover {
-      background: $brand-color;
-      border-color: $brand-color;
-    }
-  }
-}
-
-#social img {
-  transition: transform .3s;
-
-  &:hover {
-    transform: scale(1.04);
-  }
-}
-
-.img-instagram-story {
-  max-width: 300px;
-}
-
-.img-avatar {
-  max-width: 150px;
-  margin: 0 $gutter;
 }
 </style>
 
@@ -103,12 +76,23 @@
       <div class="wrapper">
         <div class="row">
           <div class="sml-c12 lrg-c8 grid-center text-center">
-            <h2>JOIN A LOCAL<br> ACTION GROUP</h2>
-            <p class="sml-push-y2 med-push-y3">We’ve created Facebook groups so that people all across America can organize protests, pass out lawn signs, and help educate voters at the polls in key districts.  There are many different ways to to help out in a lot of important races, so join a local action group today!</p>
-            <p class="sml-push-y2"><img src="https://data.battleforthenet.com/events.png" alt="A map of net neutrality Facebook Groups" class="is-rounded"></p>
+            <h2>Join a local<br>action group</h2>
+            <p class="sml-push-y2 med-push-y3">
+              We&rsquo;ve created Facebook groups so that people all across
+              America can organize protests, pass out lawn signs, and help
+              educate voters at the polls in key districts.  There are many
+              different ways to to help out in a lot of important races, so join
+              a local action group today!
+            </p>
+            <p class="sml-push-y2">
+              <img src="https://data.battleforthenet.com/events.png" alt="A map of net neutrality Facebook Groups" class="is-rounded">
+            </p>
             <div class="facebook-groups sml-push-y2">
-              <a v-for="group in facebookGroups" :key="group.url"
-                :href="group.url" target="_blank" class="btn btn-dark truncate">
+              <a v-for="group in facebookGroups"
+                :key="group.url"
+                :href="group.url"
+                target="_blank"
+                class="btn btn-hollow text-ellipsis">
                 {{ group.address }}
               </a>
             </div>
@@ -185,31 +169,14 @@
       <div class="wrapper">
         <div class="row">
           <div class="sml-c12 lrg-c8 grid-center text-center">
-            <h2>Social media</h2>
-            <p class="sml-push-y2 med-push-y3">
-              If you’re active on social media, have a video channel, or moderate an online forum, put your small piece of the Internet on alert by changing your profile on social media to the images below.  You can also schedule frequent posts linking to <a href="https://www.votefornetneutrality.com/">VoteForNetNeutrality.com</a> where people can take action.
-            </p>
-            <p>
-              <a href="https://docs.google.com/document/d/1aRhHsHCW1HB2fOJW4lIOurYYpXP2kb3vlZ2O7vniMoo/edit?disco=uiAAAACMaQa_s&ts=5ba2d9b3" target="_blank">Click here</a> to see ideas for blog posts, emails, tweets and more.
-            </p>
+            <SocialMedia/>
 
-            <h3 class="sml-push-y2">Avatar Images</h3>
-            <div class="flex-center sml-push-y1">
-              <a href="/media/Avatar.png"><img src="/media/Avatar.png" alt="Vote for Net Neutrality avatar image" class="img-avatar"></a>
-            </div>
-
-            <h3 class="sml-push-y2">Facebook Header Images</h3>
-            <div class="flex-center sml-push-y1">
-              <a href="/media/Facebook_Cover.png"><img src="/media/Facebook_Cover.png" alt="Vote for Net Neutrality Facebook header image"></a>
-            </div>
-
-            <h3 class="sml-push-y2">Instagram Story</h3>
-            <div class="flex-center sml-push-y1">
-              <a href="/media/Instagram_Story.png"><img src="/media/Instagram_Story.png" alt="Vote for Net Neutrality Instagram story image" class="img-instagram-story"></a>
-            </div>
-          </div>
-        </div>
-      </div>
+            <div class="sml-push-y2 med-push-y3">
+              <nuxt-link to="/media">See More</nuxt-link>
+            </div> <!-- .push -->
+          </div> <!-- .c -->
+        </div> <!-- .row -->
+      </div> <!-- .wrapper -->
     </section>
 
     <section id="how" class="sml-pad-y2 med-pad-y4">
@@ -276,6 +243,7 @@ import { createMetaTags, smoothScrollToElement } from '~/assets/js/helpers'
 import Logo from '~/components/Logo'
 import Chat from '~/components/Chat'
 import Scoreboard from '~/components/Scoreboard'
+import SocialMedia from '~/components/SocialMedia'
 import Modal from '~/components/Modal'
 import CallModal from '~/components/CallModal'
 import WriteModal from '~/components/WriteModal'
@@ -285,6 +253,7 @@ export default {
     Logo,
     Chat,
     Scoreboard,
+    SocialMedia,
     Modal,
     CallModal,
     WriteModal

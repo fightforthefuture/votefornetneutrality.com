@@ -28,7 +28,7 @@ body.modal-open {
   position: absolute;
   top: $gutter;
   right: $gutter;
-  font-size: $font-size-3;
+  font-size: $font-size-4;
   line-height: 1;
   background-color: transparent;
   border:none;

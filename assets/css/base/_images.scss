@@ -5,6 +5,14 @@ img {
   max-width: 100%;
 }
 
+// Images > Effects
+.img-hover-grow {
+  transition: transform .3s;
+}
+.img-hover-grow:hover {
+  transform: scale(1.04);
+}
+
 // Images > Retina
 .img-logo {
   max-width: 294px;
@@ -13,4 +21,10 @@ img {
 .img-party-emoji {
   max-width: 65px;
   background-size: 100%;
+}
+.img-instagram-story {
+  max-width: 300px;
+}
+.img-avatar {
+  max-width: 150px;
 }

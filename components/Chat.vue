@@ -44,7 +44,7 @@
 
 <script>
 import axios from 'axios'
-import { smoothScrollWithinElement, startTextFlow } from '~/assets/js/helpers'
+import { smoothScrollWithinElement } from '~/assets/js/helpers'
 import Message from '~/components/Message'
 import SocialShareButtons from '~/components/SocialShareButtons'
 import config from '~/config'
@@ -123,10 +123,13 @@ export default {
 
       // POST to Chatbot API
       try {
-        const data = await startTextFlow({
-          flow: config.textFlowId,
-          phone: this.phoneNumber
-        })
+        const { data } = await axios.post(
+          'https://utdy3yxx7l.execute-api.us-east-1.amazonaws.com/v1/flow-starts',
+          {
+            flow: config.textFlowId,
+            phone: this.phoneNumber
+          }
+        )
         // const { data } = await axios.post(
         //   `${process.env.botApiUrl}/conversations`,
         //   {

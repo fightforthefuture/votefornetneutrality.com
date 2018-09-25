@@ -13,11 +13,15 @@ h1, h2, h3, h4, h5, h6 {
   text-transform: uppercase;
 }
 h1, h2, h3 {
-  background: $text-gradient;
+  background-image: $text-gradient;
   color: $brand-secondary-color;
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
+
+  @include is-ie {
+    background: transparent;
+  }
 }
 h1 {
   font-size: $m-font-size-1;

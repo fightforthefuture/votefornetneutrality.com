@@ -1,16 +1,3 @@
-<style lang="scss" scoped>
-.facebook-groups {
-  display: grid;
-  grid-gap: $gutter;
-  grid-template-columns: repeat(2, 50%);
-  padding-right: $gutter * 1.2;
-
-  @include respond-to(med) {
-    grid-template-columns: repeat(3, 33%);
-  }
-}
-</style>
-
 <template>
   <div>
     <section id="text-me" class="sml-pad-y2 med-pad-y4">
@@ -280,7 +267,7 @@ export default {
   computed: {
     botPhoneNumber() { return config.botPhoneNumber },
     modalType () { return this.$store.state.modalType },
-    facebookGroups: () => facebookGroups
+    facebookGroups () { return facebookGroups }
   },
 
   methods: {

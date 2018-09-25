@@ -199,7 +199,7 @@
               in some rare cases, Congressional districts have been recently changed
               and the Google Civic Information API hasn't been updated. If you find
               an error, you can let us know by emailing 
-              <a href="mailto:team@fightforthefuture.org">email team@fightforthefuture.org</a>.
+              <a href="mailto:team@fightforthefuture.org">team@fightforthefuture.org</a>.
               We'll try to fix it if we can.
             </p>
             <p>

@@ -89,8 +89,8 @@
           <div class="sml-c12 med-c4">
             <h5 class="sml-push-y2">Attention</h5>
             <div class="sml-push-y1">
-              <a href="/media/600x450-Attention.png">
-                <img src="/media/600x450-Attention.png"
+              <a href="/media/600x450-ATTENTION.png">
+                <img src="/media/600x450-ATTENTION.png"
                      alt="Vote for Net Neutrality 600 x 450 image"
                      class="grid-center img-hover-grow">
               </a>
@@ -102,8 +102,8 @@
           <div class="sml-c12 med-c4">
             <h5 class="sml-push-y2">Future</h5>
             <div class="sml-push-y1">
-              <a href="/media/600x450-Future.png">
-                <img src="/media/600x450-Future.png"
+              <a href="/media/600x450-FUTURE.png">
+                <img src="/media/600x450-FUTURE.png"
                      alt="Vote for Net Neutrality 600 x 450 image"
                      class="grid-center img-hover-grow">
               </a>
@@ -162,8 +162,8 @@
           <div class="sml-c12 med-c4">
             <h5 class="sml-push-y2">Attention</h5>
             <div class="sml-push-y1">
-              <a href="/media/600x500-Attention.png">
-                <img src="/media/600x500-Attention.png"
+              <a href="/media/600x500-ATTENTION.png">
+                <img src="/media/600x500-ATTENTION.png"
                      alt="Vote for Net Neutrality 600 x 500 image"
                      class="grid-center img-hover-grow">
               </a>
@@ -175,8 +175,8 @@
           <div class="sml-c12 med-c4">
             <h5 class="sml-push-y2">Future</h5>
             <div class="sml-push-y1">
-              <a href="/media/600x500-Future.png">
-                <img src="/media/600x500-Future.png"
+              <a href="/media/600x500-FUTURE.png">
+                <img src="/media/600x500-FUTURE.png"
                      alt="Vote for Net Neutrality 600 x 500 image"
                      class="grid-center img-hover-grow">
               </a>
@@ -235,8 +235,8 @@
           <div class="sml-c12 med-c4">
             <h5 class="sml-push-y2">Attention</h5>
             <div class="sml-push-y1">
-              <a href="/media/600x600-Attention.png">
-                <img src="/media/600x600-Attention.png"
+              <a href="/media/600x600-ATTENTION.png">
+                <img src="/media/600x600-ATTENTION.png"
                      alt="Vote for Net Neutrality 600 x 600 image"
                      class="grid-center img-hover-grow">
               </a>
@@ -248,8 +248,8 @@
           <div class="sml-c12 med-c4">
             <h5 class="sml-push-y2">Future</h5>
             <div class="sml-push-y1">
-              <a href="/media/600x600-Future.png">
-                <img src="/media/600x600-Future.png"
+              <a href="/media/600x600-FUTURE.png">
+                <img src="/media/600x600-FUTURE.png"
                      alt="Vote for Net Neutrality 600 x 600 image"
                      class="grid-center img-hover-grow">
               </a>

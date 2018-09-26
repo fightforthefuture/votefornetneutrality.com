@@ -135,6 +135,19 @@
 
     <BannerAds :show-all="false"/>
 
+    <section id="quotes" class="sml-pad-y2 med-pad-y4">
+      <div class="wrapper">
+        <div class="row">
+          <div class="sml-c12 lrg-c8 grid-center text-center">
+            <h2>Quotes</h2>
+            <div class="sml-push-y2 med-push-y3">
+              <QuoteScroller/>
+            </div>
+          </div> <!-- .c -->
+        </div> <!-- .row -->
+      </div> <!-- .wrapper -->
+    </section>
+
     <section id="how" class="sml-pad-y2 med-pad-y4">
       <div class="wrapper">
         <div class="row">
@@ -143,17 +156,17 @@
             <p class="sml-push-y2 med-push-y3">
               Simply enter your number above or text <strong>VOTE</strong> to
               <strong>{{ botPhoneNumber }}</strong> and respond to a few
-              questions&hellip. First, we'll look up your voter registration status 
-              using Target Smart, a secure service.  If you are not registered to vote, 
-              we will direct you to Turbo Vote so you can make sure you are ready to 
+              questions&hellip. First, we'll look up your voter registration status
+              using Target Smart, a secure service.  If you are not registered to vote,
+              we will direct you to Turbo Vote so you can make sure you are ready to
               participate in the 2018 elections.
             </p>
             <p>
-              Next, we'll let you know who is running for the US Senate and the US 
-              House of Representatives in your district using Google Civic Information.  
-              We'll also tell you which candidates support or opppose net neutrality 
-              based on information compiled by Fight for the Future and Common Cause.  
-              We encourage you to contact these candidates and let them know you want 
+              Next, we'll let you know who is running for the US Senate and the US
+              House of Representatives in your district using Google Civic Information.
+              We'll also tell you which candidates support or opppose net neutrality
+              based on information compiled by Fight for the Future and Common Cause.
+              We encourage you to contact these candidates and let them know you want
               them to support net neutrality before the election.
             </p>
             <p>
@@ -167,7 +180,7 @@
               You may be registered to vote even if our system says otherwise. And
               in some rare cases, Congressional districts have been recently changed
               and the Google Civic Information API hasn't been updated. If you find
-              an error, you can let us know by emailing 
+              an error, you can let us know by emailing
               <a href="mailto:team@fightforthefuture.org">team@fightforthefuture.org</a>.
               We'll try to fix it if we can.
             </p>
@@ -193,6 +206,7 @@ import Chat from '~/components/Chat'
 import Scoreboard from '~/components/Scoreboard'
 import SocialMedia from '~/components/SocialMedia'
 import BannerAds from '~/components/BannerAds'
+import QuoteScroller from '~/components/QuoteScroller'
 import Modal from '~/components/Modal'
 import CallModal from '~/components/CallModal'
 import WriteModal from '~/components/WriteModal'
@@ -204,6 +218,7 @@ export default {
     Scoreboard,
     SocialMedia,
     BannerAds,
+    QuoteScroller,
     Modal,
     CallModal,
     WriteModal

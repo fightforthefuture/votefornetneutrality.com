@@ -169,20 +169,20 @@
     flex-direction: row;
   }
 }
-@for $i from 1 through 4 {
+@for $i from 1 through 8 {
   .sml-flex-#{$i} {
     flex: $i;
   }
 }
 @include respond-to(med) {
-  @for $i from 1 through 4 {
+  @for $i from 1 through 8 {
     .med-flex-#{$i} {
       flex: $i;
     }
   }
 }
 @include respond-to(lrg) {
-  @for $i from 1 through 4 {
+  @for $i from 1 through 8 {
     .lrg-flex-#{$i} {
       flex: $i;
     }

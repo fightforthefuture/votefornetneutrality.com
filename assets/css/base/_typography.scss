@@ -172,22 +172,39 @@ small {
 // Typography > Blockquote
 
 blockquote {
-  font-size: $font-size-4;
+  @include respond-to(med) {
+    font-size: $font-size-4;
+  }
 }
 blockquote:before,
 blockquote:after {
   color: $brand-color;
-  line-height: 0.4;
-  font-size: $font-size-2;
+  font-size: $font-size-3;
   font-weight: $bold-font-weight;
   font-family: $heading-stack;
+  line-height: 0.8;
   vertical-align: bottom;
+
+  @include respond-to(med) {
+    font-size: $font-size-2;
+    line-height: 0.4;
+  }
 }
 blockquote:before {
   content: "\201C";
+  margin-right: $gutter/2;
+
+  @include respond-to(med) {
+    margin-right: $gutter;
+  }
 }
 blockquote:after {
   content: "\201D";
+  margin-left: $gutter/2;
+
+  @include respond-to(med) {
+    margin-left: $gutter;
+  }
 }
 
 // Typography > Links

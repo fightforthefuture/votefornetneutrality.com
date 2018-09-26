@@ -1,4 +1,14 @@
 <style lang="scss" scoped>
+// Transition
+.fade-enter-active, .fade-leave-active {
+  transition: opacity .3s;
+}
+.fade-enter,
+.fade-leave-to {
+  opacity: 0;
+}
+
+// Quotes
 .quotes-wrapper {
   min-height: 300px;
 
@@ -10,25 +20,51 @@
     min-height: 217px;
   }
 }
-.fade-enter-active, .fade-leave-active {
-  transition: opacity .5s;
+
+// Arrows
+.arrow {
+  display: flex;
+  flex: 0 0 30px;
+  height:   30px;
+  width:    30px;
+  background: $brand-dark-color;
+  border-radius: 100%;
+  cursor: pointer;
+
+  @include respond-to(med) {
+    flex: 0 0 50px;
+    height:   50px;
+    width:    50px;
+  }
 }
-.fade-enter,
-.fade-leave-to {
-  opacity: 0;
+.arrow:hover,
+.arrow:focus {
+  background: $brand-color;
+}
+.arrow img {
+  width: 15px;
+  height: auto;
+
+  @include respond-to(med) {
+    width: 25px;
+  }
 }
 </style>
 
 <template>
   <div class="quotes-wrapper flex-row flex-center">
-    <a @click.prevent="prev">&lt;</a>
+    <a class="arrow" @click.prevent="prev">
+      <img src="~assets/images/arrow-left.svg" alt="Previous" class="grid-center"/>
+    </a>
     <transition name="fade" mode="out-in">
-      <div class="sml-flex-8" :key="`slide-${activeSlide}`">
+      <div :key="`slide-${activeSlide}`">
         <blockquote>{{ quotes[activeSlide].text }}</blockquote>
         <p class="text-brand">{{ quotes[activeSlide].source }}</p>
       </div>
     </transition>
-    <a @click.prevent="next">&gt;</a>
+    <a class="arrow" @click.prevent="next">
+      <img src="~assets/images/arrow-right.svg" alt="Next" class="grid-center"/>
+    </a>
   </div> <!-- .quotes-wrapper -->
 </template>
 

@@ -135,7 +135,7 @@
 
     <BannerAds :show-all="false"/>
 
-    <section id="quotes" class="sml-pad-y2 med-pad-y4">
+    <section v-if="hasQuotes" id="quotes" class="sml-pad-y2 med-pad-y4">
       <div class="wrapper">
         <div class="row">
           <div class="sml-c12 lrg-c8 grid-center text-center">
@@ -244,7 +244,8 @@ export default {
   computed: {
     botPhoneNumber() { return config.botPhoneNumber },
     modalType () { return this.$store.state.modalType },
-    facebookGroups () { return facebookGroups }
+    facebookGroups () { return facebookGroups },
+    hasQuotes() { return config.quotesEnabled } // TODO: remove config var when quotes are real
   },
 
   methods: {

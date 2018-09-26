@@ -5,15 +5,9 @@
         <div class="sml-c12 lrg-c8 grid-center text-center">
           <h2>Social media</h2>
           <p class="sml-push-y2 med-push-y3">
-            If you&rsquo;re active on social media, have a video channel, or moderate
-            an online forum, put your small piece of the Internet on alert by changing
-            your profile on social media to the images below.  You can also schedule
-            frequent posts linking to
-            <a href="https://www.votefornetneutrality.com/">VoteForNetNeutrality.com</a>
-            where people can take action.
-          </p>
-          <p>
-            <a href="https://docs.google.com/document/d/1aRhHsHCW1HB2fOJW4lIOurYYpXP2kb3vlZ2O7vniMoo/edit?disco=uiAAAACMaQa_s&ts=5ba2d9b3" target="_blank">Click here</a>
+            Put your small piece of the Internet on alert by changing your profile on social 
+            media to the images below.  
+            Then <a href="https://docs.google.com/document/d/1aRhHsHCW1HB2fOJW4lIOurYYpXP2kb3vlZ2O7vniMoo/edit?disco=uiAAAACMaQa_s&ts=5ba2d9b3" target="_blank">click here</a>
             to see ideas for blog posts, emails, tweets and more.
           </p>
         </div> <!-- .c -->

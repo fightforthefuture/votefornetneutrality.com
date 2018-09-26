@@ -157,6 +157,12 @@
               them to support net neutrality before the election.
             </p>
             <p>
+              Remember that you&rsquo;re texting with Vote Bot, so data &amp; message
+              rates may apply. You can text <strong>STOP</strong> to
+              <strong>{{ botPhoneNumber }}</strong> any time to stop receiving
+              messages.
+            </p>
+            <p>
               Please be aware that the services we use are not always 100% accurate.
               You may be registered to vote even if our system says otherwise. And
               in some rare cases, Congressional districts have been recently changed
@@ -164,12 +170,6 @@
               an error, you can let us know by emailing 
               <a href="mailto:team@fightforthefuture.org">team@fightforthefuture.org</a>.
               We'll try to fix it if we can.
-            </p>
-            <p>
-              Remember that you&rsquo;re texting, so data &amp; message
-              rates may apply. You can text <strong>STOP</strong> to
-              <strong>{{ botPhoneNumber }}</strong> any time to stop receiving
-              messages.
             </p>
           </div> <!-- .c -->
         </div> <!-- .row -->

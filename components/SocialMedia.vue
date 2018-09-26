@@ -22,7 +22,7 @@
       <!-- Profile -->
       <h4 class="sml-push-y4">Profile Images</h4>
       <div class="row">
-        <div class="sml-c12 med-c4 lrg-c2">
+        <div class="sml-c12 med-c3 lrg-c2 lrg-s2">
           <h5 class="sml-push-y2">Vote</h5>
           <div class="sml-push-y1">
             <a href="/media/Profile-VOTE.png">
@@ -33,7 +33,7 @@
           </div> <!-- .push -->
         </div> <!-- .c -->
 
-        <div class="sml-c12 med-c4 lrg-c2">
+        <div class="sml-c12 med-c3 lrg-c2">
           <h5 class="sml-push-y2">Angry</h5>
           <div class="sml-push-y1">
             <a href="/media/Profile-ANGRY.png">
@@ -44,18 +44,7 @@
           </div> <!-- .push -->
         </div> <!-- .c -->
 
-        <div class="sml-c12 med-c4 lrg-c2">
-          <h5 class="sml-push-y2">Attention</h5>
-          <div class="sml-push-y1">
-            <a href="/media/Profile-ATTENTION.png">
-              <img src="/media/Profile-ATTENTION.png"
-                   alt="Vote for Net Neutrality profile image"
-                   class="grid-center img-avatar img-hover-grow">
-            </a>
-          </div> <!-- .push -->
-        </div> <!-- .c -->
-
-        <div class="sml-c12 med-c4 lrg-c2">
+        <div class="sml-c12 med-c3 lrg-c2">
           <h5 class="sml-push-y2">Campaign</h5>
           <div class="sml-push-y1">
             <a href="/media/Profile-CAMPAIGN.png">
@@ -66,22 +55,11 @@
           </div> <!-- .push -->
         </div> <!-- .c -->
 
-        <div class="sml-c12 med-c4 lrg-c2">
+        <div class="sml-c12 med-c3 lrg-c2">
           <h5 class="sml-push-y2">Future</h5>
           <div class="sml-push-y1">
             <a href="/media/Profile-FUTURE.png">
               <img src="/media/Profile-FUTURE.png"
-                   alt="Vote for Net Neutrality profile image"
-                   class="grid-center img-avatar img-hover-grow">
-            </a>
-          </div> <!-- .push -->
-        </div> <!-- .c -->
-
-        <div class="sml-c12 med-c4 lrg-c2">
-          <h5 class="sml-push-y2">Protesters</h5>
-          <div class="sml-push-y1">
-            <a href="/media/Profile-PROTESTERS.png">
-              <img src="/media/Profile-PROTESTERS.png"
                    alt="Vote for Net Neutrality profile image"
                    class="grid-center img-avatar img-hover-grow">
             </a>

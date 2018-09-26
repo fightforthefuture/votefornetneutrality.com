@@ -4,9 +4,13 @@
 .messages {
   display: flex;
   flex-direction: column;
-  height: $gutter*28;
+  height: $gutter*22;
   overflow-y: auto;
   padding-bottom: 0;
+
+  @include respond-to(med) {
+    height: $gutter*30;
+  }
 }
 .messages > :last-child {
   padding-bottom: $gutter*2; // NOTE: Workaround for this bug: https://bugzilla.mozilla.org/show_bug.cgi?id=748518

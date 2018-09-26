@@ -1,5 +1,5 @@
 <template>
-  <div class="sml-push-y3 med-push-y6 with-glow">
+  <div class="sml-push-y2 med-push-y4 with-glow">
     <div class="glow-content">
       <div class="messages sml-pad-2 is-rounded-top"
            ref="messages">

@@ -1,6 +1,6 @@
 <template>
   <div>
-    <section class="sml-pad-y2 med-pad-y4 text-center">
+    <section class="sml-pad-y2 med-pad-y3 text-center">
       <div class="wrapper">
         <a href="/"><Logo/></a>
 

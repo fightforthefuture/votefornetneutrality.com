@@ -143,7 +143,7 @@
             <p class="sml-push-y2 med-push-y3">
               Simply enter your number above or text <strong>VOTE</strong> to
               <strong>{{ botPhoneNumber }}</strong> and respond to a few
-              questions&hellip. First, we'll look up your voter registration status 
+              questions. First, we'll look up your voter registration status 
               using Target Smart, a secure service.  If you are not registered to vote, 
               we will direct you to Turbo Vote so you can make sure you are ready to 
               participate in the 2018 elections.

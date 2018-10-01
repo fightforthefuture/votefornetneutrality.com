@@ -113,7 +113,7 @@
                      class="sml-pad-2 med-pad-4 sml-push-y4 fill-black is-rounded">
 
               <div class="text-center">
-                <h2 class="lrg-pad-x4">Help out in these key races</h2>
+                <h2 class="lrg-pad-x4">Help out in these key districts</h2>
                 <p class="sml-push-y2 med-push-y3">
                  We&rsquo;ve identified <a href="/districts/">{{ keyRaceCount }} extremely close races</a> across the country
                  where net neutrality supporters can make the most difference pressuring

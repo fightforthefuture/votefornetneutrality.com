@@ -135,6 +135,19 @@
 
     <BannerAds :show-all="false"/>
 
+    <section v-if="hasQuotes" id="quotes" class="sml-pad-y2 med-pad-y4">
+      <div class="wrapper">
+        <div class="row">
+          <div class="sml-c12 lrg-c8 grid-center text-center">
+            <h2>Quotes</h2>
+            <div class="sml-push-y2 med-push-y3">
+              <QuoteScroller/>
+            </div>
+          </div> <!-- .c -->
+        </div> <!-- .row -->
+      </div> <!-- .wrapper -->
+    </section>
+
     <section id="how" class="sml-pad-y2 med-pad-y4">
       <div class="wrapper">
         <div class="row">
@@ -193,6 +206,7 @@ import Chat from '~/components/Chat'
 import Scoreboard from '~/components/Scoreboard'
 import SocialMedia from '~/components/SocialMedia'
 import BannerAds from '~/components/BannerAds'
+import QuoteScroller from '~/components/QuoteScroller'
 import Modal from '~/components/Modal'
 import CallModal from '~/components/CallModal'
 import WriteModal from '~/components/WriteModal'
@@ -204,6 +218,7 @@ export default {
     Scoreboard,
     SocialMedia,
     BannerAds,
+    QuoteScroller,
     Modal,
     CallModal,
     WriteModal
@@ -229,7 +244,8 @@ export default {
   computed: {
     botPhoneNumber() { return config.botPhoneNumber },
     modalType () { return this.$store.state.modalType },
-    facebookGroups () { return facebookGroups }
+    facebookGroups () { return facebookGroups },
+    hasQuotes() { return config.quotesEnabled } // TODO: remove config var when quotes are real
   },
 
   methods: {

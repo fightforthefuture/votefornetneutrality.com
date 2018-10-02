@@ -6,11 +6,13 @@
           <div class="sml-c12 lrg-c8 grid-center text-center">
             <h2>See where the candidates stand</h2>
             <p class="sml-push-y2 med-push-y3">
-              Enter your address below. We&rsquo;ll provide you with a list of
-              all the candidates running for the Senate and House in your
-              district, and show you where they stand on restoring net
-              neutrality. Then we&rsquo;ll show you the most important things
-              you can do to make sure the free and open Internet wins in 2018.
+              Enter your address below. Don&rsquo;t worry&hellip; we do not
+              store your address. It will only be used to look up candidates in
+              your district. We&rsquo;ll provide you with a list of all the
+              candidates running for the Senate and House in your district, and
+              show you where they stand on restoring net neutrality. Then
+              we&rsquo;ll show you the most important things you can do to make
+              sure the free and open Internet wins in 2018.
             </p>
 
             <p class="text-warn" v-if="errorMessage">{{ errorMessage }}</p>

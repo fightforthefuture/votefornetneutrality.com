@@ -34,6 +34,14 @@ module.exports = {
     googleApiKey: process.env.GOOGLE_API_KEY || 'AIzaSyAYnLN4teGy30Kjenl6taaMq5kPg2CkXwU'
   },
   /*
+  ** Router configuration
+  */
+  router: {
+    scrollBehavior: function (to, from, savedPosition) {
+      return { x: 0, y: 0 }
+    }
+  },
+  /*
   ** Build configuration
   */
   build: {

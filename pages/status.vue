@@ -36,32 +36,47 @@
     <form action="#TODO" class="sml-push-y4">
       <input type="text"
              v-model="candidateName"
-             placeholder="Candidate Name"
+             placeholder="Candidate Name*"
              required />
-      <input type="text"
+      <input type="email"
              v-model="email"
              class="sml-push-y2"
-             placeholder="Your Email"
+             placeholder="Your Email*"
              required />
-      <input type="text"
+      <input type="tel"
              v-model="phone"
              class="sml-push-y2"
-             placeholder="Your Phone Number"
+             placeholder="Your Phone Number*"
              required />
-      <input type="text"
-             v-model="district"
-             class="sml-push-y2"
-             placeholder="State/District"
-             required />
-      <input type="text"
-             v-model="status"
-             class="sml-push-y2"
-             placeholder="Status of Support"
-             required />
+
+      <div class="flex-row sml-push-y2">
+        <select v-model="state" required>
+          <option :value="null">Select a state*</option>
+          <option v-for="(name, code) in stateOptions" :key="`state-${code}`" :value="code">
+            {{ name }}
+          </option>
+        </select>
+
+        <select v-model="district">
+          <option :value="null">Select a district</option>
+          <option value="at-large">At Large</option>
+          <option v-for="option in districtOptions" :key="`district-${option}`" :value="option">
+            {{ option }}
+          </option>
+        </select>
+      </div> <!-- .flex-row -->
+
+      <select v-model="status" class="sml-push-y2" required="">
+        <option :value="null">Select status of support*</option>
+        <option v-for="option in statusOptions" :key="`status-${option}`" :value="option">
+          {{ option }}
+        </option>
+      </select>
+
       <input type="text"
              v-model="url"
              class="sml-push-y2"
-             placeholder="URL"
+             placeholder="URL*"
              required />
       <div class="checkbox sml-push-y2">
         <input type="checkbox" id="authorized" v-model="authorized" required>
@@ -76,6 +91,8 @@
 </template>
 
 <script>
+import US_STATES from '~/assets/data/states'
+
 export default {
   layout: 'article',
 
@@ -85,11 +102,18 @@ export default {
       candidateName: null,
       email: null,
       phone: null,
+      state: null,
       district: null,
+      districtOptions: Array.from(new Array(50),(val,index)=>index+1),
       status: null,
+      statusOptions: [ 'Supports', 'No Stance', 'Opposes'],
       url: null,
       authorized: null
     }
+  },
+
+  computed: {
+    stateOptions() { return US_STATES }
   }
 }
 </script>

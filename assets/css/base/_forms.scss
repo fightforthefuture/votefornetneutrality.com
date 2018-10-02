@@ -73,6 +73,8 @@ form textarea.error:focus{
 // Form > Selects
 form select {
   width: 100%;
+  height: $gutter*5;
+  color: $brand-color;
 }
 
 // Forms > Checkboxes & Radios

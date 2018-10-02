@@ -87,6 +87,7 @@ form input[type=radio] ~ label {
 form .checkbox,
 form .radio {
   overflow: hidden;
+  text-align: $base-text-align;
 }
 form .checkbox input[type=checkbox],
 form .radio input[type=radio] {

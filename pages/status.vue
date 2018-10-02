@@ -67,7 +67,7 @@
         <input type="checkbox" id="authorized" v-model="authorized" required>
         <label for="authorized">I am authorized to make this correction on behalf of the candidate.</label>
       </div> <!-- .checkbox -->
-      <button class="btn sml-push-y2" :disabled="isLoading">
+      <button class="btn btn-block sml-push-y2" :disabled="isLoading">
         <span v-if="isLoading">Loading...</span>
         <span v-else>Submit</span>
       </button>

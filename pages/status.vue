@@ -33,7 +33,14 @@
       candidate&rsquo;s website, or an article with a quote.
     </p>
 
-    <form action="#TODO" class="sml-push-y4">
+    <p class="text-warn sml-push-y4" v-if="errorMessage">{{ errorMessage }}</p>
+
+    <h3 class="text-success sml-push-y4" v-if="hasSubmitted">
+      Thanks for sending us updated information on {{ candidateName }}&rsquo;s
+      position on net neutrality!
+    </h3>
+
+    <form v-if="!hasSubmitted" @submit.prevent="formSubmit" class="sml-push-y4">
       <input type="text"
              v-model="candidateName"
              placeholder="Candidate Name*"
@@ -91,6 +98,7 @@
 </template>
 
 <script>
+import axios from 'axios'
 import US_STATES from '~/assets/data/states'
 
 export default {
@@ -99,6 +107,8 @@ export default {
   data () {
     return {
       isLoading: false,
+      errorMessage: null,
+      hasSubmitted: false,
       candidateName: null,
       email: null,
       phone: null,
@@ -114,6 +124,35 @@ export default {
 
   computed: {
     stateOptions() { return US_STATES }
+  },
+
+  methods: {
+    async formSubmit() {
+      this.hasSubmitted = false
+      this.isLoading = true
+      this.errorMessage = null
+
+      try {
+        const { data } = await axios.post(
+          'https://sheetz.fftf.xyz/sheets/1GULBbKsoCwO-8nM-YkGHrRD-tZSUB92K0oMtv-Vx1Zs/rows',
+          {
+            name: this.candidateName,
+            email: this.email,
+            phone: this.phone,
+            state: this.state,
+            district: this.district ? this.district : '',
+            status: this.status,
+            proofurl: this.url
+          }
+        )
+        this.hasSubmitted = true
+      }
+      catch (error) {
+        this.errorMessage = "Oh no, something went wrong! Please try again."
+      }
+
+      this.isLoading = false
+    }
   }
 }
 </script>

@@ -29,7 +29,13 @@
               </button>
             </form>
             <p class="sml-push-y1 text-center">
-              <small> Data from Fight for the Future and Common Cause’s <a href="https://democracy2018.org/" target="_blank">Our Democracy 2018</a>.</small>
+              <small>
+                Data from Fight for the Future and Common Cause&rsquo;s
+                <a href="https://democracy2018.org/" target="_blank">
+                  Our Democracy 2018</a>.
+                Candidates can update their status
+                <nuxt-link to="/status">here</nuxt-link>.
+              </small>
             </p>
           </div> <!-- .c -->
         </div> <!-- .row -->

@@ -29,8 +29,13 @@
       request to update their stance on scorecard by  filling out the form below.
       Make sure to include a URL showing proof of the candidate&rsquo;s position
       on the CRA to restore net neutrality or we will be unable to make the
-      change. For example this could be a tweet, statement on the
-      candidate&rsquo;s website, or an article with a quote.
+      change. For example this could be a
+      <a href="https://twitter.com/laurenbaer/status/1006596999951441920" target="_blank">tweet</a>,
+      <a href="https://www.phillipsforcongress.org/net-neutrality/" target="_blank">
+        statement on the candidate&rsquo;s website,</a>
+      or an
+      <a href="https://www.nbcwashington.com/news/local/This-is-What-Local-Politicians-are-Doing-About-Net-Neutrality--462615043.html" target="_blank">
+      article with a quote</a>.
     </p>
 
     <p class="text-warn sml-push-y4" v-if="errorMessage">{{ errorMessage }}</p>
@@ -74,7 +79,7 @@
       </div> <!-- .flex-row -->
 
       <select v-model="status" class="sml-push-y2" required="">
-        <option :value="null">Select status of support*</option>
+        <option :value="null">Select candidate&rsquo;s position on net neutrality*</option>
         <option v-for="option in statusOptions" :key="`status-${option}`" :value="option">
           {{ option }}
         </option>
@@ -83,7 +88,7 @@
       <input type="text"
              v-model="url"
              class="sml-push-y2"
-             placeholder="URL*"
+             placeholder="Link to a source for the candidate's stance*"
              required />
       <div class="checkbox sml-push-y2">
         <input type="checkbox" id="authorized" v-model="authorized" required>

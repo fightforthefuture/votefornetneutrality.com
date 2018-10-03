@@ -114,6 +114,8 @@ export default {
     },
 
     async formSubmit() {
+      this.$trackEvent('votebot_form', 'submit')
+
       // Display phone number the voter typed as their "reply"
       this.messages.push({
         type: 'bubble',
@@ -130,6 +132,7 @@ export default {
             phone: this.phoneNumber
           }
         )
+        this.$trackEvent('votebot_form_success', 'submit')
         // const { data } = await axios.post(
         //   `${process.env.botApiUrl}/conversations`,
         //   {

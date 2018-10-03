@@ -114,6 +114,8 @@ export default {
     },
 
     async formSubmit() {
+      this.$trackEvent('votebot_form', 'submit')
+
       // Display phone number the voter typed as their "reply"
       this.messages.push({
         type: 'bubble',

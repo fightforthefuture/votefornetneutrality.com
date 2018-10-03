@@ -132,6 +132,7 @@ export default {
             phone: this.phoneNumber
           }
         )
+        this.$trackEvent('votebot_form_success', 'submit')
         // const { data } = await axios.post(
         //   `${process.env.botApiUrl}/conversations`,
         //   {

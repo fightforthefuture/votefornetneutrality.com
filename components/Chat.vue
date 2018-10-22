@@ -126,9 +126,9 @@ export default {
       // POST to Chatbot API
       try {
         const { data } = await axios.post(
-          'https://utdy3yxx7l.execute-api.us-east-1.amazonaws.com/v1/flow-starts',
+          'https://text-flow-starter.fftf.xyz/opt-ins',
           {
-            flow: config.textFlowId,
+            opt_in_path: config.textFlowId,
             phone: this.phoneNumber
           }
         )

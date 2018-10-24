@@ -63,13 +63,12 @@
       <div class="wrapper">
         <div class="row">
           <div class="sml-c12 lrg-c8 grid-center text-center">
-            <h2>Join a local<br>action group</h2>
+            <h2>RSVP for a tele-town hall</h2>
             <p class="sml-push-y2 med-push-y3">
-              We&rsquo;ve created Facebook groups so that people all across
-              America can organize protests, pass out lawn signs, and help
-              educate voters at the polls in key districts.  There are many
-              different ways to to help out in a lot of important races, so join
-              a local action group today!
+              We&rsquo;re convening tele-town halls in key Vote for Net
+              Neutrality districts ahead of Election Day to remind voters
+              what&rsquo;s at stake if this Congress fails to restore net
+              neutrality protections. Click on the map to RSVP.
             </p>
             <Map :events="events" class="sml-push-y2 med-push-y3" />
           </div> <!-- .c -->

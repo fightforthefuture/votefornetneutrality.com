@@ -199,7 +199,6 @@ import Scoreboard from '~/components/Scoreboard'
 import SocialMedia from '~/components/SocialMedia'
 import BannerAds from '~/components/BannerAds'
 import QuoteScroller from '~/components/QuoteScroller'
-import Map from '~/components/Map'
 import Modal from '~/components/Modal'
 import CallModal from '~/components/CallModal'
 import WriteModal from '~/components/WriteModal'
@@ -212,7 +211,6 @@ export default {
     SocialMedia,
     BannerAds,
     QuoteScroller,
-    Map,
     Modal,
     CallModal,
     WriteModal
@@ -232,34 +230,6 @@ export default {
         image: config.sharing.image,
         url: config.sharing.url
       })
-    }
-  },
-
-  async asyncData() {
-    let events = []
-
-    try {
-      const { data } = await axios.get('https://data.battleforthenet.com/events.json')
-
-      console.log(data)
-      events = data.filter(e => e.category === 'facebook_group').sort((a, b) => {
-        if (a.address < b.address) {
-          return -1
-        }
-        else if (a.address > b.address) {
-          return 1
-        }
-        else {
-          return 0
-        }
-      })
-    }
-    catch (error) {
-      //
-    }
-
-    return {
-      events: events
     }
   },
 

@@ -63,14 +63,19 @@
       <div class="wrapper">
         <div class="row">
           <div class="sml-c12 lrg-c8 grid-center text-center">
-            <h2>RSVP for a tele-town hall</h2>
+            <h2>RSVP for a<br>tele-town hall</h2>
             <p class="sml-push-y2 med-push-y3">
               We&rsquo;re convening tele-town halls in key Vote for Net
               Neutrality districts ahead of Election Day to remind voters
               what&rsquo;s at stake if this Congress fails to restore net
               neutrality protections. Click on the map to RSVP.
             </p>
-            <Map :events="events" class="sml-push-y2 med-push-y3" />
+            <a href="https://www.battleforthenet.com/map/" target="_blank">
+              <img src="https://data.battleforthenet.com/events.png"
+                   alt="A map of net neutrality Facebook Groups"
+                   class="is-rounded sml-push-y2 med-push-y3">
+              <span class="btn sml-push-y2 med-push-y3">View full map</span>
+            </a>
           </div> <!-- .c -->
         </div> <!-- .row -->
       </div> <!-- .wrapper -->
@@ -194,7 +199,6 @@ import Scoreboard from '~/components/Scoreboard'
 import SocialMedia from '~/components/SocialMedia'
 import BannerAds from '~/components/BannerAds'
 import QuoteScroller from '~/components/QuoteScroller'
-import Map from '~/components/Map'
 import Modal from '~/components/Modal'
 import CallModal from '~/components/CallModal'
 import WriteModal from '~/components/WriteModal'
@@ -207,7 +211,6 @@ export default {
     SocialMedia,
     BannerAds,
     QuoteScroller,
-    Map,
     Modal,
     CallModal,
     WriteModal
@@ -227,34 +230,6 @@ export default {
         image: config.sharing.image,
         url: config.sharing.url
       })
-    }
-  },
-
-  async asyncData() {
-    let events = []
-
-    try {
-      const { data } = await axios.get('https://data.battleforthenet.com/events.json')
-
-      console.log(data)
-      events = data.filter(e => e.category === 'facebook_group').sort((a, b) => {
-        if (a.address < b.address) {
-          return -1
-        }
-        else if (a.address > b.address) {
-          return 1
-        }
-        else {
-          return 0
-        }
-      })
-    }
-    catch (error) {
-      //
-    }
-
-    return {
-      events: events
     }
   },
 

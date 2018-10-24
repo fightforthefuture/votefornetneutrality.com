@@ -63,14 +63,19 @@
       <div class="wrapper">
         <div class="row">
           <div class="sml-c12 lrg-c8 grid-center text-center">
-            <h2>RSVP for a tele-town hall</h2>
+            <h2>RSVP for a<br>tele-town hall</h2>
             <p class="sml-push-y2 med-push-y3">
               We&rsquo;re convening tele-town halls in key Vote for Net
               Neutrality districts ahead of Election Day to remind voters
               what&rsquo;s at stake if this Congress fails to restore net
               neutrality protections. Click on the map to RSVP.
             </p>
-            <Map :events="events" class="sml-push-y2 med-push-y3" />
+            <a href="https://www.battleforthenet.com/map/" target="_blank">
+              <img src="https://data.battleforthenet.com/events.png"
+                   alt="A map of net neutrality Facebook Groups"
+                   class="is-rounded sml-push-y2 med-push-y3">
+              <span class="btn sml-push-y2 med-push-y3">View full map</span>
+            </a>
           </div> <!-- .c -->
         </div> <!-- .row -->
       </div> <!-- .wrapper -->

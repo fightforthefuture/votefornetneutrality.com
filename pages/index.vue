@@ -52,9 +52,9 @@
                 Net Neutrality tweets, social media materials, graphics, and more.
               </li>
             </ul>
-          </div>
-        </div>
-      </div>
+          </div> <!-- .c -->
+        </div> <!-- .row -->
+      </div> <!-- .wrapper -->
     </section>
 
     <Scoreboard/>
@@ -71,21 +71,10 @@
               different ways to to help out in a lot of important races, so join
               a local action group today!
             </p>
-            <p class="sml-push-y2">
-              <img src="https://data.battleforthenet.com/events.png" alt="A map of net neutrality Facebook Groups" class="is-rounded">
-            </p>
-            <div class="facebook-groups sml-push-y2">
-              <a v-for="group in facebookGroups"
-                :key="group.url"
-                :href="group.url"
-                target="_blank"
-                class="btn btn-hollow text-ellipsis">
-                {{ group.address }}
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
+            <Map :events="events" class="sml-push-y2 med-push-y3" />
+          </div> <!-- .c -->
+        </div> <!-- .row -->
+      </div> <!-- .wrapper -->
     </section>
 
 <!--     <section id="widget" class="sml-pad-y2 med-pad-y4 fill-brand-dark">
@@ -199,7 +188,6 @@
 <script>
 import axios from 'axios'
 import config from '~/config'
-import facebookGroups from '~/data/facebook-groups.json'
 import { createMetaTags, smoothScrollToElement } from '~/assets/js/helpers'
 import Logo from '~/components/Logo'
 import Chat from '~/components/Chat'
@@ -207,6 +195,7 @@ import Scoreboard from '~/components/Scoreboard'
 import SocialMedia from '~/components/SocialMedia'
 import BannerAds from '~/components/BannerAds'
 import QuoteScroller from '~/components/QuoteScroller'
+import Map from '~/components/Map'
 import Modal from '~/components/Modal'
 import CallModal from '~/components/CallModal'
 import WriteModal from '~/components/WriteModal'
@@ -219,6 +208,7 @@ export default {
     SocialMedia,
     BannerAds,
     QuoteScroller,
+    Map,
     Modal,
     CallModal,
     WriteModal
@@ -241,10 +231,37 @@ export default {
     }
   },
 
+  async asyncData() {
+    let events = []
+
+    try {
+      const { data } = await axios.get('https://data.battleforthenet.com/events.json')
+
+      console.log(data)
+      events = data.filter(e => e.category === 'facebook_group').sort((a, b) => {
+        if (a.address < b.address) {
+          return -1
+        }
+        else if (a.address > b.address) {
+          return 1
+        }
+        else {
+          return 0
+        }
+      })
+    }
+    catch (error) {
+      //
+    }
+
+    return {
+      events: events
+    }
+  },
+
   computed: {
     botPhoneNumber() { return config.botPhoneNumber },
     modalType () { return this.$store.state.modalType },
-    facebookGroups () { return facebookGroups },
     hasQuotes() { return config.quotesEnabled } // TODO: remove config var when quotes are real
   },
 

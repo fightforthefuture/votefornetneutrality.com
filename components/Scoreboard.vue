@@ -123,9 +123,11 @@
               <div class="text-center">
                 <h2 class="lrg-pad-x4">Help out in these key districts</h2>
                 <p class="sml-push-y2 med-push-y3">
-                 We&rsquo;ve identified <a href="/districts/">{{ keyRaceCount }} extremely close races</a> across the country
-                 where net neutrality supporters can make the most difference pressuring
-                 lawmakers to do the right thing. Click on the links below to help out.
+                  We&rsquo;ve identified
+                  <a href="/districts/">{{ keyRaceCount}} extremely close races</a>
+                  across the country where net neutrality supporters can make
+                  the most difference pressuring lawmakers to do the right
+                  thing. Click on the links below to help out.
                 </p>
 
                 <ActionButtons/>
@@ -161,12 +163,19 @@ export default {
     SocialShareButtons
   },
 
+  props: {
+    keyRaces: {
+      type: Object,
+      default: null,
+      required: true
+    }
+  },
+
   data () {
     return {
       isLoading: false,
       address: null,
       results: null,
-      keyRaces: null,
       errorMessage: null
     }
   },
@@ -184,7 +193,6 @@ export default {
 
   mounted() {
     this.autocompleteAddress()
-    this.fetchKeyRaces()
 
     // uncomment to test target politician
     // this.address = '120 N California St, Yerington, NV'
@@ -252,16 +260,6 @@ export default {
       }
 
       this.isLoading = false
-    },
-
-    async fetchKeyRaces() {
-      try {
-        const { data } = await axios.get('https://data.battleforthenet.com/vfnn/scoreboard/important.json')
-        this.keyRaces = data
-      }
-      catch (error) {
-        console.error(error)
-      }
     },
 
     openModal(type) {

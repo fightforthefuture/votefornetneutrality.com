@@ -57,7 +57,7 @@
       </div> <!-- .wrapper -->
     </section>
 
-    <Scoreboard/>
+    <Scoreboard :key-races="keyRaces" />
 
     <section id="join" class="sml-pad-y2 med-pad-y4">
       <div class="wrapper">
@@ -230,6 +230,22 @@ export default {
         image: config.sharing.image,
         url: config.sharing.url
       })
+    }
+  },
+
+  async asyncData() {
+    let races = {}
+
+    try {
+      const { data } = await axios.get('https://data.battleforthenet.com/vfnn/scoreboard/important.json')
+      races = data
+    }
+    catch (error) {
+      //
+    }
+
+    return {
+      keyRaces: races
     }
   },
 

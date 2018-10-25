@@ -9,10 +9,6 @@
               <img src="~assets/images/fftf-logo.svg" class="grid-center"
                    alt="Fight for the Future logo" />
             </a>
-            <a href="https://demandprogress.org/">
-              <img src="~assets/images/demand-progress-logo.svg" class="grid-center"
-                   alt="Demand Progress logo" />
-            </a>
           </div> <!-- .flex-row -->
         </div> <!-- .c -->
       </div> <!-- .wrapper -->
@@ -27,13 +23,6 @@
             <a href="tel://9788526457">978-852-6457</a> or
             <a href="mailto:press@fightforthefuture.org">
               press@fightforthefuture.org</a>
-          </small>
-        </p>
-        <p class="tuck-bottom">
-          <small>
-            <a href="tel://2026817582">202-681-7582</a> or
-            <a href="mailto:press@demandprogress.org">
-              press@demandprogress.org</a>
           </small>
         </p>
         <p>

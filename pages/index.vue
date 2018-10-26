@@ -143,12 +143,12 @@
         </div> <!-- .row -->
         <div class="row sml-pad-y2 text-center">
           <div class="sml-c12 med-c6">
-            <a href="/Signs/Sign.pdf"><img src="~/assets/images/lawn-sign-1.png" alt="A Lawn Sign" /></a>
-            <p><a href="/Signs/Sign.pdf">Download PDF</a></p>
+            <a href="/signs/Sign.pdf"><img src="~/assets/images/lawn-sign-1.png" alt="A Lawn Sign" /></a>
+            <p><a href="/signs/Sign.pdf">Download PDF</a></p>
           </div>
           <div class="sml-c12 med-c6 sml-pad-y2">
-            <a href="/Signs/Arrow.pdf"><img src="~/assets/images/lawn-sign-2.png" alt="Another Lawn Sign" /></a>
-            <p><a href="/Signs/Sign.pdf">Download PDF</a></p>
+            <a href="/signs/Arrow.pdf"><img src="~/assets/images/lawn-sign-2.png" alt="Another Lawn Sign" /></a>
+            <p><a href="/signs/Sign.pdf">Download PDF</a></p>
           </div>
         </div>
       </div> <!-- .wrapper -->

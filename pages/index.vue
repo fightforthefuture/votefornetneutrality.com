@@ -128,6 +128,22 @@
 
     <BannerAds :show-all="false"/>
 
+ <section id="signs" class="sml-pad-y2 med-pad-y4">
+      <div class="wrapper">
+        <div class="row">
+          <div class="sml-c12 lrg-c8 grid-center text-center">
+            <h2>Post lawn signs in your yard</h2>
+            <p class="sml-push-y2 med-push-y3">
+              Print out your own lawn sign to show folks in your
+              neighborhood that you support net neutrality. Or place
+              our arrow next to a lawn sign for a candidate who 
+              opposed the CRA to hold that lawmaker accountable!
+            </p>
+          </div> <!-- .c -->
+        </div> <!-- .row -->
+      </div> <!-- .wrapper -->
+    </section>
+
     <section v-if="hasQuotes" id="quotes" class="sml-pad-y2 med-pad-y4">
       <div class="wrapper">
         <div class="row">

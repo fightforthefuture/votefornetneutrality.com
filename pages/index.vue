@@ -128,7 +128,7 @@
 
     <BannerAds :show-all="false"/>
 
- <section id="signs" class="sml-pad-y2 med-pad-y4">
+    <section id="signs" class="sml-pad-y2 med-pad-y4">
       <div class="wrapper">
         <div class="row">
           <div class="sml-c12 lrg-c8 grid-center text-center">
@@ -136,11 +136,21 @@
             <p class="sml-push-y2 med-push-y3">
               Print out your own lawn sign to show folks in your
               neighborhood that you support net neutrality. Or place
-              our arrow next to a lawn sign for a candidate who 
+              our arrow next to a lawn sign for a candidate who
               opposed the CRA to hold that lawmaker accountable!
             </p>
           </div> <!-- .c -->
         </div> <!-- .row -->
+        <div class="row sml-pad-y2 text-center">
+          <div class="sml-c12 med-c6">
+            <a href="/Signs/Sign.pdf"><img src="~/assets/images/lawn-sign-1.png" alt="A Lawn Sign" /></a>
+            <p><a href="/Signs/Sign.pdf">Download PDF</a></p>
+          </div>
+          <div class="sml-c12 med-c6 sml-pad-y2">
+            <a href="/Signs/Arrow.pdf"><img src="~/assets/images/lawn-sign-2.png" alt="Another Lawn Sign" /></a>
+            <p><a href="/Signs/Sign.pdf">Download PDF</a></p>
+          </div>
+        </div>
       </div> <!-- .wrapper -->
     </section>
 

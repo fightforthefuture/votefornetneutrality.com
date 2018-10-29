@@ -44,8 +44,9 @@
               <li>
                 Recruiting
                 <a href="#join" @click.prevent="scrollTo('#join')">local action teams</a>
-                to organize protests, pass out lawn signs, and do voter
-                education at the polls in key districts.
+                to organize protests, pass out
+                <a href="#signs" @click.prevent="scrollTo('#signs')">lawn signs</a>,
+                and do voter education at the polls in key districts.
               </li>
               <li>
                 Spreading the word. <a href="#social" @click.prevent="scrollTo('#social')">Click here to find</a> Vote for
@@ -128,31 +129,7 @@
 
     <BannerAds :show-all="false"/>
 
-    <section id="signs" class="sml-pad-y2 med-pad-y4">
-      <div class="wrapper">
-        <div class="row">
-          <div class="sml-c12 lrg-c8 grid-center text-center">
-            <h2>Post lawn signs in your yard</h2>
-            <p class="sml-push-y2 med-push-y3">
-              Print out your own lawn sign to show folks in your
-              neighborhood that you support net neutrality. Or place
-              our arrow next to a lawn sign for a candidate who
-              opposed the CRA to hold that lawmaker accountable!
-            </p>
-          </div> <!-- .c -->
-        </div> <!-- .row -->
-        <div class="row sml-pad-y2 text-center">
-          <div class="sml-c12 med-c6">
-            <a href="/signs/Sign.pdf"><img src="~/assets/images/lawn-sign-1.png" alt="A Lawn Sign" /></a>
-            <p><a href="/signs/Sign.pdf">Download PDF</a></p>
-          </div>
-          <div class="sml-c12 med-c6 sml-pad-y2">
-            <a href="/signs/Arrow.pdf"><img src="~/assets/images/lawn-sign-2.png" alt="Another Lawn Sign" /></a>
-            <p><a href="/signs/Sign.pdf">Download PDF</a></p>
-          </div>
-        </div>
-      </div> <!-- .wrapper -->
-    </section>
+    <LawnSigns/>
 
     <section v-if="hasQuotes" id="quotes" class="sml-pad-y2 med-pad-y4">
       <div class="wrapper">
@@ -224,6 +201,7 @@ import Chat from '~/components/Chat'
 import Scoreboard from '~/components/Scoreboard'
 import SocialMedia from '~/components/SocialMedia'
 import BannerAds from '~/components/BannerAds'
+import LawnSigns from '~/components/LawnSigns'
 import QuoteScroller from '~/components/QuoteScroller'
 import Modal from '~/components/Modal'
 import CallModal from '~/components/CallModal'
@@ -236,6 +214,7 @@ export default {
     Scoreboard,
     SocialMedia,
     BannerAds,
+    LawnSigns,
     QuoteScroller,
     Modal,
     CallModal,

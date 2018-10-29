@@ -17,20 +17,23 @@
     </div> <!-- .wrapper -->
 
     <SocialMedia/>
-    <BannerAds class="sml-push-4 med-push-y6"/>
+    <BannerAds class="sml-push-y4 med-push-y6"/>
+    <LawnSigns class="sml-push-y4 med-push-y6"/>
   </div>
 </template>
 
 <script>
 import SocialMedia from '~/components/SocialMedia'
 import BannerAds from '~/components/BannerAds'
+import LawnSigns from '~/components/LawnSigns'
 
 export default {
   layout: 'page',
 
   components: {
     SocialMedia,
-    BannerAds
+    BannerAds,
+    LawnSigns
   }
 }
 </script>

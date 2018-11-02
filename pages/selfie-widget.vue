@@ -1,3 +1,10 @@
+<style lang="scss">
+html,
+body {
+  background: transparent;
+}
+</style>
+
 <template>
   <SelfieScroller class="text-center"/>
 </template>

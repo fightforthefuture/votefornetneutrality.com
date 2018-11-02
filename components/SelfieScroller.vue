@@ -1,33 +1,36 @@
 <style lang="scss" scoped>
 .selfies-wrapper {
-  min-height: 470px;
+  min-height: 560px;
 
   @include respond-to(med) {
-    min-height: 720px;
+    min-height: 785px;
   }
 
   @include respond-to(lrg) {
-    min-height: 620px;
+    min-height: 685px;
   }
 }
 </style>
 
 <template>
-  <div class="selfies-wrapper flex-row flex-center">
+  <div v-if="selfies" class="selfies-wrapper flex-row flex-center">
     <a class="arrow" @click.prevent="prev">
       <img src="~assets/images/arrow-left.svg" alt="Previous" class="grid-center"/>
     </a>
     <transition name="fade" mode="out-in">
-      <div :key="`slide-${activeSlide}`">
-        <img :src="selfies[activeSlide].imageUrl"
-             :alt="`Voter: ${selfies[activeSlide].name}`"
+      <div :key="`slide-${activeSlideNum}`">
+        <img v-if="curSlide.imageUrl"
+             :src="curSlide.imageUrl"
+             :alt="`Voter: ${curSlide.name}`"
              class="grid-center"/>
-        <blockquote class="sml-push-y1">{{ selfies[activeSlide].comment }}</blockquote>
-        <p>
-          <a :href="selfies[activeSlide].twitterUrl" target="_blank">
-            {{ selfies[activeSlide].name }}
-            <span v-if="selfies[activeSlide].location">
-              from {{ selfies[activeSlide].location }}
+        <blockquote class="sml-push-y1"
+            v-text="curSlide.comment ? curSlide.comment : 'I\'m voting for Net Neutrality!'">
+        </blockquote>
+        <p v-if="curSlide.name">
+          <a :href="curSlide.twitterUrl" target="_blank">
+            {{ curSlide.name }}
+            <span v-if="curSlide.location">
+              from {{ curSlide.location }}
             </span>
           </a>
         </p>
@@ -40,33 +43,38 @@
 </template>
 
 <script>
-import selfies from '~/assets/data/selfies.json'
-
 export default {
   computed: {
-    selfies() { return selfies }
+    selfies() {
+      return this.$store.state.selfies
+    },
+    curSlide() { return this.selfies[this.activeSlideNum] }
   },
 
   data () {
     return {
-      activeSlide: 0
+      activeSlideNum: 0
     }
+  },
+
+  created() {
+    this.$store.dispatch('getSelfies')
   },
 
   methods: {
     next() {
-      if (this.activeSlide < this.selfies.length - 1) {
-        this.activeSlide++
+      if (this.activeSlideNum < this.selfies.length - 1) {
+        this.activeSlideNum++
       } else {
-        this.activeSlide = 0
+        this.activeSlideNum = 0
       }
     },
 
     prev() {
-      if (this.activeSlide > 0) {
-        this.activeSlide--
+      if (this.activeSlideNum > 0) {
+        this.activeSlideNum--
       } else {
-        this.activeSlide = this.selfies.length - 1
+        this.activeSlideNum = this.selfies.length - 1
       }
     }
   }

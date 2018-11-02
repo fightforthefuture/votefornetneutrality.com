@@ -1,0 +1,16 @@
+[
+  {
+    "name": "Jane Doe",
+    "location": "City, ST",
+    "comment": "I'm voting for Net Neutrality!",
+    "imageUrl": "https://vfnn-selfies.s3.amazonaws.com/photos/1058373851636269056.png",
+    "twitterUrl": "https://twitter.com/votefornn_bot/status/1058373851636269056"
+  },
+  {
+    "name": "John Doe",
+    "location": "City, ST",
+    "comment": "I'm voting for Net Neutrality! And I have a long reason why that takes up multiple lines.",
+    "imageUrl": "https://vfnn-selfies.s3.amazonaws.com/photos/1058175638908100609.png",
+    "twitterUrl": "https://twitter.com/votefornn_bot/status/1058175638908100609"
+  }
+]

@@ -60,6 +60,24 @@
 
     <Scoreboard :key-races="keyRaces" />
 
+    <section id="selfie" class="sml-pad-y2 med-pad-y4">
+      <div class="wrapper">
+        <div class="row">
+          <div class="sml-c12 lrg-c8 grid-center text-center">
+            <h2>Take a Voter Selfie</h2>
+            <p class="sml-push-y2 med-push-y3">
+              Share that you&rsquo;re voting for Net Neutrality!
+            </p>
+            <SelfieScroller class="sml-push-y2 med-push-y3"/>
+            <a href="https://selfie.votefornetneutrality.com/"
+               class="btn sml-push-y2 med-push-y3">
+              Take your own
+            </a>
+          </div> <!-- .c -->
+        </div> <!-- .row -->
+      </div> <!-- .wrapper -->
+    </section>
+
     <section id="join" class="sml-pad-y2 med-pad-y4">
       <div class="wrapper">
         <div class="row">
@@ -203,6 +221,7 @@ import SocialMedia from '~/components/SocialMedia'
 import BannerAds from '~/components/BannerAds'
 import LawnSigns from '~/components/LawnSigns'
 import QuoteScroller from '~/components/QuoteScroller'
+import SelfieScroller from '~/components/SelfieScroller'
 import Modal from '~/components/Modal'
 import CallModal from '~/components/CallModal'
 import WriteModal from '~/components/WriteModal'
@@ -216,6 +235,7 @@ export default {
     BannerAds,
     LawnSigns,
     QuoteScroller,
+    SelfieScroller,
     Modal,
     CallModal,
     WriteModal

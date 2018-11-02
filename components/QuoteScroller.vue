@@ -1,14 +1,4 @@
 <style lang="scss" scoped>
-// Transition
-.fade-enter-active, .fade-leave-active {
-  transition: opacity .3s;
-}
-.fade-enter,
-.fade-leave-to {
-  opacity: 0;
-}
-
-// Quotes
 .quotes-wrapper {
   min-height: 300px;
 
@@ -21,34 +11,6 @@
   }
 }
 
-// Arrows
-.arrow {
-  display: flex;
-  flex: 0 0 30px;
-  height:   30px;
-  width:    30px;
-  background: $brand-dark-color;
-  border-radius: 100%;
-  cursor: pointer;
-
-  @include respond-to(med) {
-    flex: 0 0 50px;
-    height:   50px;
-    width:    50px;
-  }
-}
-.arrow:hover,
-.arrow:focus {
-  background: $brand-color;
-}
-.arrow img {
-  width: 15px;
-  height: auto;
-
-  @include respond-to(med) {
-    width: 25px;
-  }
-}
 </style>
 
 <template>

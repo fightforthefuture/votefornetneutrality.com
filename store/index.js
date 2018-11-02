@@ -1,4 +1,5 @@
 import Vuex from 'vuex'
+import axios from 'axios'
 import config from '~/config'
 
 const createStore = () => {
@@ -16,7 +17,8 @@ const createStore = () => {
       map: {
         zoom: null,
         currentPin: null
-      }
+      },
+      selfies: null
     },
     mutations: {
       setModalVisibility(state, value) {
@@ -41,6 +43,21 @@ const createStore = () => {
 
       setMapCurrentPin(state, value) {
         state.map.currentPin = value
+      },
+
+      setSelfies(state, value) {
+        state.selfies = value
+      }
+    },
+    actions: {
+      async getSelfies({ commit, state }) {
+        try {
+          const { data } = await axios.get('https://data.battleforthenet.com/vfnn/selfies.json')
+          commit('setSelfies', data)
+        }
+        catch (error) {
+          console.log("Something went wrong with fetching the selfies")
+        }
       }
     }
   })

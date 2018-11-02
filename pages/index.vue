@@ -64,14 +64,18 @@
       <div class="wrapper">
         <div class="row">
           <div class="sml-c12 lrg-c8 grid-center text-center">
-            <h2>Take a Voter Selfie</h2>
+            <h2>Take a Selfie for Net Neutrality</h2>
             <p class="sml-push-y2 med-push-y3">
-              Share that you&rsquo;re voting for Net Neutrality!
+              Big Cable&rsquo;s lobbyists are telling Congress that no one cares
+              about net neutrality. We need to prove them wrong. Take a photo
+              with our #VoteForNetNeutrality badge and share it on social media
+              to let everyone know that you&rsquo;ll be voting for a free and
+              open Internet this November.
             </p>
             <SelfieScroller class="sml-push-y2 med-push-y3"/>
             <a href="https://selfie.votefornetneutrality.com/"
                class="btn sml-push-y2 med-push-y3">
-              Take your own
+              Take a selfie
             </a>
           </div> <!-- .c -->
         </div> <!-- .row -->

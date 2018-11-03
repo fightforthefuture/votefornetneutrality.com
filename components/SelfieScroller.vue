@@ -27,12 +27,10 @@
             v-text="curSlide.comment ? curSlide.comment : 'I\'m voting for Net Neutrality!'">
         </blockquote>
         <p v-if="curSlide.name">
-          <a :href="curSlide.twitterUrl" target="_blank">
-            {{ curSlide.name }}
-            <span v-if="curSlide.location">
-              from {{ curSlide.location }}
-            </span>
-          </a>
+          {{ curSlide.name }}
+          <span v-if="curSlide.location">
+            from {{ curSlide.location }}
+          </span>
         </p>
       </div>
     </transition>

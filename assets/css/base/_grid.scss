@@ -14,6 +14,9 @@
     padding-right: $gutter*2;
   }
 }
+body.full-width .wrapper {
+  max-width: none;
+}
 .row {
   margin-left:  -$gutter;
   margin-right: -$gutter;

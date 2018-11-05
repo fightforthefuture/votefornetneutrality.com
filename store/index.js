@@ -57,7 +57,7 @@ const createStore = () => {
     actions: {
       async getSelfies({ commit, state }, pageNum) {
         try {
-          const { data } = await axios.get(`https://api.votefornetneutrality.com/selfies.json?page=${pageNum}`)
+          const { data } = await axios.get(`https://data.battleforthenet.com/vfnn/selfies-page${pageNum}.json`)
           commit('setSelfies', data)
         }
         catch (error) {

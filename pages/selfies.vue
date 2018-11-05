@@ -8,11 +8,14 @@
           <div class="sml-c12 med-c9 lrg-c8 grid-center text-center">
             <h2>Selfies for Net Neutrality</h2>
             <p class="sml-push-y2 med-push-y3">
-              Big Cable&rsquo;s lobbyists are telling Congress that no one cares
-              about net neutrality. We need to prove them wrong. Take a photo
-              with our #VoteForNetNeutrality badge and share it on social media
-              to let everyone know that you&rsquo;ll be voting for a free and
-              open Internet this November.
+              Over 2,000 people have already submitted selfies for Net Neutrality.
+              <a href="https://selfie.votefornetneutrality.com/" target="_blank">
+                 Take yours here!</a>
+              These photos put faces to just some of the millions of people who have
+              taken action on this issue over the past year by contacting their
+              members of Congress, participating in an in-district meeting with
+              lawmakers and staff, attending a protest, or volunteering to do mass
+              voter education.
             </p>
 
             <p>

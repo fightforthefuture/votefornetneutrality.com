@@ -19,8 +19,8 @@
     </a>
     <transition name="fade" mode="out-in">
       <div :key="`slide-${activeSlideNum}`">
-        <img v-if="curSlide.imageUrl"
-             :src="curSlide.imageUrl"
+        <img v-if="curSlide.photo"
+             :src="curSlide.photo"
              :alt="`Voter: ${curSlide.name}`"
              class="grid-center"/>
         <blockquote class="sml-push-y1"
@@ -44,7 +44,9 @@
 export default {
   computed: {
     selfies() {
-      return this.$store.state.selfies
+      if (this.$store.state.selfies) {
+        return this.$store.state.selfies.data
+      }
     },
     curSlide() { return this.selfies[this.activeSlideNum] }
   },
@@ -56,7 +58,7 @@ export default {
   },
 
   created() {
-    this.$store.dispatch('getSelfies')
+    this.$store.dispatch('getSelfies', 1)
   },
 
   methods: {

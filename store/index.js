@@ -46,13 +46,18 @@ const createStore = () => {
       },
 
       setSelfies(state, value) {
-        state.selfies = value
+        if (state.selfies === null) {
+          state.selfies = value
+        } else {
+          state.selfies.data = state.selfies.data.concat(value.data)
+          state.selfies.pages = value.pages
+        }
       }
     },
     actions: {
-      async getSelfies({ commit, state }) {
+      async getSelfies({ commit, state }, pageNum) {
         try {
-          const { data } = await axios.get('https://data.battleforthenet.com/vfnn/selfies.json')
+          const { data } = await axios.get(`https://data.battleforthenet.com/vfnn/selfies-page${pageNum}.json`)
           commit('setSelfies', data)
         }
         catch (error) {

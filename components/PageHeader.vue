@@ -2,7 +2,9 @@
   <header class="glow-wrapper">
     <div class="page-header">
       <div class="wrapper">
-        <Logo/>
+        <a href="/">
+          <Logo/>
+        </a>
       </div> <!-- .wrapper -->
     </div> <!-- .page-header -->
   </header>

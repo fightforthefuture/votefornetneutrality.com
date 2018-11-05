@@ -2,13 +2,18 @@
   <header class="glow-wrapper">
     <div class="page-header">
       <div class="wrapper">
-        <div class="row">
-          <div class="sml-c12 med-c6">
-            <img src="~assets/images/logo.png" class="img-logo"
-                 alt="Vote for Net Neutrality logo" />
-          </div> <!-- .c -->
-        </div> <!-- .row -->
+        <Logo/>
       </div> <!-- .wrapper -->
     </div> <!-- .page-header -->
   </header>
 </template>
+
+<script>
+import Logo from '~/components/Logo'
+
+export default {
+  components: {
+    Logo
+  }
+}
+</script>

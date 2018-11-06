@@ -42,16 +42,13 @@ export default {
 
     isEndOfFeed() {
       if (this.$store.state.selfies) {
-        console.log(this.selfiesCurPageNum, this.$store.state.selfies.pages.page_count)
         return this.selfiesCurPageNum >= this.$store.state.selfies.pages.page_count
-      } else {
-        console.log('no selfies')
       }
     }
   },
 
   mounted() {
-    // this.$store.dispatch('getSelfies', { page: this.curPageNum })
+    // NOTE: selfies are fetched in the `PageHeader`
 
     // `window` is not availabled in `created` lifecycle hook
     window.addEventListener('scroll', () => {
@@ -62,12 +59,8 @@ export default {
   methods: {
     loadMore() {
       if (!this.isEndOfFeed) {
-        console.log('not end of feed', this.selfiesCurPageNum, this.$store.state.selfies.pages.page_count)
         this.$store.commit('setSelfiesCurPageNum', this.selfiesCurPageNum + 1)
-        console.log(this.selfiesCurPageNum)
         this.$store.dispatch('getSelfies', { page: this.selfiesCurPageNum })
-      } else {
-        console.log('end of feed')
       }
     },
 
@@ -75,7 +68,6 @@ export default {
       const doc = document.documentElement
       let isBottomOfPage = doc.clientHeight + window.scrollY >= doc.scrollHeight
       if (isBottomOfPage) {
-        console.log('is bottom')
         this.loadMore()
       }
     },

@@ -52,7 +52,6 @@ const createStore = () => {
       },
 
       setSelfies(state, value) {
-        console.log(value.data.length)
         state.selfies = value
         state.selfiesCurPageNum = 1
       },
@@ -75,7 +74,6 @@ const createStore = () => {
           q = `-${query.state}`
         }
 
-        console.log('get selfies', q)
         try {
           const { data } = await axios.get(`https://data.battleforthenet.com/vfnn/selfies${q}.json`)
           if (query && query.page > 1) {

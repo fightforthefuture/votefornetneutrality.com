@@ -44,13 +44,10 @@ export default {
   async created() {
     // Fetch selfies (optionally via `/?state=XX` in url query param)
     let newState = this.$route.query.state ? this.$route.query.state.toUpperCase() : null
-    console.log('created')
     if (newState && US_STATES[newState]) {
-      console.log(newState)
       this.selectedState = newState
       this.fetchSelfies(this.selectedState)
     } else {
-      console.log('created fetch')
       this.fetchSelfies(null)
     }
   },
@@ -58,11 +55,8 @@ export default {
   methods: {
     fetchSelfies(newState) {
       if (newState) {
-        // this.$router.replace(`/selfies/?state=${newState.toLowerCase()}`)
         this.$store.dispatch('getSelfies', { state: newState.toLowerCase() })
       } else {
-        console.log('getSelfies from fetch')
-        // this.$router.replace('/selfies')
         this.$store.dispatch('getSelfies', { page: 1 })
       }
     }

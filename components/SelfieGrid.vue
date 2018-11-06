@@ -1,47 +1,18 @@
-<style lang="scss" scoped>
-.has-quote {
-  position: relative;
-  cursor: pointer;
-}
-.has-quote:after {
-  display: block;
-  content: "\201C";
-  position: absolute;
-  top: 0;
-  left: $gutter;
-  padding: 5px 0 0;
-  width:  40px;
-  height: 40px;
-  background: $brand-color;
-  border-bottom-right-radius: $default-border-radius;
-  font-family: $heading-stack;
-  font-size: $font-size-3;
-  text-align: center;
-}
-.is-first-time-voter {
-  position: absolute;
-  bottom: 0;
-  left: $gutter;
-  padding: $gutter/2 $gutter;
-  background: $success-dark-color;
-  border-top-right-radius: $default-border-radius;
-  font-size: $font-size-6;
-  font-weight: $bold-font-weight;
-}
-</style>
-
 <template>
   <div v-if="selfies">
     <div class="row sml-push-y1 med-push-y2">
       <div v-for="(selfie, index) in selfies.data"
            :key="`selfies-${index}`"
-           class="sml-c3 lrg-c2 sml-push-y2"
-           :class="{'has-quote': selfie.comment}">
-        <img :src="selfie.photo" :alt="`Selfie ${index}`" />
-        <div v-if="selfie.first_time_voter"
-             class="is-first-time-voter">
-          1st Time
-        </div> <!-- .is-first-time-voter -->
+           class="sml-c6 med-c3 lrg-c2 sml-push-y2">
+        <div class="selfie-wrapper"
+             :class="{'has-quote': selfie.comment}"
+             v-on="selfie.comment ? { click: () => openModal(selfie) } : {}">
+          <img :src="selfie.photo" :alt="`Selfie ${index}`" />
+          <div v-if="selfie.first_time_voter"
+               class="is-first-time-voter">
+            1st Time<span class="med-hide"> Voter</span>
+          </div> <!-- .is-first-time-voter -->
+        </div> <!-- .selfie-wrapper -->
       </div> <!-- v-for -->
     </div> <!-- .row -->
 
@@ -90,12 +61,19 @@ export default {
         this.$store.dispatch('getSelfies', this.curPageNum)
       }
     },
+
     bottomVisible() {
       const doc = document.documentElement
       let isBottomOfPage = doc.clientHeight + window.scrollY >= doc.scrollHeight
       if (isBottomOfPage) {
         this.loadMore()
       }
+    },
+
+    openModal(selfie) {
+      this.$store.commit('setModalVisibility', true)
+      this.$store.commit('setModalType', 'selfie')
+      this.$store.commit('setModalData', selfie)
     }
   }
 }

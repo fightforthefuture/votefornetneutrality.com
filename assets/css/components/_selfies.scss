@@ -1,0 +1,33 @@
+// Selfies
+
+.selfie-wrapper {
+  position: relative;
+}
+.selfie-wrapper.has-quote {
+  cursor: pointer;
+}
+.selfie-wrapper.has-quote:after {
+  display: block;
+  content: "\201C";
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 5px 0 0;
+  width:  40px;
+  height: 40px;
+  background: $brand-color;
+  border-bottom-right-radius: $default-border-radius;
+  font-family: $heading-stack;
+  font-size: $font-size-3;
+  text-align: center;
+}
+.selfie-wrapper .is-first-time-voter {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: $gutter/2 $gutter;
+  background: $success-dark-color;
+  border-top-right-radius: $default-border-radius;
+  font-size: $font-size-6;
+  font-weight: $bold-font-weight;
+}

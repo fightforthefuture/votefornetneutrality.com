@@ -42,7 +42,7 @@ body.modal-open {
 
 <template>
   <div class="modal-wrapper" v-if="modalVisible">
-    <div class="modal sml-pad-2 med-pad-4">
+    <div class="modal sml-pad-2 sml-pad-y4 med-pad-4">
       <button class="close text-brand-light" @click="close()">&times;</button>
       <slot></slot>
     </div>
@@ -70,6 +70,7 @@ export default {
     close() {
       this.$store.commit('setModalVisibility', false)
       this.$store.commit('setModalType', null)
+      this.$store.commit('setModalData', null)
     }
   }
 }

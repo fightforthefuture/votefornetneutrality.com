@@ -19,19 +19,7 @@
     </a>
     <transition name="fade" mode="out-in">
       <div :key="`slide-${activeSlideNum}`">
-        <img v-if="curSlide.photo"
-             :src="curSlide.photo"
-             :alt="`Voter: ${curSlide.name}`"
-             class="grid-center"/>
-        <blockquote class="sml-push-y1"
-            v-text="curSlide.comment ? curSlide.comment : 'I\'m voting for Net Neutrality!'">
-        </blockquote>
-        <p v-if="curSlide.name">
-          {{ curSlide.name }}
-          <span v-if="curSlide.location">
-            from {{ curSlide.location }}
-          </span>
-        </p>
+        <SelfieFeature :selfie="curSlide"/>
       </div>
     </transition>
     <a class="arrow" @click.prevent="next">
@@ -41,7 +29,13 @@
 </template>
 
 <script>
+import SelfieFeature from '~/components/SelfieFeature'
+
 export default {
+  components: {
+    SelfieFeature
+  },
+
   computed: {
     selfies() {
       if (this.$store.state.selfies) {

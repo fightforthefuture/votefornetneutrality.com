@@ -1,12 +1,10 @@
 <template>
-  <header class="glow-wrapper">
-    <div class="page-header">
-      <div class="wrapper">
-        <a href="/">
-          <Logo/>
-        </a>
-      </div> <!-- .wrapper -->
-    </div> <!-- .page-header -->
+  <header class="page-header">
+    <div class="wrapper">
+      <a href="/">
+        <Logo/>
+      </a>
+    </div> <!-- .wrapper -->
   </header>
 </template>
 

@@ -1,7 +1,11 @@
 // Page Header
 
 .page-header {
-  position: relative;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
   padding: $gutter 0 $gutter*2;
   z-index: 100;
   background: $brand-dark-color;
@@ -9,27 +13,16 @@
 .page-header .img-logo {
   max-width: 170px;
 }
-
-// Page Header > Glow
-.glow-wrapper {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  width: 100%;
-  z-index: 99;
-}
-.glow-wrapper:after {
+.page-header:after {
   display: block;
-  content: "";
+  content: '';
   position: absolute;
-  top: 0;
+  bottom: -50px;
   left: 0;
   right: 0;
-  height: 100%;
-  width: 100%;
-  filter: blur(40px); // NOTE: works only in newer browsers
-  background: linear-gradient(270deg, $glow-start-color, $glow-end-color);
-  background-size: 100% 100%;
-  transform: translateZ(0); // NOTE: hardware accelerated, use GPU
+  content: '';
+  height: 50px;
+  width: auto;
+  background: transparent url('~assets/images/header-bg.png') bottom center no-repeat;
+  background-size: auto 50px;
 }

@@ -52,7 +52,7 @@ export default {
   },
 
   created() {
-    this.$store.dispatch('getSelfies', 1)
+    this.$store.dispatch('getSelfies', { page: 1 })
   },
 
   methods: {

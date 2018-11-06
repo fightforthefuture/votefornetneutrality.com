@@ -74,6 +74,7 @@ form textarea.error:focus{
 form select {
   width: 100%;
   height: $gutter*5;
+  background: $white;
   color: $brand-color;
 }
 

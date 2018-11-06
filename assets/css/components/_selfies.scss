@@ -6,6 +6,17 @@
 .selfie-wrapper.has-quote {
   cursor: pointer;
 }
+.selfie-wrapper.has-quote:hover:before,
+.selfie-wrapper.has-quote:focus:before {
+  display: block;
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: transparentize($white, 0.8);
+}
 .selfie-wrapper.has-quote:after {
   display: block;
   content: "\201C";

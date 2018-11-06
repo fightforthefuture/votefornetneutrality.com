@@ -19,7 +19,8 @@ const createStore = () => {
         zoom: null,
         currentPin: null
       },
-      selfies: null
+      selfies: null,
+      selfiesCurPageNum: 1
     },
     mutations: {
       setModalVisibility(state, value) {
@@ -51,19 +52,35 @@ const createStore = () => {
       },
 
       setSelfies(state, value) {
-        if (state.selfies === null) {
-          state.selfies = value
-        } else {
-          state.selfies.data = state.selfies.data.concat(value.data)
-          state.selfies.pages = value.pages
-        }
-      }
+        state.selfies = value
+        state.selfiesCurPageNum = 1
+      },
+
+      addSelfies(state, value) {
+        state.selfies.data = state.selfies.data.concat(value.data)
+        state.selfies.pages = value.pages
+      },
+
+      setSelfiesCurPageNum(state, value) {
+        state.selfiesCurPageNum = value
+      },
     },
     actions: {
-      async getSelfies({ commit, state }, pageNum) {
+      async getSelfies({ commit, state }, query) {
+        let q = ''
+        if (query && query.page) {
+          q = `-page${query.page}`
+        } else if (query && query.state) {
+          q = `-${query.state}`
+        }
+
         try {
-          const { data } = await axios.get(`https://data.battleforthenet.com/vfnn/selfies-page${pageNum}.json`)
-          commit('setSelfies', data)
+          const { data } = await axios.get(`https://data.battleforthenet.com/vfnn/selfies${q}.json`)
+          if (query && query.page > 1) {
+            commit('addSelfies', data)
+          } else {
+            commit('setSelfies', data)
+          }
         }
         catch (error) {
           console.log("Something went wrong with fetching the selfies")

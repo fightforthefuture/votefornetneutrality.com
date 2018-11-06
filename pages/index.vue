@@ -4,7 +4,7 @@
       <div class="wrapper">
         <div class="row">
           <div class="sml-c12 lrg-c8 grid-center">
-            <Logo/>
+            <Logo class="grid-center"/>
             <Chat/>
           </div> <!-- .c -->
         </div> <!-- .row -->

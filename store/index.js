@@ -12,6 +12,7 @@ const createStore = () => {
       mapboxToken: config.mapboxToken,
       modalVisible: false,
       modalType: null,
+      modalData: null,
       zipCode: null,
       phone: null,
       map: {
@@ -27,6 +28,10 @@ const createStore = () => {
 
       setModalType(state, value) {
         state.modalType = value
+      },
+
+      setModalData(state, value) {
+        state.modalData = value
       },
 
       setZipCode(state, value) {

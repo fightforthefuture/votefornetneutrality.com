@@ -28,14 +28,22 @@
         </div> <!-- .wrapper -->
       </section>
     </div> <!-- .site-content -->
+
+    <Modal>
+      <SelfieModal v-if="modalType === 'selfie'" :selfie="modalData"/>
+    </Modal>
+
   </div>
 </template>
 
 <script>
 import config from '~/config'
 import { createMetaTags } from '~/assets/js/helpers'
+import { mapState } from 'vuex'
 import PageHeader from '~/components/PageHeader'
 import SelfieGrid from '~/components/SelfieGrid'
+import Modal from '~/components/Modal'
+import SelfieModal from '~/components/SelfieModal'
 
 export default {
   layout: 'skeleton',
@@ -57,7 +65,13 @@ export default {
 
   components: {
     PageHeader,
-    SelfieGrid
+    SelfieGrid,
+    Modal,
+    SelfieModal
+  },
+
+  computed: {
+    ...mapState(['modalType', 'modalData'])
   }
 }
 </script>

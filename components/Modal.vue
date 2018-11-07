@@ -41,7 +41,7 @@ body.modal-open {
 </style>
 
 <template>
-  <div class="modal-wrapper" v-if="modalVisible">
+  <div class="modal-wrapper" v-if="modalVisible" @click.self="close()">
     <div class="modal sml-pad-2 sml-pad-y4 med-pad-4">
       <button class="close text-brand-light" @click="close()">&times;</button>
       <slot></slot>

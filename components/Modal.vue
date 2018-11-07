@@ -16,13 +16,18 @@ body.modal-open {
   overflow: auto;
 }
 .modal {
+  display: flex;
+  flex-direction: column;
   position: relative;
   width: 90%;
   max-width: 700px;
-  max-height: 96vh;
-  overflow: auto;
+  max-height: 96%;
+  overflow: hidden;
   background-color: $brand-dark-color;
   border-radius: $default-border-radius;
+}
+.modal-scroll {
+  overflow-y: auto;
 }
 .modal .close {
   position: absolute;
@@ -42,11 +47,13 @@ body.modal-open {
 
 <template>
   <div class="modal-wrapper" v-if="modalVisible" @click.self="close()">
-    <div class="modal sml-pad-2 sml-pad-y4 med-pad-4">
+    <div class="modal">
+      <div class="modal-scroll sml-pad-2 sml-pad-y4 med-pad-4">
+        <slot></slot>
+      </div> <!-- .modal-scroll -->
       <button class="close text-brand-light" @click="close()">&times;</button>
-      <slot></slot>
-    </div>
-  </div>
+    </div> <!-- .modal -->
+  </div> <!-- .modal-wrapper -->
 </template>
 
 <script>

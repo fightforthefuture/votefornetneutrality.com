@@ -21,7 +21,7 @@ body.modal-open {
   position: relative;
   width: 90%;
   max-width: 700px;
-  max-height: 96%;
+  max-height: 96vh;
   overflow: hidden;
   background-color: $brand-dark-color;
   border-radius: $default-border-radius;

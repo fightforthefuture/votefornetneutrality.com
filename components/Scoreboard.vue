@@ -24,8 +24,9 @@
                      class="sml-flex-2 med-flex-3"
                      placeholder="Street Address, City, State ZIP"
                      ref="addressInput"
-                     required />
-              <button class="btn btn-lrg" :disabled="isLoading">
+                     required
+                     :disabled="isArchived" />
+              <button class="btn btn-lrg" :disabled="isLoading || isArchived">
                 <span v-if="isLoading">Loading...</span>
                 <span v-else>Let&rsquo;s go</span>
               </button>
@@ -152,6 +153,7 @@
 
 <script>
 import axios from 'axios'
+import { mapState } from 'vuex'
 import Candidates from '~/components/Candidates'
 import ActionButtons from '~/components/ActionButtons'
 import SocialShareButtons from '~/components/SocialShareButtons'
@@ -181,6 +183,8 @@ export default {
   },
 
   computed: {
+    ...mapState(['isArchived']),
+
     keyRaceCount() {
       if (this.keyRaces) {
         return this.keyRaces.senate.length + this.keyRaces.house.length

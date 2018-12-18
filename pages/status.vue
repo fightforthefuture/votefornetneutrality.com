@@ -49,27 +49,30 @@
       <input type="text"
              v-model="candidateName"
              placeholder="Candidate Name*"
-             required />
+             required
+             :disabled="isArchived" />
       <input type="email"
              v-model="email"
              class="sml-push-y2"
              placeholder="Your Email*"
-             required />
+             required
+             :disabled="isArchived" />
       <input type="tel"
              v-model="phone"
              class="sml-push-y2"
              placeholder="Your Phone Number*"
-             required />
+             required
+             :disabled="isArchived" />
 
       <div class="flex-row sml-push-y2">
-        <select v-model="state" required>
+        <select v-model="state" required :disabled="isArchived">
           <option :value="null">Select a state*</option>
           <option v-for="(name, code) in stateOptions" :key="`state-${code}`" :value="code">
             {{ name }}
           </option>
         </select>
 
-        <select v-model="district">
+        <select v-model="district" :disabled="isArchived">
           <option :value="null">Select a district</option>
           <option value="at-large">At Large</option>
           <option v-for="option in districtOptions" :key="`district-${option}`" :value="option">
@@ -78,7 +81,7 @@
         </select>
       </div> <!-- .flex-row -->
 
-      <select v-model="status" class="sml-push-y2" required="">
+      <select v-model="status" class="sml-push-y2" required="" :disabled="isArchived">
         <option :value="null">Select candidate&rsquo;s position on net neutrality*</option>
         <option v-for="option in statusOptions" :key="`status-${option}`" :value="option">
           {{ option }}
@@ -89,12 +92,13 @@
              v-model="url"
              class="sml-push-y2"
              placeholder="Link to a source for the candidate's stance*"
-             required />
+             required
+             :disabled="isArchived" />
       <div class="checkbox sml-push-y2">
-        <input type="checkbox" id="authorized" v-model="authorized" required>
+        <input type="checkbox" id="authorized" v-model="authorized" required :disabled="isArchived">
         <label for="authorized">I am authorized to make this correction on behalf of the candidate.</label>
       </div> <!-- .checkbox -->
-      <button class="btn btn-block sml-push-y2" :disabled="isLoading">
+      <button class="btn btn-block sml-push-y2" :disabled="isLoading || isArchived ">
         <span v-if="isLoading">Loading...</span>
         <span v-else>Submit</span>
       </button>
@@ -104,6 +108,7 @@
 
 <script>
 import axios from 'axios'
+import { mapState } from 'vuex'
 import US_STATES from '~/assets/data/states'
 
 export default {
@@ -128,6 +133,8 @@ export default {
   },
 
   computed: {
+    ...mapState(['isArchived']),
+
     stateOptions() { return US_STATES }
   },
 

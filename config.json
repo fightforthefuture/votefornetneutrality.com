@@ -15,5 +15,6 @@
   "joinURL": "https://docs.google.com/spreadsheets/d/1UDJGSVAKR4jMR2iQbHde_xuU7Yk3zCo5aEijsaMF83U/edit#gid=0",
   "donateURL": "https://donate.fightforthefuture.org/?c=0&tag=site_vfnn&fundraiser=vfnn#page-1",
   "quotesEnabled": false,
-  "mapboxToken": "pk.eyJ1Ijoia2VuZmZ0ZiIsImEiOiJjamlld2tzaTQwcXV6M3BxeXdlNXRnMXh1In0.A0ZjZjYMkyK7IvL9JLhUpg"
+  "mapboxToken": "pk.eyJ1Ijoia2VuZmZ0ZiIsImEiOiJjamlld2tzaTQwcXV6M3BxeXdlNXRnMXh1In0.A0ZjZjYMkyK7IvL9JLhUpg",
+  "isArchived": true
 }

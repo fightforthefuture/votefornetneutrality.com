@@ -2,7 +2,7 @@
   <div>
     <section class="sml-pad-y2 med-pad-y3 text-center">
       <div class="wrapper">
-        <a href="/"><Logo/></a>
+        <a href="/"><Logo class="grid-center"/></a>
 
         <div class="row">
           <div class="sml-c12 lrg-c8 grid-center article text-center">

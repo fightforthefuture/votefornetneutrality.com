@@ -19,8 +19,9 @@
                    v-model="phoneNumber"
                    placeholder="Phone number"
                    class="med-flex-2"
-                   required />
-            <button class="btn btn-block btn-lrg">
+                   required
+                   :disabled="isArchived" />
+            <button class="btn btn-block btn-lrg" :disabled="isArchived">
               Text me
             </button>
           </form>
@@ -44,6 +45,7 @@
 
 <script>
 import axios from 'axios'
+import { mapState } from 'vuex'
 import { smoothScrollWithinElement } from '~/assets/js/helpers'
 import Message from '~/components/Message'
 import SocialShareButtons from '~/components/SocialShareButtons'
@@ -61,6 +63,10 @@ export default {
       messages: [],
       isFormCompleted: false
     }
+  },
+
+  computed: {
+    ...mapState(['isArchived'])
   },
 
   created() {
